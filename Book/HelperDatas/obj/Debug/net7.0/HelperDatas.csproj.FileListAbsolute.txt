@@ -1,0 +1,12 @@
+E:\BookProject\BookApi\Book\HelperDatas\obj\Debug\net7.0\HelperDatas.csproj.AssemblyReference.cache
+E:\BookProject\BookApi\Book\HelperDatas\obj\Debug\net7.0\HelperDatas.GeneratedMSBuildEditorConfig.editorconfig
+E:\BookProject\BookApi\Book\HelperDatas\obj\Debug\net7.0\HelperDatas.AssemblyInfoInputs.cache
+E:\BookProject\BookApi\Book\HelperDatas\obj\Debug\net7.0\HelperDatas.AssemblyInfo.cs
+E:\BookProject\BookApi\Book\HelperDatas\obj\Debug\net7.0\HelperDatas.csproj.CoreCompileInputs.cache
+E:\BookProject\BookApi\Book\HelperDatas\bin\Debug\net7.0\HelperDatas.deps.json
+E:\BookProject\BookApi\Book\HelperDatas\bin\Debug\net7.0\HelperDatas.dll
+E:\BookProject\BookApi\Book\HelperDatas\bin\Debug\net7.0\HelperDatas.pdb
+E:\BookProject\BookApi\Book\HelperDatas\obj\Debug\net7.0\HelperDatas.dll
+E:\BookProject\BookApi\Book\HelperDatas\obj\Debug\net7.0\refint\HelperDatas.dll
+E:\BookProject\BookApi\Book\HelperDatas\obj\Debug\net7.0\HelperDatas.pdb
+E:\BookProject\BookApi\Book\HelperDatas\obj\Debug\net7.0\ref\HelperDatas.dll

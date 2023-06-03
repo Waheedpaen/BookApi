@@ -1,0 +1,15 @@
+E:\BookProject\BookApi\Book\ViewModels\bin\Debug\net7.0\ViewModels.deps.json
+E:\BookProject\BookApi\Book\ViewModels\bin\Debug\net7.0\ViewModels.dll
+E:\BookProject\BookApi\Book\ViewModels\bin\Debug\net7.0\ViewModels.pdb
+E:\BookProject\BookApi\Book\ViewModels\obj\Debug\net7.0\ViewModels.csproj.AssemblyReference.cache
+E:\BookProject\BookApi\Book\ViewModels\obj\Debug\net7.0\ViewModels.GeneratedMSBuildEditorConfig.editorconfig
+E:\BookProject\BookApi\Book\ViewModels\obj\Debug\net7.0\ViewModels.AssemblyInfoInputs.cache
+E:\BookProject\BookApi\Book\ViewModels\obj\Debug\net7.0\ViewModels.AssemblyInfo.cs
+E:\BookProject\BookApi\Book\ViewModels\obj\Debug\net7.0\ViewModels.csproj.CoreCompileInputs.cache
+E:\BookProject\BookApi\Book\ViewModels\obj\Debug\net7.0\ViewModels.dll
+E:\BookProject\BookApi\Book\ViewModels\obj\Debug\net7.0\refint\ViewModels.dll
+E:\BookProject\BookApi\Book\ViewModels\obj\Debug\net7.0\ViewModels.pdb
+E:\BookProject\BookApi\Book\ViewModels\obj\Debug\net7.0\ref\ViewModels.dll
+E:\BookProject\BookApi\Book\ViewModels\bin\Debug\net7.0\EntitiesClasses.dll
+E:\BookProject\BookApi\Book\ViewModels\bin\Debug\net7.0\EntitiesClasses.pdb
+E:\BookProject\BookApi\Book\ViewModels\obj\Debug\net7.0\ViewModels.csproj.CopyComplete
