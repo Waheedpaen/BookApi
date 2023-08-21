@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\BookProject\\BookApi\\Book\\BookApplication\\BookApplication.csproj": {}
+    "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\BookApplication.csproj": {}
   },
   "projects": {
-    "E:\\BookProject\\BookApi\\Book\\BookApplication\\BookApplication.csproj": {
+    "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\BookApplication.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\BookProject\\BookApi\\Book\\BookApplication\\BookApplication.csproj",
+        "projectUniqueName": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\BookApplication.csproj",
         "projectName": "BookApplication",
-        "projectPath": "E:\\BookProject\\BookApi\\Book\\BookApplication\\BookApplication.csproj",
-        "packagesPath": "C:\\Users\\Waheed\\.nuget\\packages\\",
-        "outputPath": "E:\\BookProject\\BookApi\\Book\\BookApplication\\obj\\",
+        "projectPath": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\BookApplication.csproj",
+        "packagesPath": "C:\\Users\\Wa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Waheed\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Wa\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,27 +22,27 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\sdk\\7.0.302\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
+          "C:\\Program Files\\dotnet\\sdk\\7.0.304\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "E:\\BookProject\\BookApi\\Book\\DataAccessLayer\\DataAccessLayer.csproj": {
-                "projectPath": "E:\\BookProject\\BookApi\\Book\\DataAccessLayer\\DataAccessLayer.csproj"
+              "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\DataAccessLayer\\DataAccessLayer.csproj": {
+                "projectPath": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\DataAccessLayer\\DataAccessLayer.csproj"
               },
-              "E:\\BookProject\\BookApi\\Book\\EntitiesClasses\\EntitiesClasses.csproj": {
-                "projectPath": "E:\\BookProject\\BookApi\\Book\\EntitiesClasses\\EntitiesClasses.csproj"
+              "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\EntitiesClasses\\EntitiesClasses.csproj": {
+                "projectPath": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\EntitiesClasses\\EntitiesClasses.csproj"
               },
-              "E:\\BookProject\\BookApi\\Book\\HelperDatas\\HelperDatas.csproj": {
-                "projectPath": "E:\\BookProject\\BookApi\\Book\\HelperDatas\\HelperDatas.csproj"
+              "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\HelperDatas\\HelperDatas.csproj": {
+                "projectPath": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\HelperDatas\\HelperDatas.csproj"
               },
-              "E:\\BookProject\\BookApi\\Book\\ImplementDAl\\ImplementDAl.csproj": {
-                "projectPath": "E:\\BookProject\\BookApi\\Book\\ImplementDAl\\ImplementDAl.csproj"
+              "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\ImplementDAl\\ImplementDAl.csproj": {
+                "projectPath": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\ImplementDAl\\ImplementDAl.csproj"
               },
-              "E:\\BookProject\\BookApi\\Book\\ViewModels\\ViewModels.csproj": {
-                "projectPath": "E:\\BookProject\\BookApi\\Book\\ViewModels\\ViewModels.csproj"
+              "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\ViewModels\\ViewModels.csproj": {
+                "projectPath": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\ViewModels\\ViewModels.csproj"
               }
             }
           }
@@ -73,6 +73,10 @@
               "target": "Package",
               "version": "[2.2.0, )"
             },
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[7.0.10, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[7.0.2, )"
@@ -82,6 +86,14 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[7.0.2, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
+            "Newtonsoft.Json.Bson": {
+              "target": "Package",
+              "version": "[1.0.2, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -107,21 +119,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\BookProject\\BookApi\\Book\\DataAccessLayer\\DataAccessLayer.csproj": {
+    "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\DataAccessLayer\\DataAccessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\BookProject\\BookApi\\Book\\DataAccessLayer\\DataAccessLayer.csproj",
+        "projectUniqueName": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\DataAccessLayer\\DataAccessLayer.csproj",
         "projectName": "DataAccessLayer",
-        "projectPath": "E:\\BookProject\\BookApi\\Book\\DataAccessLayer\\DataAccessLayer.csproj",
-        "packagesPath": "C:\\Users\\Waheed\\.nuget\\packages\\",
-        "outputPath": "E:\\BookProject\\BookApi\\Book\\DataAccessLayer\\obj\\",
+        "projectPath": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\DataAccessLayer\\DataAccessLayer.csproj",
+        "packagesPath": "C:\\Users\\Wa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\DataAccessLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Waheed\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Wa\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -135,14 +147,14 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "E:\\BookProject\\BookApi\\Book\\EntitiesClasses\\EntitiesClasses.csproj": {
-                "projectPath": "E:\\BookProject\\BookApi\\Book\\EntitiesClasses\\EntitiesClasses.csproj"
+              "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\EntitiesClasses\\EntitiesClasses.csproj": {
+                "projectPath": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\EntitiesClasses\\EntitiesClasses.csproj"
               },
-              "E:\\BookProject\\BookApi\\Book\\HelperDatas\\HelperDatas.csproj": {
-                "projectPath": "E:\\BookProject\\BookApi\\Book\\HelperDatas\\HelperDatas.csproj"
+              "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\HelperDatas\\HelperDatas.csproj": {
+                "projectPath": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\HelperDatas\\HelperDatas.csproj"
               },
-              "E:\\BookProject\\BookApi\\Book\\ViewModels\\ViewModels.csproj": {
-                "projectPath": "E:\\BookProject\\BookApi\\Book\\ViewModels\\ViewModels.csproj"
+              "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\ViewModels\\ViewModels.csproj": {
+                "projectPath": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\ViewModels\\ViewModels.csproj"
               }
             }
           }
@@ -172,21 +184,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\BookProject\\BookApi\\Book\\EntitiesClasses\\EntitiesClasses.csproj": {
+    "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\EntitiesClasses\\EntitiesClasses.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\BookProject\\BookApi\\Book\\EntitiesClasses\\EntitiesClasses.csproj",
+        "projectUniqueName": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\EntitiesClasses\\EntitiesClasses.csproj",
         "projectName": "EntitiesClasses",
-        "projectPath": "E:\\BookProject\\BookApi\\Book\\EntitiesClasses\\EntitiesClasses.csproj",
-        "packagesPath": "C:\\Users\\Waheed\\.nuget\\packages\\",
-        "outputPath": "E:\\BookProject\\BookApi\\Book\\EntitiesClasses\\obj\\",
+        "projectPath": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\EntitiesClasses\\EntitiesClasses.csproj",
+        "packagesPath": "C:\\Users\\Wa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\EntitiesClasses\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Waheed\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Wa\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -218,7 +230,7 @@
             },
             "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
               "target": "Package",
-              "version": "[7.0.2, )"
+              "version": "[7.0.10, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -243,6 +255,14 @@
             "Microsoft.Extensions.Identity.Core": {
               "target": "Package",
               "version": "[7.0.2, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
+            "Newtonsoft.Json.Bson": {
+              "target": "Package",
+              "version": "[1.0.2, )"
             }
           },
           "imports": [
@@ -261,21 +281,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\BookProject\\BookApi\\Book\\HelperDatas\\HelperDatas.csproj": {
+    "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\HelperDatas\\HelperDatas.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\BookProject\\BookApi\\Book\\HelperDatas\\HelperDatas.csproj",
+        "projectUniqueName": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\HelperDatas\\HelperDatas.csproj",
         "projectName": "HelperDatas",
-        "projectPath": "E:\\BookProject\\BookApi\\Book\\HelperDatas\\HelperDatas.csproj",
-        "packagesPath": "C:\\Users\\Waheed\\.nuget\\packages\\",
-        "outputPath": "E:\\BookProject\\BookApi\\Book\\HelperDatas\\obj\\",
+        "projectPath": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\HelperDatas\\HelperDatas.csproj",
+        "packagesPath": "C:\\Users\\Wa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\HelperDatas\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Waheed\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Wa\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -326,21 +346,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\BookProject\\BookApi\\Book\\ImplementDAl\\ImplementDAl.csproj": {
+    "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\ImplementDAl\\ImplementDAl.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\BookProject\\BookApi\\Book\\ImplementDAl\\ImplementDAl.csproj",
+        "projectUniqueName": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\ImplementDAl\\ImplementDAl.csproj",
         "projectName": "ImplementDAl",
-        "projectPath": "E:\\BookProject\\BookApi\\Book\\ImplementDAl\\ImplementDAl.csproj",
-        "packagesPath": "C:\\Users\\Waheed\\.nuget\\packages\\",
-        "outputPath": "E:\\BookProject\\BookApi\\Book\\ImplementDAl\\obj\\",
+        "projectPath": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\ImplementDAl\\ImplementDAl.csproj",
+        "packagesPath": "C:\\Users\\Wa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\ImplementDAl\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Waheed\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Wa\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -354,11 +374,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "E:\\BookProject\\BookApi\\Book\\DataAccessLayer\\DataAccessLayer.csproj": {
-                "projectPath": "E:\\BookProject\\BookApi\\Book\\DataAccessLayer\\DataAccessLayer.csproj"
+              "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\DataAccessLayer\\DataAccessLayer.csproj": {
+                "projectPath": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\DataAccessLayer\\DataAccessLayer.csproj"
               },
-              "E:\\BookProject\\BookApi\\Book\\EntitiesClasses\\EntitiesClasses.csproj": {
-                "projectPath": "E:\\BookProject\\BookApi\\Book\\EntitiesClasses\\EntitiesClasses.csproj"
+              "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\EntitiesClasses\\EntitiesClasses.csproj": {
+                "projectPath": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\EntitiesClasses\\EntitiesClasses.csproj"
               }
             }
           }
@@ -394,21 +414,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\BookProject\\BookApi\\Book\\ViewModels\\ViewModels.csproj": {
+    "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\ViewModels\\ViewModels.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\BookProject\\BookApi\\Book\\ViewModels\\ViewModels.csproj",
+        "projectUniqueName": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\ViewModels\\ViewModels.csproj",
         "projectName": "ViewModels",
-        "projectPath": "E:\\BookProject\\BookApi\\Book\\ViewModels\\ViewModels.csproj",
-        "packagesPath": "C:\\Users\\Waheed\\.nuget\\packages\\",
-        "outputPath": "E:\\BookProject\\BookApi\\Book\\ViewModels\\obj\\",
+        "projectPath": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\ViewModels\\ViewModels.csproj",
+        "packagesPath": "C:\\Users\\Wa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\ViewModels\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Waheed\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Wa\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -422,8 +442,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "E:\\BookProject\\BookApi\\Book\\EntitiesClasses\\EntitiesClasses.csproj": {
-                "projectPath": "E:\\BookProject\\BookApi\\Book\\EntitiesClasses\\EntitiesClasses.csproj"
+              "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\EntitiesClasses\\EntitiesClasses.csproj": {
+                "projectPath": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\EntitiesClasses\\EntitiesClasses.csproj"
               }
             }
           }
@@ -463,7 +483,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
         }
       }
     }
