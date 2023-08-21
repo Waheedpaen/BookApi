@@ -1012,6 +1012,7 @@
       },
       "HelperDatas/1.0.0": {
         "dependencies": {
+          "EntitiesClasses": "1.0.0",
           "Microsoft.AspNetCore.Http.Abstractions": "2.2.0",
           "Microsoft.AspNetCore.Mvc.Core": "2.2.5"
         },

@@ -22,3 +22,6 @@ C:\Users\Wa\Documents\GitHub\BookApi\Book\HelperDatas\obj\Debug\net7.0\HelperDat
 C:\Users\Wa\Documents\GitHub\BookApi\Book\HelperDatas\obj\Debug\net7.0\refint\HelperDatas.dll
 C:\Users\Wa\Documents\GitHub\BookApi\Book\HelperDatas\obj\Debug\net7.0\HelperDatas.pdb
 C:\Users\Wa\Documents\GitHub\BookApi\Book\HelperDatas\obj\Debug\net7.0\ref\HelperDatas.dll
+C:\Users\Wa\Documents\GitHub\BookApi\Book\HelperDatas\bin\Debug\net7.0\EntitiesClasses.dll
+C:\Users\Wa\Documents\GitHub\BookApi\Book\HelperDatas\bin\Debug\net7.0\EntitiesClasses.pdb
+C:\Users\Wa\Documents\GitHub\BookApi\Book\HelperDatas\obj\Debug\net7.0\HelperDatas.csproj.CopyComplete
