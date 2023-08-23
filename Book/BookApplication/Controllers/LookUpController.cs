@@ -5,49 +5,94 @@ using ImplementDAL.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ViewModel.ViewModels.UserViewModel;
+using ViewModels.CommonViewModel;
+using ViewModels.ScholarViewModel;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
-namespace BookApplication.Controllers
+namespace BookApplication.Controllers;
+
+[Route("api/[controller]")]
+[ApiController]
+public class LookUpController : ControllerBase
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class LookUpController : ControllerBase
+    private readonly IMapper _mapper;
+    private readonly ILookUpServices _lookUpServices;
+    private readonly IConfiguration _config;
+    public LookUpController(ILookUpServices lookUpServices, IMapper mapper, IConfiguration config)
     {
-        private readonly IMapper _mapper;
-        private readonly ILookUpServices  _lookUpServices;
-        private readonly IConfiguration _config;
-        public LookUpController(ILookUpServices lookUpServices, IMapper mapper, IConfiguration config)
+        _lookUpServices = lookUpServices;
+        _mapper = mapper;
+        _config = config;
+    }
+    [HttpGet("BookCategories")]
+    public async Task<IActionResult> BookCategories()
+    {
+        if (!ModelState.IsValid) return BadRequest(ModelState);
+        var enityData = await _lookUpServices.BookCategories();
+        var model = _mapper.Map<List<CommonDto>>(enityData);
+        if (enityData != null)
         {
-            _lookUpServices = lookUpServices;
-            _mapper = mapper;
-            _config = config;
+            return Ok(new { Success = true, data = model, });
         }
-        [HttpGet("BookCategories")]
-        public async Task<IActionResult> BookCategories()
+        else
         {
-            if (!ModelState.IsValid) return BadRequest(ModelState);
-            var enityData = await _lookUpServices.BookCategories();
-
-            if(enityData != null)
-            {
-                return Ok(new
-                {
-                    data = enityData,
-                    Success = true,
-                });
-            }
-            else
-            {
-                return Ok(new
-                {
-                    data = string.Empty,
-                    Success = true,
-                });
-            }
-           
-            
-
+            return Ok(new { Success = false, data = string.Empty, });
         }
     }
+
+
+    [HttpGet("FarqaCategories")]
+    public async Task<IActionResult> FarqaCategories()
+    {
+        if (!ModelState.IsValid) return BadRequest(ModelState);
+        var enityData = await _lookUpServices.FarqaCategories();
+        var model = _mapper.Map<List<FarqaCategoryDto>>(enityData);
+        if (model != null)
+        {
+            return Ok(new { Success = true, data = model, });
+        }
+        else
+        {
+            return Ok(new { Success = false, data = string.Empty    , });
+        }
+    }
+
+
+
+    [HttpGet("GetScholars")]
+    public async Task<IActionResult> GetScholars()
+    {
+        if (!ModelState.IsValid) return BadRequest(ModelState);
+        var enityData = await _lookUpServices.GetScholars();
+        var model = _mapper.Map<List<ScholarDto>>(enityData);
+        if (model != null)
+        {
+            return Ok(new { Success = true, data = model, });
+        }
+        else
+        {
+            return Ok(new { Success = false, data = string.Empty, });
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

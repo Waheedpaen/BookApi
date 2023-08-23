@@ -31,14 +31,14 @@ public class BookCategoryController : ControllerBase
         var dataExit = await _bookCategoryServices.BookCategoryAlreadyExit(enity.Name);
         if (dataExit != null)
         {
-            return Ok(new { Success = false, Message = dataExit.Name + ' ' + "Already Exist", });  
-        } 
+            return Ok(new { Success = false, Message = dataExit.Name + ' ' + "Already Exist", });
+        }
         else
         {
             await _bookCategoryServices.Create(enity);
-            return Ok(new { Success = true, Message = CustomMessage.Added }); 
+            return Ok(new { Success = true, Message = CustomMessage.Added });
         }
-    } 
+    }
 
     [HttpGet("BookCategoryDetail/{Id}")]
     public async Task<IActionResult> Get(int Id)
@@ -48,15 +48,15 @@ public class BookCategoryController : ControllerBase
         var model = _mapper.Map<CommonDto>(entity);
         if (model != null)
         {
-            return Ok(new {  Data = model, Success = true, }); 
+            return Ok(new { Data = model, Success = true, });
         }
         else
         {
-            return Ok(new { Data = string.Empty, Success = false,  }); 
+            return Ok(new { Data = string.Empty, Success = false, });
         }
 
     }
-     
+
     [HttpDelete("DeleteBookCategory/{Id}")]
     public async Task<IActionResult> Delete(int Id)
     {
@@ -64,8 +64,8 @@ public class BookCategoryController : ControllerBase
         var entity = await _bookCategoryServices.Get(Id);
 
         if (entity != null)
-        { 
-             await _bookCategoryServices.Delete(entity);
+        {
+            await _bookCategoryServices.Delete(entity);
             return Ok(new { Success = true, Message = CustomMessage.Deleted });
         }
         else
@@ -73,44 +73,34 @@ public class BookCategoryController : ControllerBase
             return Ok(new { Message = CustomMessage.RecordNotFound, Success = false, });
         }
     }
-     
+
+
 
     [HttpPut("UpdateBookCategory")]
     public async Task<IActionResult> UpdateBookCategory(CommonDto model)
     {
         if (!ModelState.IsValid) return BadRequest(ModelState);
-        var entity = _mapper.Map<BookCategory>(model); 
-        var dataExit = await _bookCategoryServices.BookCategoryAlreadyExit(entity.Name);
-        if (dataExit != null)
+        var entity = _mapper.Map<BookCategory>(model);
+        var dataAlreadyExits = await _bookCategoryServices.BookCategoryAlreadyExit(entity.Name);
+        if (dataAlreadyExits != null)
         {
-            return Ok(new { Success = false, Message = dataExit.Name + ' ' + "Already Exist", });
+            return Ok(new { Success = false, Message = dataAlreadyExits.Name + ' ' + "Already Exist" });
         }
         else
         {
-            var getDetail = await _bookCategoryServices.Get(entity.Id);
-            if (getDetail != null)
+            var detailOldData = await _bookCategoryServices.Get(model.Id);
+            var newData = _mapper.Map<BookCategory>(model);
+            if (detailOldData != null)
             {
-                await _bookCategoryServices.Update(getDetail, entity);
-                return Ok(new { Message = CustomMessage.Updated, Success = true, }); 
+                await _bookCategoryServices.Update(detailOldData, newData);
+                return Ok(new { Success = true, Message = CustomMessage.Updated });
             }
             else
             {
-                return Ok(new { Message = CustomMessage.RecordNotFound, Success = false, });
+                return Ok(new { Success = false, Message = CustomMessage.RecordNotFound });
             }
-        }
-
+        } 
     }
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -123,11 +113,12 @@ public class BookCategoryController : ControllerBase
 
 
 
- 
-          
-       
-           
 
- 
- 
+
+
+
+
+
+
+
  

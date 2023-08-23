@@ -2,7 +2,7 @@
 
 namespace EntitiesClasses.Entities;
  
-    public  class ReligionCategory : CommonClass
+    public  class FarqaCategory : CommonClass
 {
   
 

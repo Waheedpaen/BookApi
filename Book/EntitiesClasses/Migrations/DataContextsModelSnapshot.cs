@@ -48,6 +48,72 @@ namespace EntitiesClasses.Migrations
                     b.ToTable("BookCategories");
                 });
 
+            modelBuilder.Entity("EntitiesClasses.Entities.FarqaCategory", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("BookCategoryId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("Created_At")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("varchar(50)");
+
+                    b.Property<DateTime?>("Updated_At")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BookCategoryId");
+
+                    b.ToTable("FarqaCategories");
+                });
+
+            modelBuilder.Entity("EntitiesClasses.Entities.Scholar", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime?>("Created_At")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("FarqaCategoryId")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("MadrassaName")
+                        .IsRequired()
+                        .HasColumnType("varchar(100)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("varchar(50)");
+
+                    b.Property<DateTime?>("Updated_At")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("FarqaCategoryId");
+
+                    b.ToTable("Scholars");
+                });
+
             modelBuilder.Entity("EntitiesClasses.Entities.User", b =>
                 {
                     b.Property<int>("Id")
@@ -139,6 +205,28 @@ namespace EntitiesClasses.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("UserTypes");
+                });
+
+            modelBuilder.Entity("EntitiesClasses.Entities.FarqaCategory", b =>
+                {
+                    b.HasOne("EntitiesClasses.Entities.BookCategory", "BookCategory")
+                        .WithMany()
+                        .HasForeignKey("BookCategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("BookCategory");
+                });
+
+            modelBuilder.Entity("EntitiesClasses.Entities.Scholar", b =>
+                {
+                    b.HasOne("EntitiesClasses.Entities.FarqaCategory", "FarqaCategory")
+                        .WithMany()
+                        .HasForeignKey("FarqaCategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("FarqaCategory");
                 });
 
             modelBuilder.Entity("EntitiesClasses.Entities.User", b =>

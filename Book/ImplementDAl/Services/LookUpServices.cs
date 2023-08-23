@@ -16,5 +16,16 @@ public class LookUpServices : ILookUpServices
     {
         return await _unitOfWork.ILookUpRepository.BookCategories();
     }
+
+    public async Task<List<FarqaCategory>> FarqaCategories()
+    {
+        return await _unitOfWork.ILookUpRepository.FarqaCategories();
+    }
+
+    public async Task<List<Scholar>> GetScholars()
+    {
+        return await _unitOfWork.ILookUpRepository.GetScholars();
+
+    }
 }
  

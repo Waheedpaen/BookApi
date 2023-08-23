@@ -18,9 +18,11 @@ global  using Microsoft.AspNetCore.Authorization;
 global using Microsoft.AspNetCore.Http;
    
 global using EntitiesClasses.DataContext;
-  
+global using  DataAccessLayer.Services;
 global using Microsoft.AspNetCore.Authentication.JwtBearer;
 global using Microsoft.EntityFrameworkCore;
 global using Microsoft.IdentityModel.Tokens;
 global using Microsoft.OpenApi.Models;
 global using MobileManagementSystem.Extension;
+global using  ViewModels.FarqaCategoryViewModel;
+global using HelperData;

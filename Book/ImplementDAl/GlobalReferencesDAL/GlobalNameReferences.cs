@@ -10,7 +10,8 @@ global using DataAccessLayer.IUnitofWork;
 global using DataAccessLayer.IRepositories;
 global using EntitiesClasses.DataContext;
 global using System;
-  
+global using ImplementDAL.Reporsitory;
+global using   Microsoft.EntityFrameworkCore;
 global using System.Diagnostics;
 
 global using   DataAccessLayer.Services;
