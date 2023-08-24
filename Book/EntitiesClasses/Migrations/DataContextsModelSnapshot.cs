@@ -48,6 +48,82 @@ namespace EntitiesClasses.Migrations
                     b.ToTable("BookCategories");
                 });
 
+            modelBuilder.Entity("EntitiesClasses.Entities.BookDetail", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime?>("Created_At")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("ImageUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("varchar(50)");
+
+                    b.Property<int>("ScholarId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("Updated_At")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ScholarId");
+
+                    b.ToTable("BookDetails");
+                });
+
+            modelBuilder.Entity("EntitiesClasses.Entities.BookImage", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("BookDetailId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("Created_At")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("FileNamePDF")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FilePathPDF")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Image")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("varchar(50)");
+
+                    b.Property<DateTime?>("Updated_At")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BookDetailId");
+
+                    b.ToTable("BookImages");
+                });
+
             modelBuilder.Entity("EntitiesClasses.Entities.FarqaCategory", b =>
                 {
                     b.Property<int>("Id")
@@ -207,6 +283,28 @@ namespace EntitiesClasses.Migrations
                     b.ToTable("UserTypes");
                 });
 
+            modelBuilder.Entity("EntitiesClasses.Entities.BookDetail", b =>
+                {
+                    b.HasOne("EntitiesClasses.Entities.Scholar", "Scholar")
+                        .WithMany()
+                        .HasForeignKey("ScholarId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Scholar");
+                });
+
+            modelBuilder.Entity("EntitiesClasses.Entities.BookImage", b =>
+                {
+                    b.HasOne("EntitiesClasses.Entities.BookDetail", "BookDetail")
+                        .WithMany("BookImages")
+                        .HasForeignKey("BookDetailId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("BookDetail");
+                });
+
             modelBuilder.Entity("EntitiesClasses.Entities.FarqaCategory", b =>
                 {
                     b.HasOne("EntitiesClasses.Entities.BookCategory", "BookCategory")
@@ -238,6 +336,11 @@ namespace EntitiesClasses.Migrations
                         .IsRequired();
 
                     b.Navigation("UserTypes");
+                });
+
+            modelBuilder.Entity("EntitiesClasses.Entities.BookDetail", b =>
+                {
+                    b.Navigation("BookImages");
                 });
 #pragma warning restore 612, 618
         }

@@ -1,4 +1,5 @@
 ﻿using Azure;
+using DataAccessLayer.IUnitofWork;
 using DataAccessLayer.Services;
 using HelperData;
 using ImplementDAL.Services;
@@ -79,11 +80,38 @@ public class LookUpController : ControllerBase
 
 
 
+    [HttpGet("GetBookDetails")]
+    public async Task<IActionResult> GetBookDetails()
+    {
+        if (!ModelState.IsValid) return BadRequest(ModelState);
+        var enityData = await _lookUpServices.GetBookDetails();
+        //var model = _mapper.Map<List<ScholarDto>>(enityData);//it dto have remained
+        if (enityData != null)
+        {
+            return Ok(new { Success = true, data = enityData, });
+        }
+        else
+        {
+            return Ok(new { Success = false, data = string.Empty, });
+        }
+    }
+    [HttpGet("GetBookImages")]
+    public async Task<IActionResult> GetBookImages()
+    {
+        if (!ModelState.IsValid) return BadRequest(ModelState);
+        var enityData = await _lookUpServices.GetBookImages();
+        //var model = _mapper.Map<List<ScholarDto>>(enityData);//it dto have remained
+        if (enityData != null)
+        {
+            return Ok(new { Success = true, data = enityData, });
+        }
+        else
+        {
+            return Ok(new { Success = false, data = string.Empty, });
+        }
+    }
 
-
-
-
-
+     
 
 
 

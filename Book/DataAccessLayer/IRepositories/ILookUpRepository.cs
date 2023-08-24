@@ -12,11 +12,14 @@ namespace DataAccessLayer.IRepositories;
  
     public interface ILookUpRepository
     {
-        Task<List<BookCategory>> BookCategories();
-    
-       Task<List<FarqaCategory>> FarqaCategories();
-    Task<List<Scholar>> GetScholars();
+      Task<List<BookCategory>> BookCategories();
+      Task<List<FarqaCategory>> FarqaCategories();
+     Task<List<Scholar>> GetScholars();
+    Task<List<BookDetail>> GetBookDetails();
+
+    Task<List<BookImage>> GetBookImages();
+
 }
-  
- 
- 
+
+
+

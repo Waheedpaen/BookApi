@@ -10,6 +10,9 @@ namespace EntitiesClasses.DataContext;
     public DbSet<UserTypes> UserTypes { get; set; }
     public DbSet<BookCategory> BookCategories { get; set; } 
     public DbSet<FarqaCategory> FarqaCategories { get; set; }
+    public DbSet<BookDetail>  BookDetails { get; set; }
+    public DbSet<BookImage>  BookImages { get; set; }
+    
     public DbSet<Scholar> Scholars { get; set; }    
     public DataContexts(DbContextOptions<DataContexts> options) : base(options)
     {
@@ -23,7 +26,7 @@ namespace EntitiesClasses.DataContext;
         modelBuilder.Entity<BookCategory>().HasQueryFilter((d => EF.Property<bool>(d, "IsDeleted") == false));
         modelBuilder.Entity<FarqaCategory>().HasQueryFilter((d => EF.Property<bool>(d, "IsDeleted") == false));
         modelBuilder.Entity<Scholar>().HasQueryFilter((d => EF.Property<bool>(d, "IsDeleted") == false));
-
+        modelBuilder.Entity<BookDetail>().HasQueryFilter((d => EF.Property<bool>(d, "IsDeleted") == false));
 
         base.OnModelCreating(modelBuilder);
     }

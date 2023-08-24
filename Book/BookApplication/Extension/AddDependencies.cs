@@ -22,14 +22,12 @@ namespace MobileManagementSystem.Extension
             Services.AddTransient<ILookUpServices, LookUpServices>();
             Services.AddTransient<IBookCategoryServices, BookCategoryServices>();
             Services.AddTransient<IFarqaCategoryServices, FarqaCategoryServices>();
+            Services.AddTransient<IBookDetailServices, BookDetailServices>();
             //Services.AddTransient<IOperatingSystemService, OperatingSystemService>();
             //Services.AddTransient<ILoggerManager, LoggerManager>();
             Services.AddAutoMapper(typeof(AutoMappers));
 
-            return Services;
-
-
-            return Services;
+            return Services; 
         }
     }
 }

@@ -27,5 +27,18 @@ public class LookUpServices : ILookUpServices
         return await _unitOfWork.ILookUpRepository.GetScholars();
 
     }
+
+
+    public async Task<List<BookDetail>> GetBookDetails()
+    {
+        return await _unitOfWork.ILookUpRepository.GetBookDetails();
+    }
+
+    public async Task<List<BookImage>> GetBookImages()
+    {
+        return await _unitOfWork.ILookUpRepository.GetBookImages();
+    }
+
+
 }
  

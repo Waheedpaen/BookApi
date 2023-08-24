@@ -14,6 +14,7 @@ namespace ImplementDAL.UnitWorks;
     private FarqaCategoryRepository _faarqaCategoryRepository;
     private BookCategoryRepository _bookCategoryRepository;
     private ScholarRepository _scholarRepository;
+    private BookDetailRepository  _bookDetailRepository;
     public readonly DataContexts _context;
     public UnitWork(DataContexts context)
     {
@@ -29,6 +30,8 @@ namespace ImplementDAL.UnitWorks;
     public IFarqaCategoryRepository IFarqaCategoryRepository => _faarqaCategoryRepository ?? new(_context);
 
     public IScholarRepository IScholarRepository => _scholarRepository ?? new(_context);
+
+    public IBookDetailRepository IBookDetailRepository => _bookDetailRepository ?? new(_context);
 
     public async Task<int> CommitAsync()
     {

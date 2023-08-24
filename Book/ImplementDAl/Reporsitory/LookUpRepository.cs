@@ -29,6 +29,16 @@ namespace ImplementDAl.Reporsitory;
         return await Context.Set<FarqaCategory>().ToListAsync();
     }
 
+    public async  Task<List<BookDetail>> GetBookDetails()
+    {
+        return await Context.Set<BookDetail>().ToListAsync();
+    }
+
+    public async Task<List<BookImage>> GetBookImages()
+    {
+        return await Context.Set<BookImage>().ToListAsync();
+    }
+
     public async Task<List<Scholar>> GetScholars()
     {
         return await Context.Set<Scholar>().ToListAsync();
