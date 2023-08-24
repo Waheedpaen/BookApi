@@ -60,9 +60,10 @@ namespace ImplementDAl.Services;
     {
         Expression<Func<Scholar, bool>> predicate = category =>
         string.IsNullOrEmpty(options.SearchTerm) ||
-        category.Name.Contains(options.SearchTerm);
+        category.Name.Contains(options.SearchTerm) || string.IsNullOrEmpty(options.MadrassaName) ||
+        category.Name.Contains(options.MadrassaName);
 
-        var pagedResult = await _unitOfWork.IFarqaCategoryRepository.SearchAndPaginateAsync(predicate, new PaginationOptions() { PageSize = options.PageSize, Page = options.Page });
+        var pagedResult = await _unitOfWork.IScholarRepository.SearchAndPaginateAsync(predicate, new PaginationOptions() { PageSize = options.PageSize, Page = options.Page });
         return pagedResult;
     }
 

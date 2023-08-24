@@ -26,6 +26,7 @@ public class LookUpController : ControllerBase
         _mapper = mapper;
         _config = config;
     }
+
     [HttpGet("BookCategories")]
     public async Task<IActionResult> BookCategories()
     {
@@ -58,8 +59,7 @@ public class LookUpController : ControllerBase
             return Ok(new { Success = false, data = string.Empty    , });
         }
     }
-
-
+     
 
     [HttpGet("GetScholars")]
     public async Task<IActionResult> GetScholars()
@@ -76,10 +76,7 @@ public class LookUpController : ControllerBase
             return Ok(new { Success = false, data = string.Empty, });
         }
     }
-
-
-
-
+ 
     [HttpGet("GetBookDetails")]
     public async Task<IActionResult> GetBookDetails()
     {

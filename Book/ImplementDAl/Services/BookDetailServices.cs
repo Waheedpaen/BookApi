@@ -21,9 +21,9 @@ public class BookDetailServices : IBookDetailServices
         return await _unitOfWork.IBookDetailRepository.BookDetailAlreadyExit(name);
     }
 
-    public async  Task<BookImage> CreateBookImages(BookImage model)
+    public async Task<BookImage> CreateBookImages(BookImage model)
     {
-        return  await _unitOfWork.IBookDetailRepository.SaveBookImages(model);
+        return await _unitOfWork.IBookDetailRepository.SaveBookImages(model);
     }
     public async Task<BookImage> DeleteBookImages(BookImage model)
     {
@@ -50,7 +50,7 @@ public class BookDetailServices : IBookDetailServices
     }
     public async Task<BookImage> SaveBookImages(BookImage model)
     {
-       return await _unitOfWork.IBookDetailRepository.SaveBookImages(model);
+        return await _unitOfWork.IBookDetailRepository.SaveBookImages(model);
     }
     public async Task<BookDetail> DeleteBookDetail(BookDetail model)
     {
@@ -76,7 +76,7 @@ public class BookDetailServices : IBookDetailServices
 
     public async Task<BookImage> GetBookImageById(int? Id)
     {
-       return await _unitOfWork.IBookDetailRepository.GetImageId(Id);
+        return await _unitOfWork.IBookDetailRepository.GetImageId(Id);
     }
 
     public async Task<BookDetail> UpdateBookDetail(BookDetail update, BookDetail model)
@@ -90,6 +90,15 @@ public class BookDetailServices : IBookDetailServices
         return update;
     }
 
-  
+    public async Task<PagedResult<BookDetail>> SearchAndPaginateAsync(SearchAndPaginateOptions options)
+    {
+        Expression<Func<BookDetail, bool>> predicate = category => 
+        category.Name.Contains(options.SearchTerm)
+        ||   
+        category.Scholar.Name.Contains(options.ScholarName);
+
+        var pagedResult = await _unitOfWork.IBookDetailRepository.SearchAndPaginateAsync(predicate, new PaginationOptions() { PageSize = options.PageSize, Page = options.Page });
+        return pagedResult;
+    }
 }
  

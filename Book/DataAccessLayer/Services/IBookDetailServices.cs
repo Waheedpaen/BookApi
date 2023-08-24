@@ -32,7 +32,7 @@ namespace DataAccessLayer.Services;
     Task<BookImage> DeleteBookImage(BookImage model);
     Task<BookImage> GetBookImageById(int ?Id);
 
-  
+    Task<PagedResult<BookDetail>> SearchAndPaginateAsync(SearchAndPaginateOptions options);
 
 
 }

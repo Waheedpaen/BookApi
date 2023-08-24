@@ -1,6 +1,7 @@
 ﻿using Azure;
 using Azure.Core;
 using EntitiesClasses.Entities;
+using HelperDatas.PaginationsClasses;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -209,7 +210,12 @@ public class BookDetailController : ControllerBase
 
 
 
-
+    [HttpGet("search")]
+    public async Task<IActionResult> SearchAndPaginateCategories([FromQuery] SearchAndPaginateOptions options)
+    {
+        var pagedResult = await _bookDetailServices.SearchAndPaginateAsync(options);
+        return Ok(pagedResult);
+    }
 
 
 

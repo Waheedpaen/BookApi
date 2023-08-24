@@ -105,7 +105,7 @@ public class BookCategoryController : ControllerBase
     }
 
 
-    [HttpPost("search")]
+    [HttpGet("search")]
     public async Task<IActionResult> SearchAndPaginateCategories([FromQuery] SearchAndPaginateOptions  options)
     {
         var pagedResult = await _bookCategoryServices.SearchAndPaginateAsync(options);
