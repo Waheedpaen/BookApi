@@ -1,4 +1,5 @@
 ﻿using DataAccessLayer.IRepositories;
+using HelperDatas.GlobalReferences;
 using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 
@@ -57,6 +58,32 @@ public class Reporsitory<TEntity, TPrimaryKeyType> : IRepository<TEntity, TPrima
     {
         
         return await Context.Set<TEntity>().SingleOrDefaultAsync(predicate);
+    }
+
+    public async Task<PagedResult<TEntity>> SearchAndPaginateAsync(Expression<Func<TEntity, bool>> predicate, PaginationOptions options)
+    {
+        var query = Context.Set<TEntity>().AsQueryable();
+
+        if (predicate != null)
+        {
+            query = query.Where(predicate);
+        }
+
+        int totalRecords = await query.CountAsync();
+        int totalPages = (int)Math.Ceiling((double)totalRecords / options.PageSize);
+        int startIndex = (options.Page - 1) * options.PageSize;
+
+        List<TEntity> data = await query
+            .Skip(startIndex)
+            .Take(options.PageSize)
+            .ToListAsync();
+
+        return new PagedResult<TEntity>
+        {
+            Data = data,
+            TotalRecords = totalRecords,
+            TotalPages = totalPages
+        };
     }
 }
  

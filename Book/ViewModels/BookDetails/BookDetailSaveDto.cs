@@ -8,12 +8,13 @@ using ViewModels.ScholarViewModel;
 
 namespace ViewModels.BookDetails
 {
-    public class BookDetailSaveDto 
+    public class BookDetailSaveDto  
     {
         public BookDetailSaveDto()
         {
             this.BookImages = new List<BookImagePDFSaveDto>();
         }
+        public int ? Id { get; set; }
         public string Name { get; set; }
         public string ImageUrl { get; set; }
 

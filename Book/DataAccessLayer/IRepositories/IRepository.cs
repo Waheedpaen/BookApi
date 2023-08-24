@@ -1,4 +1,6 @@
-﻿    namespace DataAccessLayer.IRepositories;
+﻿using HelperDatas.GlobalReferences;
+
+namespace DataAccessLayer.IRepositories;
     public interface IRepository<TEntity, in TPrimaryKeyType> where TEntity : class
     {
     ValueTask<TEntity> GetByIdAsync(TPrimaryKeyType id);
@@ -13,7 +15,7 @@
     void RemoveRange(IEnumerable<TEntity> entities);
     int Count();
 
-
+    Task<PagedResult<TEntity>> SearchAndPaginateAsync(Expression<Func<TEntity, bool>> predicate, PaginationOptions options);
 
 
 

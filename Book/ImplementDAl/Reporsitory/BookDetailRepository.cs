@@ -17,7 +17,7 @@ public class BookDetailRepository :Reporsitory<BookDetail, int>, IBookDetailRepo
         throw new NotImplementedException();
     }
 
-    public async Task<BookImage> GetImageId(int Id)
+    public async Task<BookImage> GetImageId(int? Id)
     {
         return await Context.Set<BookImage>().FirstOrDefaultAsync(obj => obj.Id == Id);
 

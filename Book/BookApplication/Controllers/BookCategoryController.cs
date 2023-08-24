@@ -1,6 +1,8 @@
 ﻿using Azure;
 using DataAccessLayer.Services;
 using HelperData;
+using HelperDatas.PaginationsClasses;
+using ImplementDAl.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ViewModels.CommonViewModel;
@@ -103,7 +105,12 @@ public class BookCategoryController : ControllerBase
     }
 
 
-
+    [HttpPost("search")]
+    public async Task<IActionResult> SearchAndPaginateCategories([FromQuery] SearchAndPaginateOptionsBookDetail options)
+    {
+        var pagedResult = await _bookCategoryServices.SearchAndPaginateCategories(options);
+        return Ok(pagedResult);
+    }
 }
 
 

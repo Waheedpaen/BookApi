@@ -13,7 +13,7 @@ namespace DataAccessLayer.Services;
     Task<BookDetail> SaveBookDetail(BookDetail model);
 
      Task<BookDetail> DeleteBookDetail(BookDetail model);
- 
+    Task<BookDetail> UpdateBookDetail(BookDetail update, BookDetail model);
 
 
 
@@ -28,7 +28,7 @@ namespace DataAccessLayer.Services;
     Task<List<BookDetail>> GetBookDetailByScholar(int Id);
     #endregion
     Task<BookImage> DeleteBookImage(BookImage model);
-    Task<BookImage> GetBookImageById(int Id);
+    Task<BookImage> GetBookImageById(int ?Id);
 
 
 

@@ -1,9 +1,12 @@
 ﻿using Azure;
 using HelperDatas;
+using HelperDatas.GlobalReferences;
+using HelperDatas.PaginationsClasses;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -48,6 +51,18 @@ namespace ImplementDAl.Services
         public Task<List<BookCategory>> GetBookCategory(SeachItem searchitem)
         {
             throw new NotImplementedException();
+        }
+
+       
+
+        public async Task<PagedResult<BookCategory>> SearchAndPaginateCategories(SearchAndPaginateOptionsBookDetail options)
+        {
+            Expression<Func<BookCategory, bool>> predicate = category =>
+         string.IsNullOrEmpty(options.SearchTerm) ||
+         category.Name.Contains(options.SearchTerm) ;
+
+            var pagedResult = await _unitOfWork.IBookCategory.SearchAndPaginateAsync(predicate, new PaginationOptions() { PageSize = options.PageSize, Page = options.Page });
+            return pagedResult;
         }
 
         public async Task<BookCategory> Update(BookCategory update, BookCategory model)

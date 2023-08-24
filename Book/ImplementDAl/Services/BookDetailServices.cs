@@ -70,9 +70,21 @@ public class BookDetailServices : IBookDetailServices
         return await _unitOfWork.IBookDetailRepository.DeleteImage(model);
     }
 
-    public async Task<BookImage> GetBookImageById(int Id)
+    public async Task<BookImage> GetBookImageById(int? Id)
     {
        return await _unitOfWork.IBookDetailRepository.GetImageId(Id);
     }
+
+    public async Task<BookDetail> UpdateBookDetail(BookDetail update, BookDetail model)
+    {
+        update.Id = model.Id;
+        update.ImageUrl = model.ImageUrl;
+        update.ScholarId = model.ScholarId;
+        update.Name = model.Name;
+        update.Updated_At = model.Updated_At;
+        await _unitOfWork.CommitAsync();
+        return update;
+    }
+
 }
  

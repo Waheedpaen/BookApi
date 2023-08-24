@@ -1,6 +1,8 @@
 ﻿using EntitiesClasses.CommonClasses;
 using EntitiesClasses.Entities;
 using HelperDatas;
+using HelperDatas.GlobalReferences;
+using HelperDatas.PaginationsClasses;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,6 +19,11 @@ namespace DataAccessLayer.Services
         Task<BookCategory> Delete(BookCategory model);
         //Task<List<BookCategory>> GetBookCategory(SeachItem searchitem);
         public Task<BookCategory> BookCategoryAlreadyExit(string name);
+        Task<PagedResult<BookCategory>> SearchAndPaginateCategories(SearchAndPaginateOptionsBookDetail options);
     }
+
+
+
 }
+ 
  
