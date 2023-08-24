@@ -1,5 +1,9 @@
 ﻿
 
+using HelperDatas.GlobalReferences;
+using HelperDatas.PaginationsClasses;
+using System.Linq.Expressions;
+
 namespace ImplementDAl.Services;
 
 public class FarqaCategoryServices : IFarqaCategoryServices
@@ -41,6 +45,16 @@ public class FarqaCategoryServices : IFarqaCategoryServices
     public async Task<List<FarqaCategory>> GetFarqaCategoriesByBook(int Id)
     {
         return await _unitOfWork.IFarqaCategoryRepository.GetFarqaCategoriesByBook(Id);
+    }
+
+    public async Task<PagedResult<FarqaCategory>> SearchAndPaginateAsync(SearchAndPaginateOptions options)
+    {
+        Expression<Func<FarqaCategory, bool>> predicate = category =>
+        string.IsNullOrEmpty(options.SearchTerm) ||
+        category.Name.Contains(options.SearchTerm);
+
+        var pagedResult = await _unitOfWork.IFarqaCategoryRepository.SearchAndPaginateAsync(predicate, new PaginationOptions() { PageSize = options.PageSize, Page = options.Page });
+        return pagedResult;
     }
 
     public async Task<FarqaCategory> Update(FarqaCategory update, FarqaCategory model)

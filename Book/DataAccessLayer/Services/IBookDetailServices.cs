@@ -2,6 +2,8 @@
 
 using DataAccessLayer.IUnitofWork;
 using EntitiesClasses.Entities;
+using HelperDatas.GlobalReferences;
+using HelperDatas.PaginationsClasses;
 
 namespace DataAccessLayer.Services;
  
@@ -30,7 +32,7 @@ namespace DataAccessLayer.Services;
     Task<BookImage> DeleteBookImage(BookImage model);
     Task<BookImage> GetBookImageById(int ?Id);
 
-
+  
 
 
 }

@@ -19,7 +19,7 @@ namespace DataAccessLayer.Services
         Task<BookCategory> Delete(BookCategory model);
         //Task<List<BookCategory>> GetBookCategory(SeachItem searchitem);
         public Task<BookCategory> BookCategoryAlreadyExit(string name);
-        Task<PagedResult<BookCategory>> SearchAndPaginateCategories(SearchAndPaginateOptionsBookDetail options);
+        Task<PagedResult<BookCategory>> SearchAndPaginateAsync(SearchAndPaginateOptions options);
     }
 
 

@@ -55,7 +55,7 @@ namespace ImplementDAl.Services
 
        
 
-        public async Task<PagedResult<BookCategory>> SearchAndPaginateCategories(SearchAndPaginateOptionsBookDetail options)
+        public async Task<PagedResult<BookCategory>> SearchAndPaginateAsync(SearchAndPaginateOptions options)
         {
             Expression<Func<BookCategory, bool>> predicate = category =>
          string.IsNullOrEmpty(options.SearchTerm) ||

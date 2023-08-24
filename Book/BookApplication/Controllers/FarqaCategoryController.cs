@@ -1,4 +1,6 @@
 ﻿
+using HelperDatas.PaginationsClasses;
+
 namespace BookApplication.Controllers;
 
 [Route("api/[controller]")]
@@ -113,7 +115,12 @@ namespace BookApplication.Controllers;
     }
 
 
-
+    [HttpGet("search")]
+    public async Task<IActionResult> SearchAndPaginateAsync([FromQuery] SearchAndPaginateOptions options)
+    {
+        var pagedResult = await _farqaCategoryServices.SearchAndPaginateAsync(options);
+        return Ok(pagedResult);
+    }
 
 
 

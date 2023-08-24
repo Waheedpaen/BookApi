@@ -1,4 +1,9 @@
-﻿ 
+﻿
+using EntitiesClasses.Migrations;
+using HelperDatas.GlobalReferences;
+using HelperDatas.PaginationsClasses;
+using System.Linq.Expressions;
+
 namespace ImplementDAl.Services;
  
     public class ScholarServices : IScholarServices
@@ -51,7 +56,15 @@ namespace ImplementDAl.Services;
         }
 
 
+    public async Task<PagedResult<Scholar>> SearchAndPaginateAsync(SearchAndPaginateOptions options)
+    {
+        Expression<Func<Scholar, bool>> predicate = category =>
+        string.IsNullOrEmpty(options.SearchTerm) ||
+        category.Name.Contains(options.SearchTerm);
 
-
+        var pagedResult = await _unitOfWork.IFarqaCategoryRepository.SearchAndPaginateAsync(predicate, new PaginationOptions() { PageSize = options.PageSize, Page = options.Page });
+        return pagedResult;
     }
+
+}
  

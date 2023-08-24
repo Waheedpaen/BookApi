@@ -1,5 +1,6 @@
 ﻿
 
+using HelperDatas.PaginationsClasses;
 using ViewModels.CommonViewModel;
 using ViewModels.ScholarViewModel;
 
@@ -109,6 +110,12 @@ public class ScholarController : ControllerBase
         {
             return Ok(new { Data = string.Empty, Success = false, });
         }
+    }
+    [HttpGet("search")] 
+    public async Task<IActionResult> SearchAndPaginateAsync([FromQuery] SearchAndPaginateOptions options)
+    {
+        var pagedResult = await _scholarServices.SearchAndPaginateAsync(options);
+        return Ok(pagedResult);
     }
 
 

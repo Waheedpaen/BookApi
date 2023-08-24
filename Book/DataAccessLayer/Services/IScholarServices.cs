@@ -1,5 +1,7 @@
 ﻿
 using EntitiesClasses.Entities;
+using HelperDatas.GlobalReferences;
+using HelperDatas.PaginationsClasses;
 
 namespace DataAccessLayer.Services;
  
@@ -11,5 +13,6 @@ namespace DataAccessLayer.Services;
     public Task<Scholar> ScholarNameAlreadyExit(string name);
     Task<Scholar> Delete(Scholar model);
     public Task<List<Scholar>> GetScholarByFarqaCategories(int Id);
+    Task<PagedResult<Scholar>> SearchAndPaginateAsync(SearchAndPaginateOptions options);
 }
  
