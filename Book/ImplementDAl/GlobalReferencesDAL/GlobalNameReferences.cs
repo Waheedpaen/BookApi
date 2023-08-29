@@ -13,5 +13,7 @@ global using System;
 global using ImplementDAL.Reporsitory;
 global using   Microsoft.EntityFrameworkCore;
 global using System.Diagnostics;
-
-global using   DataAccessLayer.Services;
+global using System.Linq.Expressions;
+global using   DataAccessLayer.Services; 
+global using HelperDatas.GlobalReferences;
+global using HelperDatas.PaginationsClasses;

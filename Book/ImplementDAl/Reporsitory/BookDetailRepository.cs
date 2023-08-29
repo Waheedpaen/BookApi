@@ -12,9 +12,9 @@ public class BookDetailRepository :Reporsitory<BookDetail, int>, IBookDetailRepo
     }
     public DataContexts DataContexts => Context as DataContexts;
 
-    public Task<BookDetail> BookDetailAlreadyExit(string name)
+    public async Task<BookDetail> BookDetailAlreadyExit(string name)
     {
-        throw new NotImplementedException();
+        return await Context.Set<BookDetail>().FirstOrDefaultAsync(data => data.Name == name) ;
     }
 
     public async Task<BookImage> GetImageId(int? Id)

@@ -12,7 +12,8 @@ namespace EntitiesClasses.DataContext;
     public DbSet<FarqaCategory> FarqaCategories { get; set; }
     public DbSet<BookDetail>  BookDetails { get; set; }
     public DbSet<BookImage>  BookImages { get; set; }
-    
+    public DbSet<MadrassaBook> MadrassaBooks { get; set; }
+    public DbSet<MadrassaBookCatgory> MadrassaBookCatgories { get; set; }
     public DbSet<Scholar> Scholars { get; set; }    
     public DataContexts(DbContextOptions<DataContexts> options) : base(options)
     {

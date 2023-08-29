@@ -61,6 +61,7 @@ public class BookDetailServices : IBookDetailServices
     public async Task<BookImage> UpdateBookImages(BookImage update, BookImage model)
     {
         update.BookDetailId = model.BookDetailId;
+        update.Name = model.Name;
         update.Image = model.Image;
         update.FileNamePDF = model.FileNamePDF;
         update.Updated_At = model.Updated_At;
@@ -83,6 +84,7 @@ public class BookDetailServices : IBookDetailServices
     {
         update.Id = model.Id;
         update.ImageUrl = model.ImageUrl;
+        update.Name = model.Name;
         update.ScholarId = model.ScholarId;
         update.Name = model.Name;
         update.Updated_At = model.Updated_At;

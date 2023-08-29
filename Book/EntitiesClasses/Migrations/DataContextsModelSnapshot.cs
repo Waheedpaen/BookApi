@@ -155,6 +155,76 @@ namespace EntitiesClasses.Migrations
                     b.ToTable("FarqaCategories");
                 });
 
+            modelBuilder.Entity("EntitiesClasses.Entities.MadrassaBook", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime?>("Created_At")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("ImageUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("varchar(50)");
+
+                    b.Property<DateTime?>("Updated_At")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("MadrassaBooks");
+                });
+
+            modelBuilder.Entity("EntitiesClasses.Entities.MadrassaBookCatgory", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime?>("Created_At")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("FileNamePDF")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FilePathPDF")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ImageUrl")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("MadrassaBookId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("varchar(50)");
+
+                    b.Property<DateTime?>("Updated_At")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MadrassaBookId");
+
+                    b.ToTable("MadrassaBookCatgories");
+                });
+
             modelBuilder.Entity("EntitiesClasses.Entities.Scholar", b =>
                 {
                     b.Property<int>("Id")
@@ -316,6 +386,17 @@ namespace EntitiesClasses.Migrations
                     b.Navigation("BookCategory");
                 });
 
+            modelBuilder.Entity("EntitiesClasses.Entities.MadrassaBookCatgory", b =>
+                {
+                    b.HasOne("EntitiesClasses.Entities.MadrassaBook", "MadrassaBook")
+                        .WithMany("MadrassaBookCatgories")
+                        .HasForeignKey("MadrassaBookId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("MadrassaBook");
+                });
+
             modelBuilder.Entity("EntitiesClasses.Entities.Scholar", b =>
                 {
                     b.HasOne("EntitiesClasses.Entities.FarqaCategory", "FarqaCategory")
@@ -341,6 +422,11 @@ namespace EntitiesClasses.Migrations
             modelBuilder.Entity("EntitiesClasses.Entities.BookDetail", b =>
                 {
                     b.Navigation("BookImages");
+                });
+
+            modelBuilder.Entity("EntitiesClasses.Entities.MadrassaBook", b =>
+                {
+                    b.Navigation("MadrassaBookCatgories");
                 });
 #pragma warning restore 612, 618
         }
