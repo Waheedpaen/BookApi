@@ -108,7 +108,21 @@ public class LookUpController : ControllerBase
         }
     }
 
-     
+    [HttpGet("GetMadrassaBooks")]
+    public async Task<IActionResult> GetMadrassaBooks()
+    {
+        if (!ModelState.IsValid) return BadRequest(ModelState);
+        var enityData = await _lookUpServices.GetMadrassaBooks();
+        //var model = _mapper.Map<List<ScholarDto>>(enityData);//it dto have remained
+        if (enityData != null)
+        {
+            return Ok(new { Success = true, data = enityData, });
+        }
+        else
+        {
+            return Ok(new { Success = false, data = string.Empty, });
+        }
+    }
 
 
 

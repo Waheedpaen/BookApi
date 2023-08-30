@@ -13,6 +13,7 @@ namespace DataAccessLayer.Services
         Task<List<FarqaCategory>> FarqaCategories();
         Task<List<Scholar>> GetScholars();
          Task<List<BookDetail>> GetBookDetails();  
-      Task<List<BookImage>> GetBookImages(); 
+      Task<List<BookImage>> GetBookImages();
+        Task<List<MadrassaBook>> GetMadrassaBooks();
     }
 }

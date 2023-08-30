@@ -39,6 +39,11 @@ namespace ImplementDAl.Reporsitory;
         return await Context.Set<BookImage>().ToListAsync();
     }
 
+    public async Task<List<MadrassaBook>> GetMadrassaBooks()
+    {
+        return await Context.Set<MadrassaBook>().ToListAsync();
+    }
+
     public async Task<List<Scholar>> GetScholars()
     {
         return await Context.Set<Scholar>().ToListAsync();

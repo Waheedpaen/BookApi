@@ -33,12 +33,16 @@ public class LookUpServices : ILookUpServices
     {
         return await _unitOfWork.ILookUpRepository.GetBookDetails();
     }
-
+    
     public async Task<List<BookImage>> GetBookImages()
     {
         return await _unitOfWork.ILookUpRepository.GetBookImages();
     }
+    public async Task<List<MadrassaBook>> GetMadrassaBooks()
+    {
+        return await _unitOfWork.ILookUpRepository.GetMadrassaBooks();
+    }
 
 
 }
- 
+

@@ -9,8 +9,7 @@ namespace ViewModels.CommonViewModel
 {
     public class CommonDto
     {
-        public int   Id  { get; set; }
-        [Column(TypeName = "varchar(50)")]
+        public int  ? Id  { get; set; }
         public string Name { get; set; }
        
     }

@@ -90,7 +90,7 @@ public class BookCategoryController : ControllerBase
         }
         else
         {
-            var detailOldData = await _bookCategoryServices.Get(model.Id);
+            var detailOldData = await _bookCategoryServices.Get( Convert.ToInt16(model.Id));
             var newData = _mapper.Map<BookCategory>(model);
             if (detailOldData != null)
             {
@@ -105,7 +105,7 @@ public class BookCategoryController : ControllerBase
     }
 
 
-    [HttpGet("search")]
+    [HttpGet("SearchAndPaginateCategories")]
     public async Task<IActionResult> SearchAndPaginateCategories([FromQuery] SearchAndPaginateOptions  options)
     {
         var pagedResult = await _bookCategoryServices.SearchAndPaginateAsync(options);
