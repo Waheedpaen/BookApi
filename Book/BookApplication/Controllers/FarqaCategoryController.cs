@@ -115,7 +115,7 @@ namespace BookApplication.Controllers;
     }
 
 
-    [HttpGet("search")]
+    [HttpGet("SearchAndPaginateAsync")]
     public async Task<IActionResult> SearchAndPaginateAsync([FromQuery] SearchAndPaginateOptions options)
     {
         var pagedResult = await _farqaCategoryServices.SearchAndPaginateAsync(options);

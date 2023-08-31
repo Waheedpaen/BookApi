@@ -210,14 +210,29 @@ public class BookDetailController : ControllerBase
 
 
 
-    [HttpGet("search")]
-    public async Task<IActionResult> SearchAndPaginateCategories([FromQuery] SearchAndPaginateOptions options)
+    [HttpGet("SearchAndPaginateAsync")]
+    public async Task<IActionResult> SearchAndPaginateAsync([FromQuery] SearchAndPaginateOptions options)
     {
         var pagedResult = await _bookDetailServices.SearchAndPaginateAsync(options);
         return Ok(pagedResult);
     }
 
 
+    [HttpGet("BookDetail/{Id}")]
+    public async Task<IActionResult> Get(int Id)
+    {
+        if (!ModelState.IsValid) return BadRequest(ModelState);
+        var entity = await _bookDetailServices.Get(Id);
+        //var model = _mapper.Map<FarqaCategoryDto>(entity);
+        if (entity != null)
+        {
+            return Ok(new { Data = entity, Success = true, });
+        }
+        else
+        {
+            return Ok(new { Data = string.Empty, Success = false, });
+        }
+    }
 
 
 

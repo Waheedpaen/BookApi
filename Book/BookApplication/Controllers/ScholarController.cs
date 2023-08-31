@@ -97,7 +97,7 @@ public class ScholarController : ControllerBase
     }
 
     [HttpGet("GetScholarByFarqaCategories/{Id}")]
-    public async Task<IActionResult> GetScholarByFarqaCategoriesr(int Id)
+    public async Task<IActionResult> GetScholarByFarqaCategories(int Id)
     {
         if (!ModelState.IsValid) return BadRequest(ModelState);
         var entity = await _scholarServices.GetScholarByFarqaCategories(Id);
@@ -111,7 +111,7 @@ public class ScholarController : ControllerBase
             return Ok(new { Data = string.Empty, Success = false, });
         }
     }
-    [HttpGet("search")] 
+    [HttpGet("SearchAndPaginateAsync")] 
     public async Task<IActionResult> SearchAndPaginateAsync([FromQuery] SearchAndPaginateOptions options)
     {
         var pagedResult = await _scholarServices.SearchAndPaginateAsync(options);

@@ -1,5 +1,6 @@
 ﻿using ImplementDAL.Reporsitory;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.VisualBasic;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,8 +29,7 @@ namespace ImplementDAl.Reporsitory;
 
         public async Task<FarqaCategory> Get(int Id)
         {
-            return await DataContexts.Set<FarqaCategory>().Include(a=>a.BookCategory).FirstOrDefaultAsync(data => data.Id == Id);
-
+        return await Context.Set<FarqaCategory>().Include(a=>a.BookCategory).Where(data => data.Id == Id).FirstOrDefaultAsync();
         }
 
         public async Task<List<FarqaCategory>> GetFarqaCategoriesByBook(int Id)
