@@ -59,8 +59,13 @@ namespace EntitiesClasses.Migrations
                     b.Property<DateTime?>("Created_At")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("FilePathImageUrl")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("ImageUrl")
-                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ImageUrlName")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsDeleted")
@@ -91,7 +96,7 @@ namespace EntitiesClasses.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("BookDetailId")
+                    b.Property<int?>("BookDetailId")
                         .HasColumnType("int");
 
                     b.Property<DateTime?>("Created_At")
@@ -368,9 +373,7 @@ namespace EntitiesClasses.Migrations
                 {
                     b.HasOne("EntitiesClasses.Entities.BookDetail", "BookDetail")
                         .WithMany("BookImages")
-                        .HasForeignKey("BookDetailId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("BookDetailId");
 
                     b.Navigation("BookDetail");
                 });

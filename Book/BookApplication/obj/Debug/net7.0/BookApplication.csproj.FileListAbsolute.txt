@@ -200,3 +200,4 @@ C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\obj\Debug\net7.0\refin
 C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\obj\Debug\net7.0\BookApplication.pdb
 C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\obj\Debug\net7.0\BookApplication.genruntimeconfig.cache
 C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\obj\Debug\net7.0\ref\BookApplication.dll
+C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\bin\Debug\net7.0\BookApplication.staticwebassets.runtime.json

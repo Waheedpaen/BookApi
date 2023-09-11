@@ -8,7 +8,9 @@ namespace EntitiesClasses.Entities;
     {
         this.BookImages = new List<BookImage>();
     }
-    public string ImageUrl { get; set; }
+    public string? ImageUrlName { get; set; }
+    public string? FilePathImageUrl { get; set; }
+    public string ?  ImageUrl { get; set; }
     [ForeignKey("Scholar")]
     public int ScholarId { get; set; }
     public virtual Scholar  Scholar { get; set; }

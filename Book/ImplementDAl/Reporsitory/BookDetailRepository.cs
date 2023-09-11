@@ -25,7 +25,10 @@ public class BookDetailRepository :Reporsitory<BookDetail, int>, IBookDetailRepo
 
     public async Task<BookDetail> Get(int Id)
     {
-         return await Context.Set<BookDetail>().Include(data=>data.Scholar).Include(data=>data.BookImages).FirstOrDefaultAsync(obj=>obj.Id==Id);
+         return await Context.Set<BookDetail>().Include(data=>data.Scholar)
+            .Include(data => data.Scholar.FarqaCategory)
+            .Include(data => data.Scholar.FarqaCategory.BookCategory)
+            .Include(data=>data.BookImages).FirstOrDefaultAsync(obj=>obj.Id==Id);
     }
 
     public async Task<List<BookDetail>> GetBookDetailByScholar(int Id)

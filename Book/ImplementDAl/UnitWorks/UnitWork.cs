@@ -20,9 +20,7 @@ namespace ImplementDAL.UnitWorks;
     public UnitWork(DataContexts context)
     {
         _context = context;
-    } 
-  
-
+    }  
     public IUserRepository IUserRepository => _userRepository ?? new(_context); 
     public ILookUpRepository ILookUpRepository => _lookUpRepository ?? new(_context); 
     public IBookCategoryRepository IBookCategory => _bookCategoryRepository ?? new(_context); 
@@ -37,7 +35,7 @@ namespace ImplementDAL.UnitWorks;
     }
 
     public void Dispose()
-    {
+     {
         _context.Dispose();
     }
 

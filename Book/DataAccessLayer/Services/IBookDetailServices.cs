@@ -29,8 +29,9 @@ namespace DataAccessLayer.Services;
 
     Task<BookImage> DeleteBookImages(BookImage model);
     Task<List<BookDetail>> GetBookDetailByScholar(int Id);
+    Task<BookImage> UpdateBookImagesForFile(BookImage update, BookImage model);
     #endregion
-   
+
 
 
 

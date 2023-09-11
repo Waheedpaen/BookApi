@@ -72,7 +72,9 @@ public class BookDetailServices : IBookDetailServices
 
     public async Task<BookImage> DeleteBookImage(BookImage model)
     {
-        return await _unitOfWork.IBookDetailRepository.DeleteImage(model);
+
+      var deleteBookImage=  await _unitOfWork.IBookDetailRepository.DeleteImage(model); 
+        return deleteBookImage;
     }
 
     public async Task<BookImage> GetBookImageById(int? Id)
@@ -94,13 +96,22 @@ public class BookDetailServices : IBookDetailServices
 
     public async Task<PagedResult<BookDetail>> SearchAndPaginateAsync(SearchAndPaginateOptions options)
     {
-        Expression<Func<BookDetail, bool>> predicate = category => 
-        category.Name.Contains(options.SearchTerm)
-        ||   
-        category.Scholar.Name.Contains(options.ScholarName);
+        Expression<Func<BookDetail, bool>> predicate = category =>
+         string.IsNullOrEmpty(options.SearchTerm) ||
+         category.Name.Contains(options.SearchTerm);
 
         var pagedResult = await _unitOfWork.IBookDetailRepository.SearchAndPaginateAsync(predicate, new PaginationOptions() { PageSize = options.PageSize, Page = options.Page });
         return pagedResult;
+    }
+
+    public async Task<BookImage> UpdateBookImagesForFile(BookImage update, BookImage model)
+    {
+       
+        update.Name = model.Name;
+        update.Image = model.Image; 
+        update.Updated_At = model.Updated_At; 
+        await _unitOfWork.CommitAsync();
+        return update; 
     }
 }
  
