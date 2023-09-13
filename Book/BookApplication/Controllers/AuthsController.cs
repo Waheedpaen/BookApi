@@ -117,8 +117,7 @@ public class AuthsController : BaseController
         if (!ModelState.IsValid)
         {
             return BadRequest(ModelState);
-        }
-
+        } 
         obj.Username = obj.Username.ToLower();
         if (await _userService.UserAlreadyExit(obj.Username))
             return BadRequest(new { message = CustomMessage.UserAlreadyExist });

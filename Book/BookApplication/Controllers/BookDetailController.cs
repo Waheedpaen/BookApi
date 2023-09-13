@@ -32,7 +32,7 @@ public class BookDetailController : ControllerBase
 
     [HttpPost("SaveBookDetail")]
     public async Task<IActionResult> SaveBookDetail([FromForm] BookDetailSaveDto model)
-    {
+    { 
         if (!ModelState.IsValid) return BadRequest(ModelState);
         var bookDetail = new EntitiesClasses.Entities.BookDetail();
         bookDetail.ImageUrl = model.ImageUrl;

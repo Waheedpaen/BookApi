@@ -1,10 +1,20 @@
 
 
+using Microsoft.AspNetCore.Http.Features;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
+builder.Services.Configure<FormOptions>(options =>
+{
+    options.MultipartBodyLengthLimit = 500 * 1024 * 1024; // 500 MB
+});
 
+builder.Services.Configure<IISServerOptions>(options =>
+{
+    options.MaxRequestBodySize = 500 * 1024 * 1024; // 500 MB
+});
 builder.Services.AddDependencies();
 builder.Services.AddIdentityServices(builder.Configuration);
 

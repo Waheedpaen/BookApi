@@ -46,6 +46,7 @@ public class BookDetailRepository :Reporsitory<BookDetail, int>, IBookDetailRepo
 
     public async Task<BookImage> DeleteImage(BookImage model)
     {
+      //  Context.Set<BookImage>().Where(p => p.Id == model.Id).ExecuteDeleteAsync();
          Context.Set<BookImage>().Remove(model);
         await Context.SaveChangesAsync();
         return model;
