@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "5h8TEPWCCaEwdILh8DKrSxx7X66VPnbGPx60TrlWYxQ=",
+  "Hash": "2RYV80cTsznDjOkYtmmtSybIr/p9r0EPDu3Lzz4Mw8U=",
   "Source": "BookApplication",
   "BasePath": "_content/BookApplication",
   "Mode": "Default",
@@ -204,6 +204,23 @@
       "OriginalItemSpec": "wwwroot\\uploads\\6144188a-41e2-4f69-87bf-51256d403569.mp3"
     },
     {
+      "Identity": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\wwwroot\\uploads\\702a9bef-27fa-4c69-8011-2477d15f7a68.pdf",
+      "SourceId": "BookApplication",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\wwwroot\\",
+      "BasePath": "_content/BookApplication",
+      "RelativePath": "uploads/702a9bef-27fa-4c69-8011-2477d15f7a68.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\702a9bef-27fa-4c69-8011-2477d15f7a68.pdf"
+    },
+    {
       "Identity": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\wwwroot\\uploads\\73e4d4d6-bfd6-4ffc-93ad-0fc26a7183be.jpg",
       "SourceId": "BookApplication",
       "SourceType": "Discovered",
@@ -236,6 +253,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\7be5415b-500a-4865-8913-0aca32b35568.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\wwwroot\\uploads\\8664a73e-b55d-4178-bf4b-120fd5381493.pdf",
+      "SourceId": "BookApplication",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\wwwroot\\",
+      "BasePath": "_content/BookApplication",
+      "RelativePath": "uploads/8664a73e-b55d-4178-bf4b-120fd5381493.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\8664a73e-b55d-4178-bf4b-120fd5381493.pdf"
     },
     {
       "Identity": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\wwwroot\\uploads\\870793b8-06a8-459c-83e7-d1d52983b689.jpg",
@@ -304,6 +338,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\afbd7959-3d07-4d64-8323-310f412e9a42.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\wwwroot\\uploads\\b23bda41-7194-41b4-9ade-cac177a98bb4.pdf",
+      "SourceId": "BookApplication",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\wwwroot\\",
+      "BasePath": "_content/BookApplication",
+      "RelativePath": "uploads/b23bda41-7194-41b4-9ade-cac177a98bb4.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\b23bda41-7194-41b4-9ade-cac177a98bb4.pdf"
     },
     {
       "Identity": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\wwwroot\\uploads\\c01bebfb-74db-4a8e-bbfa-5ee187f4be50.jpg",

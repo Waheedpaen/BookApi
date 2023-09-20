@@ -145,7 +145,7 @@ public class BookDetailController : ControllerBase
 
         var fileStream = new FileStream(pdfDocument.FilePathPDF, FileMode.Open, FileAccess.Read);
 
-        return File(fileStream, "application/pdf", pdfDocument.FileNamePDF);
+        return File(fileStream, "application/pdf", pdfDocument.Name);
     }
 
     [HttpGet("GetImageDetailId/{Id}")]
@@ -189,11 +189,7 @@ public class BookDetailController : ControllerBase
             return Ok(new { Message = CustomMessage.RecordNotFound, Success = false, });
         }
     }
-
-
-
-
-
+     
     [HttpPut("UpdatedBookDetail")]
     public async Task<IActionResult> UpdatedBookDetail([FromForm] BookDetailSaveDto model)
     {
@@ -282,9 +278,7 @@ public class BookDetailController : ControllerBase
         }
         return Ok(new { Success = true, Message = CustomMessage.Added });
     }
-
-
-
+     
     [HttpGet("SearchAndPaginateAsync")]
     public async Task<IActionResult> SearchAndPaginateAsync([FromQuery] SearchAndPaginateOptions options)
     {
@@ -310,13 +304,41 @@ public class BookDetailController : ControllerBase
     }
 
 
+    [HttpGet("GetBookDetailByScholar/{Id}")]
+    public async Task<IActionResult> GetBookDetailByScholar(int Id)
+    {
+        if (!ModelState.IsValid) return BadRequest(ModelState);
+        var entity = await _bookDetailServices.GetBookDetailByScholar(Id);
+        //var model = _mapper.Map<List<FarqaCategoryDto>>(entity);
+        if (entity != null)
+        {
+            return Ok(new { Data = entity, Success = true, });
+        }
+        else
+        {
+            return Ok(new { Data = string.Empty, Success = false, });
+        }
+    }
 
 
 
 
-
-
-
+    
+      [HttpGet("GetBookImagesByBookDetails/{Id}")]
+    public async Task<IActionResult> GetBookImagesByBookDetails(int Id)
+    {
+        if (!ModelState.IsValid) return BadRequest(ModelState);
+        var entity = await _bookDetailServices.GetBookImagesByBookDetails(Id);
+        //var model = _mapper.Map<List<FarqaCategoryDto>>(entity);
+        if (entity != null)
+        {
+            return Ok(new { Data = entity, Success = true, });
+        }
+        else
+        {
+            return Ok(new { Data = string.Empty, Success = false, });
+        }
+    }
 
 
 

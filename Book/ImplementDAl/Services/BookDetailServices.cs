@@ -113,5 +113,10 @@ public class BookDetailServices : IBookDetailServices
         await _unitOfWork.CommitAsync();
         return update; 
     }
+
+    public async Task<List<BookImage>> GetBookImagesByBookDetails(int Id)
+    {
+        return await _unitOfWork.IBookDetailRepository.GetBookImagesByBookDetails(Id);
+    }
 }
  

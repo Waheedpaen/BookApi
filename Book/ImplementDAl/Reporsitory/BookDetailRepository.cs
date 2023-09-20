@@ -51,4 +51,9 @@ public class BookDetailRepository :Reporsitory<BookDetail, int>, IBookDetailRepo
         await Context.SaveChangesAsync();
         return model;
     }
+
+    public async Task<List<BookImage>> GetBookImagesByBookDetails(int Id)
+    {
+        return await Context.Set<BookImage>().Where(data => data.BookDetailId == Id).ToListAsync();
+    }
 }

@@ -18,6 +18,7 @@ namespace DataAccessLayer.Services;
     Task<BookDetail> DeleteBookDetail(BookDetail model);
     Task<BookDetail> UpdateBookDetail(BookDetail update, BookDetail model);
     Task<PagedResult<BookDetail>> SearchAndPaginateAsync(SearchAndPaginateOptions options);
+    Task<List<BookImage>> GetBookImagesByBookDetails(int Id);
     #endregion
 
     #region BookImagesCrud
