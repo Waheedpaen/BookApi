@@ -33,6 +33,9 @@ namespace EntitiesClasses.Migrations
                     b.Property<DateTime?>("Created_At")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("ImageUrl")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 

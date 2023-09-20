@@ -59,7 +59,8 @@ public  class UserRepository :  Reporsitory<User, int>, IUserRepository
        
         ServiceResponse<object> serviceResponse = new();
         var objUser = await Context.Set<User>().Include(data=>data.UserTypes).Where(data => data.Email.ToLower() == model.Email.ToLower().Trim()&& (data.UserTypesId == model.UserTypeId)).FirstOrDefaultAsync();
-   
+        if (objUser == null)
+            return null;
         LoginUserDto obj = new();
         obj.Id = objUser.Id;
        obj.Email = objUser.Email;
@@ -75,8 +76,7 @@ public  class UserRepository :  Reporsitory<User, int>, IUserRepository
         {
 
         }
-        if (objUser == null)
-            return null;
+        
         if (!Seed.VerifyPasswordHash(model.Password.Trim(), objUser.PasswordHash, objUser.PasswordSalt))
             return null;
 
