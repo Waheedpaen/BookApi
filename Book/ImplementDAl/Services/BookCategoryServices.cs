@@ -67,7 +67,9 @@ namespace ImplementDAl.Services
 
         public async Task<BookCategory> Update(BookCategory update, BookCategory model)
         {
-            update.Name = model.Name; 
+            update.Name = model.Name;
+            update.Description = model.Description;
+            update.ImageUrl = model.ImageUrl;
             update.Updated_At = model.Updated_At;
             await _unitOfWork.CommitAsync();
             return update;

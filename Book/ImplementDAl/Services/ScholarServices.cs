@@ -48,6 +48,7 @@ namespace ImplementDAl.Services;
         public async Task<Scholar> Update(Scholar update, Scholar model)
         {
             update.Name = model.Name;
+            update.ImageUrl = model.ImageUrl;
             update.MadrassaName = model.MadrassaName;
             update.FarqaCategoryId = model.FarqaCategoryId;
             update.Updated_At = model.Updated_At;
