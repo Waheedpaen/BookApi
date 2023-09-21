@@ -101,6 +101,7 @@ E:\BookProject\BookApi\Book\BookApplication\bin\Debug\net7.0\ImplementDAl.pdb
 E:\BookProject\BookApi\Book\BookApplication\obj\Debug\net7.0\BookApplication.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\bin\Debug\net7.0\appsettings.Development.json
 C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\bin\Debug\net7.0\appsettings.json
+C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\bin\Debug\net7.0\BookApplication.staticwebassets.runtime.json
 C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\bin\Debug\net7.0\BookApplication.exe
 C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\bin\Debug\net7.0\BookApplication.deps.json
 C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\bin\Debug\net7.0\BookApplication.runtimeconfig.json
@@ -200,4 +201,3 @@ C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\obj\Debug\net7.0\refin
 C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\obj\Debug\net7.0\BookApplication.pdb
 C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\obj\Debug\net7.0\BookApplication.genruntimeconfig.cache
 C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\obj\Debug\net7.0\ref\BookApplication.dll
-C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\bin\Debug\net7.0\BookApplication.staticwebassets.runtime.json

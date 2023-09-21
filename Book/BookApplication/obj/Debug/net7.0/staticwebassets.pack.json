@@ -5,6 +5,14 @@
       "PackagePath": "staticwebassets\\uploads\\04abf044-d436-4f00-a75e-e2f1a3997f9b.jpg"
     },
     {
+      "Id": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\wwwroot\\uploads\\0947367f-2aef-4843-bcbb-74038db5dcd5.pdf",
+      "PackagePath": "staticwebassets\\uploads\\0947367f-2aef-4843-bcbb-74038db5dcd5.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\wwwroot\\uploads\\0dbf486a-92fb-4fd7-8906-462f83ada49e.pdf",
+      "PackagePath": "staticwebassets\\uploads\\0dbf486a-92fb-4fd7-8906-462f83ada49e.pdf"
+    },
+    {
       "Id": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\wwwroot\\uploads\\134d7fc7-49da-4705-ab56-0d2d1029cdeb.jpg",
       "PackagePath": "staticwebassets\\uploads\\134d7fc7-49da-4705-ab56-0d2d1029cdeb.jpg"
     },
@@ -15,6 +23,10 @@
     {
       "Id": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\wwwroot\\uploads\\15cb1ee9-63a4-4a69-ab3e-5888a72567dc.jpg",
       "PackagePath": "staticwebassets\\uploads\\15cb1ee9-63a4-4a69-ab3e-5888a72567dc.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\wwwroot\\uploads\\24447501-2fac-4128-a6c0-0e054f926733.pdf",
+      "PackagePath": "staticwebassets\\uploads\\24447501-2fac-4128-a6c0-0e054f926733.pdf"
     },
     {
       "Id": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\wwwroot\\uploads\\2ae51f65-99b1-453d-86e7-b7046d7efcd9.jpg",
@@ -33,16 +45,36 @@
       "PackagePath": "staticwebassets\\uploads\\36b8da4d-6e9e-4f24-bb2a-841995f21687.jpg"
     },
     {
+      "Id": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\wwwroot\\uploads\\3d7c2632-d769-4643-bada-d01e8c6a34d1.pdf",
+      "PackagePath": "staticwebassets\\uploads\\3d7c2632-d769-4643-bada-d01e8c6a34d1.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\wwwroot\\uploads\\3ec1afea-ec6b-4f18-91b1-1b9120f3816f.pdf",
+      "PackagePath": "staticwebassets\\uploads\\3ec1afea-ec6b-4f18-91b1-1b9120f3816f.pdf"
+    },
+    {
       "Id": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\wwwroot\\uploads\\454eb7f0-2fc8-4ec0-8d29-c6ff6f485529.mp3",
       "PackagePath": "staticwebassets\\uploads\\454eb7f0-2fc8-4ec0-8d29-c6ff6f485529.mp3"
+    },
+    {
+      "Id": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\wwwroot\\uploads\\4d0cbd4f-cf02-4189-9879-6199fcfbe3f6.pdf",
+      "PackagePath": "staticwebassets\\uploads\\4d0cbd4f-cf02-4189-9879-6199fcfbe3f6.pdf"
     },
     {
       "Id": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\wwwroot\\uploads\\547c2952-e719-42ae-8608-b82e06d99557.pdf",
       "PackagePath": "staticwebassets\\uploads\\547c2952-e719-42ae-8608-b82e06d99557.pdf"
     },
     {
+      "Id": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\wwwroot\\uploads\\551d1fbe-fa4c-4bd8-99e0-37cc04cea2ab.pdf",
+      "PackagePath": "staticwebassets\\uploads\\551d1fbe-fa4c-4bd8-99e0-37cc04cea2ab.pdf"
+    },
+    {
       "Id": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\wwwroot\\uploads\\6144188a-41e2-4f69-87bf-51256d403569.mp3",
       "PackagePath": "staticwebassets\\uploads\\6144188a-41e2-4f69-87bf-51256d403569.mp3"
+    },
+    {
+      "Id": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\wwwroot\\uploads\\6fa21278-e5f4-4012-96a6-ef0cc280f49b.pdf",
+      "PackagePath": "staticwebassets\\uploads\\6fa21278-e5f4-4012-96a6-ef0cc280f49b.pdf"
     },
     {
       "Id": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\wwwroot\\uploads\\702a9bef-27fa-4c69-8011-2477d15f7a68.pdf",
@@ -61,6 +93,10 @@
       "PackagePath": "staticwebassets\\uploads\\8664a73e-b55d-4178-bf4b-120fd5381493.pdf"
     },
     {
+      "Id": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\wwwroot\\uploads\\86b00964-60c6-4516-ac50-4dd3f065e1af.pdf",
+      "PackagePath": "staticwebassets\\uploads\\86b00964-60c6-4516-ac50-4dd3f065e1af.pdf"
+    },
+    {
       "Id": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\wwwroot\\uploads\\870793b8-06a8-459c-83e7-d1d52983b689.jpg",
       "PackagePath": "staticwebassets\\uploads\\870793b8-06a8-459c-83e7-d1d52983b689.jpg"
     },
@@ -73,8 +109,16 @@
       "PackagePath": "staticwebassets\\uploads\\9469629e-3e8d-4733-99e8-99f7ecc71501.pdf"
     },
     {
+      "Id": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\wwwroot\\uploads\\a0ac03e9-a720-4ccf-b109-4405bd1c2b9f.pdf",
+      "PackagePath": "staticwebassets\\uploads\\a0ac03e9-a720-4ccf-b109-4405bd1c2b9f.pdf"
+    },
+    {
       "Id": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\wwwroot\\uploads\\afbd7959-3d07-4d64-8323-310f412e9a42.jpg",
       "PackagePath": "staticwebassets\\uploads\\afbd7959-3d07-4d64-8323-310f412e9a42.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\wwwroot\\uploads\\b135a4f9-844b-4daf-98fc-18bf6cbb7e31.pdf",
+      "PackagePath": "staticwebassets\\uploads\\b135a4f9-844b-4daf-98fc-18bf6cbb7e31.pdf"
     },
     {
       "Id": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\wwwroot\\uploads\\b23bda41-7194-41b4-9ade-cac177a98bb4.pdf",
@@ -85,6 +129,10 @@
       "PackagePath": "staticwebassets\\uploads\\c01bebfb-74db-4a8e-bbfa-5ee187f4be50.jpg"
     },
     {
+      "Id": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\wwwroot\\uploads\\c091cfd9-b130-4bc1-aac7-2d04e5230cfe.pdf",
+      "PackagePath": "staticwebassets\\uploads\\c091cfd9-b130-4bc1-aac7-2d04e5230cfe.pdf"
+    },
+    {
       "Id": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\wwwroot\\uploads\\c5afdb56-077b-475e-a794-f51aa07f7745.jpg",
       "PackagePath": "staticwebassets\\uploads\\c5afdb56-077b-475e-a794-f51aa07f7745.jpg"
     },
@@ -93,8 +141,20 @@
       "PackagePath": "staticwebassets\\uploads\\d1c0bd65-645a-4732-a096-e9192b1501c8.pdf"
     },
     {
+      "Id": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\wwwroot\\uploads\\d4808032-e35c-44ef-8bea-05ee85a52b1a.pdf",
+      "PackagePath": "staticwebassets\\uploads\\d4808032-e35c-44ef-8bea-05ee85a52b1a.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\wwwroot\\uploads\\e4d04aa0-95b3-4dd0-a231-b49c9fbe3749.pdf",
+      "PackagePath": "staticwebassets\\uploads\\e4d04aa0-95b3-4dd0-a231-b49c9fbe3749.pdf"
+    },
+    {
       "Id": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\wwwroot\\uploads\\e646fdd9-6d09-4217-9671-138e9beb710a.jpg",
       "PackagePath": "staticwebassets\\uploads\\e646fdd9-6d09-4217-9671-138e9beb710a.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\wwwroot\\uploads\\f39ad877-73a0-4e93-95f4-525c431195d2.pdf",
+      "PackagePath": "staticwebassets\\uploads\\f39ad877-73a0-4e93-95f4-525c431195d2.pdf"
     },
     {
       "Id": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\wwwroot\\uploads\\f4bc7580-a113-44b1-9139-9380cfc406b1.jpg",
@@ -103,6 +163,10 @@
     {
       "Id": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\wwwroot\\uploads\\f52b6375-6578-4a65-adcf-63d425b02b10.jpg",
       "PackagePath": "staticwebassets\\uploads\\f52b6375-6578-4a65-adcf-63d425b02b10.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\wwwroot\\uploads\\fc2cbeb2-1de0-4e04-acc5-b0c947233c6d.pdf",
+      "PackagePath": "staticwebassets\\uploads\\fc2cbeb2-1de0-4e04-acc5-b0c947233c6d.pdf"
     },
     {
       "Id": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\wwwroot\\uploads\\ff93d4dc-e8a3-487f-9cba-5db3a671e417.jpg",

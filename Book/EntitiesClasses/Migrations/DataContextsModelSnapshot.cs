@@ -236,6 +236,32 @@ namespace EntitiesClasses.Migrations
                     b.ToTable("MadrassaBookCatgories");
                 });
 
+            modelBuilder.Entity("EntitiesClasses.Entities.MadrassaClass", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime?>("Created_At")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("varchar(50)");
+
+                    b.Property<DateTime?>("Updated_At")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("MadrassaClasses");
+                });
+
             modelBuilder.Entity("EntitiesClasses.Entities.Scholar", b =>
                 {
                     b.Property<int>("Id")

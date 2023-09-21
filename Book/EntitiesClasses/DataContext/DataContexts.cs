@@ -12,6 +12,7 @@ namespace EntitiesClasses.DataContext;
     public DbSet<FarqaCategory> FarqaCategories { get; set; }
     public DbSet<BookDetail>  BookDetails { get; set; }
     public DbSet<BookImage>  BookImages { get; set; }
+    public DbSet<MadrassaClass>  MadrassaClasses { get; set; }
     public DbSet<MadrassaBook> MadrassaBooks { get; set; }
     public DbSet<MadrassaBookCatgory> MadrassaBookCatgories { get; set; }
     public DbSet<Scholar> Scholars { get; set; }    
@@ -24,6 +25,8 @@ namespace EntitiesClasses.DataContext;
     {   
            
         modelBuilder.Entity<User>().HasQueryFilter((d => EF.Property<bool>(d, "IsDeleted") == false));
+        modelBuilder.Entity<MadrassaClass>().HasQueryFilter((d => EF.Property<bool>(d, "IsDeleted") == false));
+        modelBuilder.Entity<MadrassaBook>().HasQueryFilter((d => EF.Property<bool>(d, "IsDeleted") == false)); 
         modelBuilder.Entity<BookCategory>().HasQueryFilter((d => EF.Property<bool>(d, "IsDeleted") == false));
         modelBuilder.Entity<FarqaCategory>().HasQueryFilter((d => EF.Property<bool>(d, "IsDeleted") == false));
         modelBuilder.Entity<Scholar>().HasQueryFilter((d => EF.Property<bool>(d, "IsDeleted") == false));
