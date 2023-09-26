@@ -23,7 +23,7 @@ public class MadrassaBookRepository : Reporsitory<MadrassaBook, int>, IMadrassaB
      
 
     #region MadrassaBookCatgory 
-    public async Task<MadrassaBookCatgory> GetMadrassaBookCatgoryId(int? Id)
+    public async Task<MadrassaBookCatgory> GetMadrassaBookCatgoryId(int Id)
     {
         return await Context.Set<MadrassaBookCatgory>().FirstOrDefaultAsync(obj => obj.Id == Id);
     }

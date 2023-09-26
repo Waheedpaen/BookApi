@@ -10,7 +10,7 @@ public interface IMadrassaBookRepository : IRepository<MadrassaBook, int>
     public Task<MadrassaBook> MadrassaBooklAlreadyExit(string name);
     Task<MadrassaBookCatgory> SaveMadrassaBookCatgory(MadrassaBookCatgory model);
  
-    Task<MadrassaBookCatgory> GetMadrassaBookCatgoryId(int? Id);
+    Task<MadrassaBookCatgory> GetMadrassaBookCatgoryId(int Id);
     Task<MadrassaBookCatgory> DeleteMadrassaBookCatgory(MadrassaBookCatgory model);
     Task<List<MadrassaBookCatgory>> MadrassaBookCatgorybyMadrassBook(int Id);
 

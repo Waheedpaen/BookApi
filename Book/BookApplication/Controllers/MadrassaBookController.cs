@@ -24,7 +24,7 @@ public class MadrassaBookController : ControllerBase
         _hostEnvironment = hostEnvironment;
     }
 
-    [HttpGet("search")]
+    [HttpGet("SearchAndPaginateCategories")]
     public async Task<IActionResult> SearchAndPaginateCategories([FromQuery] SearchAndPaginateOptions options)
     {
         var pagedResult = await _madrassaBookServices.SearchAndPaginateAsync(options);
@@ -74,6 +74,7 @@ public class MadrassaBookController : ControllerBase
         if (!ModelState.IsValid) return BadRequest(ModelState);
         var madrassaBook = new MadrassaBook();
         madrassaBook.ImageUrl = model.ImageUrl;
+        madrassaBook.MadrassaClassId = Convert.ToInt16(model.MadrassaClassId);
         madrassaBook.Name = model.Name;
         if (madrassaBook != null)
         {
@@ -118,6 +119,7 @@ public class MadrassaBookController : ControllerBase
         var madrassaBook = new MadrassaBook();
         madrassaBook.Id = Convert.ToInt16(model.Id);
         madrassaBook.ImageUrl = model.ImageUrl;
+        madrassaBook.MadrassaClassId = Convert.ToInt16(model.MadrassaClassId);
         madrassaBook.Name = model.Name; 
         if (madrassaBook != null)
         {
@@ -128,10 +130,10 @@ public class MadrassaBookController : ControllerBase
 
                 if (item.IsDeleted == true)
                 {
-                    var bookImages = await _madrassaBookServices.GetMadrassaBookCatgoryById(item.Id);
+                    var bookImages = await _madrassaBookServices.GetMadrassaBookCatgoryById(Convert.ToInt16( item.Id));
                     await _madrassaBookServices.DeleteMadrassaBookCatgoryImagePermently(bookImages);
                 }
-                if (item.IsSaved == true)
+                if (item.Id == null)
                 {
                     var uploadsFolder = Path.Combine(_hostEnvironment.WebRootPath, "uploads");
                     var pdfFileName = Guid.NewGuid().ToString() + Path.GetExtension(item.PdfFile.FileName);
@@ -156,28 +158,39 @@ public class MadrassaBookController : ControllerBase
                 }
                 else
                 {
-                    var bookImageId = await _madrassaBookServices.GetMadrassaBookCatgoryById(item.Id);
+                    var madrassaBookId = await _madrassaBookServices.GetMadrassaBookCatgoryById(Convert.ToInt16(item.Id));
+                    if (item.IsDeleted == false)
+                    {
 
-                    var uploadsFolder = Path.Combine(_hostEnvironment.WebRootPath, "uploads");
-                    var pdfFileName = Guid.NewGuid().ToString() + Path.GetExtension(item.PdfFile.FileName);
-                    var pdfFilePath = Path.Combine(uploadsFolder, pdfFileName);
-                    if (!Directory.Exists(uploadsFolder))
-                    {
-                        Directory.CreateDirectory(uploadsFolder);
+                        var updateBookImageData = new MadrassaBookCatgory()
+                        {
+                            Name = item.Name,
+                            ImageUrl = item.ImageUrl, 
+                        };
+                        await _madrassaBookServices.UpdateMadrassaBookCatgory(madrassaBookId, updateBookImageData);
                     }
-                    using (var pdfStream = new FileStream(pdfFilePath, FileMode.Create))
-                    {
-                        await item.PdfFile.CopyToAsync(pdfStream);
-                    }
-                    var madrassaBookCatgory = new MadrassaBookCatgory()
-                    {
-                        FileNamePDF = pdfFileName,
-                        FilePathPDF = pdfFilePath,
-                        MadrassaBookId = item.MadrassaBookId,
-                        Name = item.Name,
-                        ImageUrl = item.ImageUrl
-                    };
-                    await _madrassaBookServices.UpdateMadrassaBookCatgory(bookImageId, madrassaBookCatgory);
+                    //var bookImageId = await _madrassaBookServices.GetMadrassaBookCatgoryById(item.Id);
+
+                    //var uploadsFolder = Path.Combine(_hostEnvironment.WebRootPath, "uploads");
+                    //var pdfFileName = Guid.NewGuid().ToString() + Path.GetExtension(item.PdfFile.FileName);
+                    //var pdfFilePath = Path.Combine(uploadsFolder, pdfFileName);
+                    //if (!Directory.Exists(uploadsFolder))
+                    //{
+                    //    Directory.CreateDirectory(uploadsFolder);
+                    //}
+                    //using (var pdfStream = new FileStream(pdfFilePath, FileMode.Create))
+                    //{
+                    //    await item.PdfFile.CopyToAsync(pdfStream);
+                    //}
+                    //var madrassaBookCatgory = new MadrassaBookCatgory()
+                    //{
+                    //    FileNamePDF = pdfFileName,
+                    //    FilePathPDF = pdfFilePath,
+                    //    MadrassaBookId = item.MadrassaBookId,
+                    //    Name = item.Name,
+                    //    ImageUrl = item.ImageUrl
+                    //};
+                    //await _madrassaBookServices.UpdateMadrassaBookCatgory(bookImageId, madrassaBookCatgory);
                 }
             }
 

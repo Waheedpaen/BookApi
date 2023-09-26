@@ -11,6 +11,7 @@ public class MadrassaBookSaveDto
     }
     public int? Id { get; set; }
     public string Name { get; set; }
+    public int ? MadrassaClassId { get; set; }
     public string  ? ImageUrl { get; set; }
     public virtual List<MadrassaBookCatgorySaveDto> MadrassaBookCatgories { get; set; }
 }

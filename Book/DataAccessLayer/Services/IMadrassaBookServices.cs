@@ -22,7 +22,7 @@ public interface IMadrassaBookServices
 
     #region MadrassaBookCatogryCrud
     Task<MadrassaBookCatgory> DeleteMadrassaBookCatgoryImages(MadrassaBookCatgory model);
-    Task<MadrassaBookCatgory> GetMadrassaBookCatgoryById(int? Id);
+    Task<MadrassaBookCatgory> GetMadrassaBookCatgoryById(int Id);
     Task<MadrassaBookCatgory> SaveMadrassaBookCatgoryImages(MadrassaBookCatgory model);
     Task<MadrassaBookCatgory> CreateMadrassaBookCatgoryImages(MadrassaBookCatgory model);
     Task<MadrassaBookCatgory> UpdateMadrassaBookCatgory(MadrassaBookCatgory update, MadrassaBookCatgory model);

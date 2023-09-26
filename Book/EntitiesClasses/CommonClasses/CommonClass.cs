@@ -4,7 +4,7 @@
     {
      [Key]
     public int Id { get; set; }
-    [Column(TypeName = "varchar(50)")]
+    [Column(TypeName = "nvarchar(MAX)")]
     public string Name { get; set; }
     public DateTime? Created_At { get; set; } = DateTime.Now;
     public DateTime? Updated_At  { get; set; } = DateTime.Now;

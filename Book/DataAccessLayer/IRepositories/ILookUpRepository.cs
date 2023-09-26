@@ -18,7 +18,8 @@ namespace DataAccessLayer.IRepositories;
     Task<List<BookDetail>> GetBookDetails();
 
     Task<List<BookImage>> GetBookImages();
-    Task<List<MadrassaBook>> GetMadrassaBooks();  
+    Task<List<MadrassaBook>> GetMadrassaBooks();
+    Task<List<MonthlyMagzine>> MonthlyMagzines();
 
 }
 

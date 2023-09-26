@@ -41,7 +41,7 @@ public class MadrassaBookServices : IMadrassaBookServices
         return await _unitOfWork.IMadrassaBookRepository.Get(Id);
     }
 
-    public async Task<MadrassaBookCatgory> GetMadrassaBookCatgoryById(int? Id)
+    public async Task<MadrassaBookCatgory> GetMadrassaBookCatgoryById(int Id)
     {
         return await _unitOfWork.IMadrassaBookRepository.GetMadrassaBookCatgoryId(Id); 
     }

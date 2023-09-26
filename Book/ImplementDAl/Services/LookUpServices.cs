@@ -1,5 +1,7 @@
 ﻿
 
+using System.Collections.Generic;
+
 namespace ImplementDAl.Services;
 
 public class LookUpServices : ILookUpServices
@@ -43,6 +45,9 @@ public class LookUpServices : ILookUpServices
         return await _unitOfWork.ILookUpRepository.GetMadrassaBooks();
     }
 
-
+    public async Task<List<MonthlyMagzine>> GetMonthlyMagzines()
+    {
+        return await _unitOfWork.ILookUpRepository.MonthlyMagzines();
+    }
 }
 

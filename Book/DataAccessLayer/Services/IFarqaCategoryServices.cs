@@ -7,6 +7,7 @@ namespace DataAccessLayer.Services;
 
     public  interface IFarqaCategoryServices
     {
+    
     Task<FarqaCategory> Get(int id);
     Task<FarqaCategory> Create(FarqaCategory model);
     Task<FarqaCategory> Update(FarqaCategory update, FarqaCategory model);

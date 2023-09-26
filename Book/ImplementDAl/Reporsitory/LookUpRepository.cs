@@ -8,19 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace ImplementDAl.Reporsitory;
- 
-    public class LookUpRepository : ILookUpRepository
+
+public class LookUpRepository : ILookUpRepository
+{
+    protected readonly DbContext Context;
+    public LookUpRepository(DbContext context)
     {
-        protected readonly DbContext Context;
-        public LookUpRepository(DbContext context)
-        {
-            Context = context; 
-           
-        }
+        Context = context;
+
+    }
 
     public async Task<List<BookCategory>> BookCategories()
     {
-      return await Context.Set<BookCategory>().ToListAsync();
+        return await Context.Set<BookCategory>().ToListAsync();
     }
 
     public async Task<List<FarqaCategory>> FarqaCategories()
@@ -29,7 +29,7 @@ namespace ImplementDAl.Reporsitory;
         return await Context.Set<FarqaCategory>().ToListAsync();
     }
 
-    public async  Task<List<BookDetail>> GetBookDetails()
+    public async Task<List<BookDetail>> GetBookDetails()
     {
         return await Context.Set<BookDetail>().ToListAsync();
     }
@@ -48,5 +48,9 @@ namespace ImplementDAl.Reporsitory;
     {
         return await Context.Set<Scholar>().ToListAsync();
     }
+
+    public async Task<List<MonthlyMagzine>> MonthlyMagzines()
+    {
+        return await Context.Set<MonthlyMagzine>().OrderByDescending(data => data).ToListAsync();
+    }
 }
- 

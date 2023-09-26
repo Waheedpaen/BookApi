@@ -44,7 +44,7 @@ namespace EntitiesClasses.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("nvarchar(MAX)");
 
                     b.Property<DateTime?>("Updated_At")
                         .HasColumnType("datetime2");
@@ -79,7 +79,7 @@ namespace EntitiesClasses.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("nvarchar(MAX)");
 
                     b.Property<int>("ScholarId")
                         .HasColumnType("int");
@@ -123,7 +123,7 @@ namespace EntitiesClasses.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("nvarchar(MAX)");
 
                     b.Property<DateTime?>("Updated_At")
                         .HasColumnType("datetime2");
@@ -154,7 +154,7 @@ namespace EntitiesClasses.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("nvarchar(MAX)");
 
                     b.Property<DateTime?>("Updated_At")
                         .HasColumnType("datetime2");
@@ -184,14 +184,19 @@ namespace EntitiesClasses.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
+                    b.Property<int>("MadrassaClassId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("nvarchar(MAX)");
 
                     b.Property<DateTime?>("Updated_At")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("MadrassaClassId");
 
                     b.ToTable("MadrassaBooks");
                 });
@@ -224,7 +229,7 @@ namespace EntitiesClasses.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("nvarchar(MAX)");
 
                     b.Property<DateTime?>("Updated_At")
                         .HasColumnType("datetime2");
@@ -252,7 +257,7 @@ namespace EntitiesClasses.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("nvarchar(MAX)");
 
                     b.Property<DateTime?>("Updated_At")
                         .HasColumnType("datetime2");
@@ -260,6 +265,38 @@ namespace EntitiesClasses.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("MadrassaClasses");
+                });
+
+            modelBuilder.Entity("EntitiesClasses.Entities.MonthlyMagzine", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime?>("Created_At")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ImageUrl")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(MAX)");
+
+                    b.Property<DateTime?>("Updated_At")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("MonthlyMagzines");
                 });
 
             modelBuilder.Entity("EntitiesClasses.Entities.Scholar", b =>
@@ -288,7 +325,7 @@ namespace EntitiesClasses.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("nvarchar(MAX)");
 
                     b.Property<DateTime?>("Updated_At")
                         .HasColumnType("datetime2");
@@ -335,7 +372,7 @@ namespace EntitiesClasses.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("nvarchar(MAX)");
 
                     b.Property<byte[]>("PasswordHash")
                         .IsRequired()
@@ -422,6 +459,17 @@ namespace EntitiesClasses.Migrations
                         .IsRequired();
 
                     b.Navigation("BookCategory");
+                });
+
+            modelBuilder.Entity("EntitiesClasses.Entities.MadrassaBook", b =>
+                {
+                    b.HasOne("EntitiesClasses.Entities.MadrassaClass", "MadrassaClass")
+                        .WithMany()
+                        .HasForeignKey("MadrassaClassId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("MadrassaClass");
                 });
 
             modelBuilder.Entity("EntitiesClasses.Entities.MadrassaBookCatgory", b =>

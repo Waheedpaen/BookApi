@@ -14,6 +14,8 @@ namespace ImplementDAL.UnitWorks;
     private MadrassaClassRepository _madrassaClassRepository;
     private FarqaCategoryRepository _faarqaCategoryRepository;
     private BookCategoryRepository _bookCategoryRepository;
+    private MonthlyMagzinesRepository _monthlyMagzinesRepository;
+
     private ScholarRepository _scholarRepository;
     private BookDetailRepository  _bookDetailRepository;
     private MadrassaBookRepository _madrassaBookRepository;
@@ -31,6 +33,8 @@ namespace ImplementDAL.UnitWorks;
     public IMadrassaBookRepository IMadrassaBookRepository => _madrassaBookRepository ?? new(_context);
     
     public IMadrassaClassRepository IMadrassaClassRepository => _madrassaClassRepository ?? new(_context);
+
+    public IMonthlyMagzinesRepository IMonthlyMagzinesRepository => _monthlyMagzinesRepository ?? new(_context);
 
     public async Task<int> CommitAsync()
     {

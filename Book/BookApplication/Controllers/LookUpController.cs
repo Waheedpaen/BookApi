@@ -123,10 +123,22 @@ public class LookUpController : ControllerBase
             return Ok(new { Success = false, data = string.Empty, });
         }
     }
-
-
-
-
+     
+     [HttpGet("GetMonthlyMagzines")]
+    public async Task<IActionResult> GetMonthlyMagzines()
+    {
+        if (!ModelState.IsValid) return BadRequest(ModelState);
+        var enityData = await _lookUpServices.GetMonthlyMagzines();
+        var model = _mapper.Map<List<CommonDto>>(enityData);
+        if (model != null)
+        {
+            return Ok(new { Success = true, data = model });
+        }
+        else
+        {
+            return Ok(new { Success = false, data = string.Empty, });
+        }
+    }
 
 
 

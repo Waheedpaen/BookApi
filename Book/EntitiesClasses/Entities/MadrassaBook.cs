@@ -12,6 +12,9 @@ namespace EntitiesClasses.Entities
         {
             this.MadrassaBookCatgories = new List<MadrassaBookCatgory>();
         }
+        [ForeignKey("MadrassaClass")]
+        public int   MadrassaClassId { get; set; }
+        public virtual MadrassaClass  MadrassaClass { get; set; }
         public string ImageUrl { get; set; }
         public virtual ICollection<MadrassaBookCatgory>  MadrassaBookCatgories { get; set; }
     }

@@ -6,6 +6,8 @@ namespace DataAccessLayer.IUnitofWork;
 {
     IUserRepository IUserRepository { get; }
     IScholarRepository IScholarRepository { get; }
+
+    IMonthlyMagzinesRepository IMonthlyMagzinesRepository { get; }
     ILookUpRepository  ILookUpRepository { get; }
     IMadrassaBookRepository IMadrassaBookRepository { get; } 
     IBookCategoryRepository IBookCategory { get; }
