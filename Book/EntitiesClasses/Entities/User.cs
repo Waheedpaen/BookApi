@@ -4,11 +4,11 @@
     {
     [Required]
     [StringLength(50, ErrorMessage = "Username cannot be longer then 50 characters")]
-    public string UserName { get; set; }
+    public string? UserName  { get; set; }
     [Required]
     [StringLength(50, ErrorMessage = "Email cannot be longer then 50 characters")]
     [EmailAddress]
-    public string Email { get; set; }
+    public string  Email   { get; set; }
     [StringLength(50, ErrorMessage = "FullName cannot be longer then 50 characters")]
 
  

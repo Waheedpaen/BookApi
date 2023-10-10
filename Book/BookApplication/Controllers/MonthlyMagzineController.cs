@@ -1,7 +1,10 @@
 ﻿using HelperDatas.PaginationsClasses;
+using ImplementDAl.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Hosting;
 using ViewModels.CommonViewModel;
+using ViewModels.MonthlyMagizne;
 
 namespace BookApplication.Controllers;
 
@@ -13,26 +16,53 @@ public class MonthlyMagzineController : ControllerBase
     private readonly ILookUpServices _lookUpServices;
     private readonly IConfiguration _config;
     private readonly IMonthlyMagzinesServices _monthlyMagzinesServices;
-    public MonthlyMagzineController(IMonthlyMagzinesServices monthlyMagzinesServices, ILookUpServices lookUpServices, IMapper mapper, IConfiguration config)
+    private readonly IWebHostEnvironment _hostEnvironment;
+    public MonthlyMagzineController(IWebHostEnvironment hostEnvironment, IMonthlyMagzinesServices monthlyMagzinesServices, ILookUpServices lookUpServices, IMapper mapper, IConfiguration config)
     {
         _lookUpServices = lookUpServices;
         _mapper = mapper;
+        _hostEnvironment = hostEnvironment;
         _config = config;
-        _monthlyMagzinesServices = monthlyMagzinesServices;
+        _monthlyMagzinesServices = monthlyMagzinesServices; 
     }
     [HttpPost("SaveMonthlyMagzines")]
-    public async Task<IActionResult> SaveMonthlyMagzines(CommonDto model)
+    public async Task<IActionResult> SaveMonthlyMagzines([FromForm] MonthlyMagzinesSaveDto model)
     {
         var enity = _mapper.Map<MonthlyMagzine>(model);
-        var dataExit = await _monthlyMagzinesServices. MonthlyMagzinesAlreadyExit(enity.Name);
+        var dataExit = await _monthlyMagzinesServices.MonthlyMagzinesAlreadyExit(enity.Name);
         if (dataExit != null)
         {
             return Ok(new { Success = false, Message = dataExit.Name + ' ' + "Already Exist", });
         }
         else
         {
-            await _monthlyMagzinesServices.Create(enity);
-            return Ok(new { Success = true, Message = CustomMessage.Added });
+            {
+                if (model.PdfFile == null || model.PdfFile.Length <= 0)
+                {
+                    return BadRequest("No file or empty file provided.");
+                }
+                var uploadsFolder = Path.Combine(_hostEnvironment.WebRootPath, "MonthlyMagzine");
+                var pdfFileName = Guid.NewGuid().ToString() + Path.GetExtension(model.PdfFile.FileName);
+                var pdfFilePath = Path.Combine(uploadsFolder, pdfFileName);
+                if (!Directory.Exists(uploadsFolder))
+                {
+                    Directory.CreateDirectory(uploadsFolder);
+                }
+                using (var pdfStream = new FileStream(pdfFilePath, FileMode.Create))
+                {
+                    await model.PdfFile.CopyToAsync(pdfStream);
+                }
+                var imageDetail = new MonthlyMagzine()
+                {
+                    FileNamePDF = pdfFileName,
+                    FilePathPDF = pdfFilePath,
+                    Name = model.Name,
+                    Description = model.Description,
+                    ImageUrl = model.ImageUrl,
+                };
+                await _monthlyMagzinesServices.Create(imageDetail);
+                return Ok(new { Success = true, Message = CustomMessage.Added });
+            }
         }
     }
 
@@ -73,10 +103,10 @@ public class MonthlyMagzineController : ControllerBase
 
 
     [HttpPut("UpdateMonthlyMagzines")]
-    public async Task<IActionResult> UpdateMonthlyMagzines(CommonDto model)
+    public async Task<IActionResult> UpdateMonthlyMagzines([FromForm] MonthlyMagzinesSaveDto model)
     {
         if (!ModelState.IsValid) return BadRequest(ModelState);
-        var entity = _mapper.Map<BookCategory>(model);
+        var entity = _mapper.Map<MonthlyMagzine>(model);
         var dataAlreadyExits = await _monthlyMagzinesServices. MonthlyMagzinesAlreadyExit(entity.Name);
         if (dataAlreadyExits != null)
         {
@@ -84,17 +114,64 @@ public class MonthlyMagzineController : ControllerBase
         }
         else
         {
-            var detailOldData = await _monthlyMagzinesServices.Get(Convert.ToInt16(model.Id));
-            var newData = _mapper.Map<MonthlyMagzine>(model);
-            if (detailOldData != null)
+            if(model.PdfFile == null)
             {
-                await _monthlyMagzinesServices.Update(detailOldData, newData);
-                return Ok(new { Success = true, Message = CustomMessage.Updated });
+                var detailOldData1 = await _monthlyMagzinesServices.Get(Convert.ToInt16(model.Id));
+                var monthlyMagzines = new MonthlyMagzine()
+                {
+                  
+                    Name = model.Name,
+                    Description = model.Description,
+                    ImageUrl = model.ImageUrl,
+                };
+                if (monthlyMagzines != null)
+                {
+                    await _monthlyMagzinesServices.UpdateForwithoutPdf(detailOldData1, monthlyMagzines);
+                    return Ok(new { Success = true, Message = CustomMessage.Updated });
+                }
+                else
+                {
+                    return Ok(new { Success = false, Message = CustomMessage.RecordNotFound });
+                }
             }
             else
             {
-                return Ok(new { Success = false, Message = CustomMessage.RecordNotFound });
+                var detailOldData = await _monthlyMagzinesServices.Get(Convert.ToInt16(model.Id));
+                //var newData = _mapper.Map<MonthlyMagzine>(model);
+                if (model.PdfFile == null || model.PdfFile.Length <= 0)
+                {
+                    return BadRequest("No file or empty file provided.");
+                }
+                var uploadsFolder = Path.Combine(_hostEnvironment.WebRootPath, "MonthlyMagzine");
+                var pdfFileName = Guid.NewGuid().ToString() + Path.GetExtension(model.PdfFile.FileName);
+                var pdfFilePath = Path.Combine(uploadsFolder, pdfFileName);
+                if (!Directory.Exists(uploadsFolder))
+                {
+                    Directory.CreateDirectory(uploadsFolder);
+                }
+                using (var pdfStream = new FileStream(pdfFilePath, FileMode.Create))
+                {
+                    await model.PdfFile.CopyToAsync(pdfStream);
+                }
+                var imageDetail = new MonthlyMagzine()
+                {
+                    FileNamePDF = pdfFileName,
+                    FilePathPDF = pdfFilePath,
+                    Name = model.Name,
+                    Description = model.Description,
+                    ImageUrl = model.ImageUrl,
+                };
+                if (detailOldData != null)
+                {
+                    await _monthlyMagzinesServices.Update(detailOldData, imageDetail);
+                    return Ok(new { Success = true, Message = CustomMessage.Updated });
+                }
+                else
+                {
+                    return Ok(new { Success = false, Message = CustomMessage.RecordNotFound });
+                }
             }
+          
         }
     }
 

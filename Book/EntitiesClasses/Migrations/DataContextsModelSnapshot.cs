@@ -224,7 +224,7 @@ namespace EntitiesClasses.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
-                    b.Property<int>("MadrassaBookId")
+                    b.Property<int?>("MadrassaBookId")
                         .HasColumnType("int");
 
                     b.Property<string>("Name")
@@ -279,6 +279,12 @@ namespace EntitiesClasses.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FileNamePDF")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FilePathPDF")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ImageUrl")
@@ -476,9 +482,7 @@ namespace EntitiesClasses.Migrations
                 {
                     b.HasOne("EntitiesClasses.Entities.MadrassaBook", "MadrassaBook")
                         .WithMany("MadrassaBookCatgories")
-                        .HasForeignKey("MadrassaBookId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("MadrassaBookId");
 
                     b.Navigation("MadrassaBook");
                 });

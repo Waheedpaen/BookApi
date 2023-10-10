@@ -3,6 +3,7 @@ using EntitiesClasses.Entities;
 using ViewModels.BookDetails;
 using ViewModels.CommonViewModel;
 using ViewModels.FarqaCategoryViewModel;
+using ViewModels.MonthlyMagizne;
 using ViewModels.ScholarViewModel;
 
 namespace ViewModel.AutoMapper;
@@ -12,10 +13,13 @@ public class AutoMappers : Profile
     {
         CreateMap<BookCategory, CommonDto>().ReverseMap();
         CreateMap<BookCategory, CommonDto>().ReverseMap();
+        CreateMap<MonthlyMagzine, CommonDto>().ReverseMap();
         CreateMap<FarqaCategory, FarqaCategoryDto>().ReverseMap();
         CreateMap<FarqaCategory, FarqaCategorySaveDto>().ReverseMap();
         CreateMap<Scholar, ScholarDto>().ReverseMap();
+        CreateMap<MonthlyMagzine, CommonDto>().ReverseMap();
         CreateMap<Scholar, ScholarSaveDto>().ReverseMap();
+        CreateMap<MonthlyMagzine, MonthlyMagzinesSaveDto>().ReverseMap(); 
         CreateMap<BookDetail, BookDetailDto>().ReverseMap();
         CreateMap<MadrassaClass, CommonDto>().ReverseMap();
         //CreateMap<BookDetail, BookDetailSaveDto>().ReverseMap(); 

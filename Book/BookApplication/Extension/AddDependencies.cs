@@ -19,7 +19,8 @@ namespace MobileManagementSystem.Extension
              Services.AddTransient<IScholarServices, ScholarServices>();
             Services.AddScoped<IUnitofWork, UnitWork>();
             Services.AddTransient<IMadrassaBookServices, MadrassaBookServices>();
-            Services.AddTransient<IMadrassaClassService, MadrassaClassService>(); 
+            Services.AddTransient<IMadrassaClassService, MadrassaClassService>();
+            Services.AddTransient<IMonthlyMagzinesServices, MonthlyMagzinesServices>();
             Services.AddTransient<IUserService, UserService>();
             Services.AddTransient<ILookUpServices, LookUpServices>();
             Services.AddTransient<IBookCategoryServices, BookCategoryServices>();

@@ -8,7 +8,7 @@ namespace EntitiesClasses.Entities;
     public string? FileNamePDF { get; set; }
     public string? FilePathPDF { get; set; }
     [ForeignKey("MadrassaBook")]
-    public int MadrassaBookId { get; set; }
-    public virtual MadrassaBook MadrassaBook { get; set; }
+    public int ? MadrassaBookId { get; set; }
+    public virtual  MadrassaBook ? MadrassaBook { get; set; }
 }
  

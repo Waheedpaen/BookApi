@@ -13,7 +13,7 @@ namespace EntitiesClasses.DataContext;
     public DbSet<BookDetail>  BookDetails { get; set; }
     public DbSet<BookImage>  BookImages { get; set; }
     public DbSet<MadrassaClass>  MadrassaClasses { get; set; }
-    public DbSet<MadrassaBook> MadrassaBooks { get; set; }
+     public DbSet<MadrassaBook> MadrassaBooks { get; set; }
     public DbSet<MonthlyMagzine>  MonthlyMagzines { get; set; }
 
     

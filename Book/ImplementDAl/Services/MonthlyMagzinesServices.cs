@@ -53,9 +53,22 @@ public class MonthlyMagzinesServices : IMonthlyMagzinesServices
 
     public async Task<MonthlyMagzine> Update(MonthlyMagzine update, MonthlyMagzine model)
     {
-        update.Id = model.Id;
+        //update.Id = model.Id;
+        update.ImageUrl = model.ImageUrl;
+        update.FileNamePDF = model.FileNamePDF;
+        update.FilePathPDF = model.FilePathPDF;
+        update.Description = model.Description;
+        update.Name = model.Name;
+        update.Updated_At = model.Updated_At;
+        await _unitOfWork.CommitAsync();
+        return update;
+    }
+
+    public async Task<MonthlyMagzine> UpdateForwithoutPdf(MonthlyMagzine update, MonthlyMagzine model)
+    {
         update.ImageUrl = model.ImageUrl; 
         update.Name = model.Name;
+        update.Description = model.Description;
         update.Updated_At = model.Updated_At;
         await _unitOfWork.CommitAsync();
         return update;

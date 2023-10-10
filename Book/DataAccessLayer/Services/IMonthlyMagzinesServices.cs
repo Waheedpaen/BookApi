@@ -14,8 +14,9 @@ public  interface IMonthlyMagzinesServices
     Task<MonthlyMagzine> Get(int id); 
     Task<MonthlyMagzine> Create(MonthlyMagzine model);
     Task<MonthlyMagzine> Update(MonthlyMagzine update, MonthlyMagzine model);
+    Task<MonthlyMagzine> UpdateForwithoutPdf(MonthlyMagzine update, MonthlyMagzine model);
     Task<MonthlyMagzine> Delete(MonthlyMagzine model);
     //Task<List<BookCategory>> GetBookCategory(SeachItem searchitem);
-    public Task<MonthlyMagzine> MonthlyMagzinesAlreadyExit(string name);
+     Task<MonthlyMagzine> MonthlyMagzinesAlreadyExit(string name);
     Task<PagedResult<MonthlyMagzine>> SearchAndPaginateAsync(SearchAndPaginateOptions options);
 }

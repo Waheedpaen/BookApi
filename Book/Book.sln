@@ -25,7 +25,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ImplementDAl", "ImplementDA
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Helpers", "Helpers", "{9DAA186A-0157-4925-A453-77E17CCFA89C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelperDatas", "HelperDatas\HelperDatas.csproj", "{59DDB1B7-1A11-4110-B5FE-1EB1F3043973}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelperDatas", "HelperDatas\HelperDatas.csproj", "{59DDB1B7-1A11-4110-B5FE-1EB1F3043973}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
