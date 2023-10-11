@@ -6,9 +6,10 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.Configure<FormOptions>(options =>
+builder.Services.Configure<FormOptions>(x =>
 {
-    options.MultipartBodyLengthLimit = 500 * 1024 * 1024; // 500 MB
+    //x.ValueLengthLimit = int.MaxValue;
+    x.MultipartBodyLengthLimit = long.MaxValue; // In case of multipart
 });
 
 builder.Services.Configure<IISServerOptions>(options =>

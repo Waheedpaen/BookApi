@@ -26,6 +26,8 @@ public class MonthlyMagzineController : ControllerBase
         _monthlyMagzinesServices = monthlyMagzinesServices; 
     }
     [HttpPost("SaveMonthlyMagzines")]
+    [DisableRequestSizeLimit]
+    [RequestFormLimits(ValueLengthLimit = int.MaxValue, MultipartBodyLengthLimit = int.MaxValue)]
     public async Task<IActionResult> SaveMonthlyMagzines([FromForm] MonthlyMagzinesSaveDto model)
     {
         var enity = _mapper.Map<MonthlyMagzine>(model);
@@ -181,5 +183,34 @@ public class MonthlyMagzineController : ControllerBase
     {
         var pagedResult = await _monthlyMagzinesServices.SearchAndPaginateAsync(options);
         return Ok(pagedResult);
+    }
+
+    [HttpPost("dara")] 
+    [DisableRequestSizeLimit]
+    [RequestFormLimits(ValueLengthLimit = int.MaxValue, MultipartBodyLengthLimit = int.MaxValue)] 
+    public async Task<ActionResult> UploadFileAsync(IFormFile file)
+    {
+        if (file == null)
+            return Ok(new { success = false, message = "You have to attach a file" });
+
+        var fileName = file.FileName;
+        // var extension = Path.GetExtension(fileName);
+
+        // Add validations here...
+
+        var localPath = $"{Path.Combine(System.AppContext.BaseDirectory, "myCustomDir")}\\{fileName}";
+
+        // Create dir if not exists
+        Directory.CreateDirectory(Path.Combine(System.AppContext.BaseDirectory, "myCustomDir"));
+
+        using (var stream = new FileStream(localPath, FileMode.Create))
+        {
+            await file.CopyToAsync(stream);
+        }
+
+        // db.SomeContext.Add(someData);
+        // await db.SaveChangesAsync();
+
+        return Ok(new { success = true, message = "All set", fileName });
     }
 }
