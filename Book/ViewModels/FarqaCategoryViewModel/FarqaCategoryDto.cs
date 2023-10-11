@@ -8,6 +8,7 @@ using System.Collections.Generic;
     public int Id { get; set; }
     [Column(TypeName = "varchar(50)")]
     public string Name { get; set; }
+    public string? ImageUrl { get; set; }
 
     public int BookCategoryId { get; set; }
 

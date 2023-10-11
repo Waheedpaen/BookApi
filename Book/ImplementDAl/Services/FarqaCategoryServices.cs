@@ -65,6 +65,7 @@ public class FarqaCategoryServices : IFarqaCategoryServices
         update.Name = model.Name;
         update.BookCategoryId = model.BookCategoryId;
         update.Updated_At = model.Updated_At;
+        update.ImageUrl = model.ImageUrl;
         await _unitOfWork.CommitAsync();
         return update;
     }

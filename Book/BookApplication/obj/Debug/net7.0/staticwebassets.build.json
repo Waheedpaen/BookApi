@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "RolBYbJsiag6+h7qQ4hmDm2iwvNovWwBsAEJMSe6s0s=",
+  "Hash": "E3XawifWbDT4AgCjgXiMnNUphdDU8dYBsjuQQH3Wr24=",
   "Source": "BookApplication",
   "BasePath": "_content/BookApplication",
   "Mode": "Default",
@@ -136,6 +136,40 @@
       "OriginalItemSpec": "wwwroot\\MonthlyMagzine\\509ff1b4-8ac1-4503-9b81-a524e9e0cd5a.JPG"
     },
     {
+      "Identity": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\wwwroot\\MonthlyMagzine\\5bb7c9cf-0c67-442b-a4f9-bf357764ec39.jpg",
+      "SourceId": "BookApplication",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\wwwroot\\",
+      "BasePath": "_content/BookApplication",
+      "RelativePath": "MonthlyMagzine/5bb7c9cf-0c67-442b-a4f9-bf357764ec39.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\MonthlyMagzine\\5bb7c9cf-0c67-442b-a4f9-bf357764ec39.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\wwwroot\\MonthlyMagzine\\63b0c4f3-a433-460c-8f92-e60cbb4cb672.jpg",
+      "SourceId": "BookApplication",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\wwwroot\\",
+      "BasePath": "_content/BookApplication",
+      "RelativePath": "MonthlyMagzine/63b0c4f3-a433-460c-8f92-e60cbb4cb672.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\MonthlyMagzine\\63b0c4f3-a433-460c-8f92-e60cbb4cb672.jpg"
+    },
+    {
       "Identity": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\wwwroot\\MonthlyMagzine\\6aadd630-9ea5-45bf-846d-ebdf9be6042c.pdf",
       "SourceId": "BookApplication",
       "SourceType": "Discovered",
@@ -151,6 +185,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\MonthlyMagzine\\6aadd630-9ea5-45bf-846d-ebdf9be6042c.pdf"
+    },
+    {
+      "Identity": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\wwwroot\\MonthlyMagzine\\902a24e5-b6eb-43f3-a9d9-a1c70b821ed5.pdf",
+      "SourceId": "BookApplication",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\wwwroot\\",
+      "BasePath": "_content/BookApplication",
+      "RelativePath": "MonthlyMagzine/902a24e5-b6eb-43f3-a9d9-a1c70b821ed5.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\MonthlyMagzine\\902a24e5-b6eb-43f3-a9d9-a1c70b821ed5.pdf"
     },
     {
       "Identity": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\wwwroot\\MonthlyMagzine\\92deeb82-d44f-4fac-b5fa-268504efc4c5.pdf",
@@ -170,6 +221,23 @@
       "OriginalItemSpec": "wwwroot\\MonthlyMagzine\\92deeb82-d44f-4fac-b5fa-268504efc4c5.pdf"
     },
     {
+      "Identity": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\wwwroot\\MonthlyMagzine\\9c3842c0-3e76-498b-9ec7-c24c400cd7e1.pdf",
+      "SourceId": "BookApplication",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\wwwroot\\",
+      "BasePath": "_content/BookApplication",
+      "RelativePath": "MonthlyMagzine/9c3842c0-3e76-498b-9ec7-c24c400cd7e1.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\MonthlyMagzine\\9c3842c0-3e76-498b-9ec7-c24c400cd7e1.pdf"
+    },
+    {
       "Identity": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\wwwroot\\MonthlyMagzine\\9d886912-6ba0-4779-bcd3-b33225e42bee.jpg",
       "SourceId": "BookApplication",
       "SourceType": "Discovered",
@@ -185,6 +253,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\MonthlyMagzine\\9d886912-6ba0-4779-bcd3-b33225e42bee.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\wwwroot\\MonthlyMagzine\\a3c0ca75-f388-4946-b484-54db165f6a5e.pdf",
+      "SourceId": "BookApplication",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\wwwroot\\",
+      "BasePath": "_content/BookApplication",
+      "RelativePath": "MonthlyMagzine/a3c0ca75-f388-4946-b484-54db165f6a5e.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\MonthlyMagzine\\a3c0ca75-f388-4946-b484-54db165f6a5e.pdf"
     },
     {
       "Identity": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\wwwroot\\MonthlyMagzine\\ac6194e9-0d36-47f7-9011-c18f74272cf4.jpg",
