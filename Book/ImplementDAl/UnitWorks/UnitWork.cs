@@ -15,9 +15,10 @@ namespace ImplementDAL.UnitWorks;
     private FarqaCategoryRepository _faarqaCategoryRepository;
     private BookCategoryRepository _bookCategoryRepository;
     private MonthlyMagzinesRepository _monthlyMagzinesRepository;
-
+    private AudioScholarsRepository _audioScholarsRepository;
     private ScholarRepository _scholarRepository;
     private BookDetailRepository  _bookDetailRepository;
+    private AudioDetailRepository _audioDetailRepository;
     private MadrassaBookRepository _madrassaBookRepository;
     public readonly DataContexts _context;
     public UnitWork(DataContexts context)
@@ -35,6 +36,10 @@ namespace ImplementDAL.UnitWorks;
     public IMadrassaClassRepository IMadrassaClassRepository => _madrassaClassRepository ?? new(_context);
 
     public IMonthlyMagzinesRepository IMonthlyMagzinesRepository => _monthlyMagzinesRepository ?? new(_context);
+   
+    public IAudioScholarsRepository IAudioScholarsRepository => _audioScholarsRepository ?? new(_context);
+
+    public IAudioDetailRepository IAudioDetailRepository => _audioDetailRepository ?? new(_context);
 
     public async Task<int> CommitAsync()
     {

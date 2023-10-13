@@ -156,8 +156,23 @@ public class LookUpController : ControllerBase
         }
     }
 
-
-
+    [HttpGet("GetAudioScholars")]
+    public async Task<IActionResult> AudioScholars()
+    {
+        if (!ModelState.IsValid) return BadRequest(ModelState);
+        var enityData = await _lookUpServices.AudioScholars();
+        var model = _mapper.Map<List<CommonDto>>(enityData);
+        model = model.Select(a => a).TakeLast(5).ToList();
+        if (model != null)
+        {
+            return Ok(new { Success = true, data = model });
+        }
+        else
+        {
+            return Ok(new { Success = false, data = string.Empty, });
+        }
+    }
+    
 
 
 

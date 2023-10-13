@@ -10,6 +10,8 @@ namespace DataAccessLayer.Services
     public interface ILookUpServices
     {
         Task<List<BookCategory>> BookCategories();
+        Task<List<AudioScholars>> AudioScholars();
+       
         Task<List<FarqaCategory>> FarqaCategories();
         Task<List<Scholar>> GetScholars();
          Task<List<BookDetail>> GetBookDetails();  

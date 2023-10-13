@@ -18,6 +18,11 @@ public class LookUpRepository : ILookUpRepository
 
     }
 
+    public async Task<List<AudioScholars>> AudioScholars()
+    {
+        return await Context.Set<AudioScholars>().ToListAsync();
+    }
+
     public async Task<List<BookCategory>> BookCategories()
     {
         return await Context.Set<BookCategory>().ToListAsync();

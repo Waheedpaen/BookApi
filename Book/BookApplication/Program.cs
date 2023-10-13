@@ -6,6 +6,11 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
+builder.WebHost.ConfigureKestrel(options =>
+{
+    options.Limits.MaxRequestBodySize = 512 * 2012 * 1598;
+});
+
 builder.Services.Configure<FormOptions>(x =>
 {
     //x.ValueLengthLimit = int.MaxValue;

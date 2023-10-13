@@ -11,9 +11,10 @@ namespace DataAccessLayer.IRepositories;
 {
     public Task<BookDetail> Get(int Id);
     public Task<BookDetail> BookDetailAlreadyExit(string name);
-    Task<BookImage> SaveBookImages(BookImage model);
+   
     Task<List<BookDetail>> GetBookDetailByScholar(int Id);
     Task<List<BookImage>> GetBookImagesByBookDetails(int Id);
+    Task<BookImage> SaveBookImages(BookImage model);
     Task<BookImage> GetImageId(int? Id);
     Task<BookImage> DeleteImage(BookImage model);
    

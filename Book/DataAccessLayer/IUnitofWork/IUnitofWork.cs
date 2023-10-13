@@ -9,9 +9,11 @@ namespace DataAccessLayer.IUnitofWork;
 
     IMonthlyMagzinesRepository IMonthlyMagzinesRepository { get; }
     ILookUpRepository  ILookUpRepository { get; }
-    IMadrassaBookRepository IMadrassaBookRepository { get; } 
+    IMadrassaBookRepository IMadrassaBookRepository { get; }
+    IAudioScholarsRepository IAudioScholarsRepository { get; }
+    IAudioDetailRepository IAudioDetailRepository { get; }
     IBookCategoryRepository IBookCategory { get; }
-    IFarqaCategoryRepository IFarqaCategoryRepository { get; }
+    IFarqaCategoryRepository IFarqaCategoryRepository { get; }                                                                                                                                                                                                                                              
     IBookDetailRepository IBookDetailRepository { get; }
 
     IMadrassaClassRepository IMadrassaClassRepository { get; }

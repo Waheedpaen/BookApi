@@ -6,19 +6,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ImplementDAl.Reporsitory
+namespace ImplementDAl.Reporsitory;
+
+public class BookCategoryRepository : Reporsitory<BookCategory, int>, IBookCategoryRepository
 {
-    public class BookCategoryRepository : Reporsitory<BookCategory, int>, IBookCategoryRepository
+    public BookCategoryRepository(DataContexts context) : base(context)
     {
-        public BookCategoryRepository(DataContexts context) : base(context)
-        {
 
-        }
-        public DataContexts DataContexts => Context as DataContexts;
+    }
+    public DataContexts DataContexts => Context as DataContexts;
 
-        public async Task<BookCategory> BookCategoryAlreadyExit(string name)
-        {
-        return await DataContexts.Set<BookCategory>().FirstOrDefaultAsync(data => data.Name == name); 
-        }
+    public async Task<BookCategory> BookCategoryAlreadyExit(string name)
+    {
+    return await DataContexts.Set<BookCategory>().FirstOrDefaultAsync(data => data.Name == name); 
     }
 }

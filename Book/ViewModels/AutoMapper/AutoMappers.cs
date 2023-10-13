@@ -21,6 +21,7 @@ public class AutoMappers : Profile
         CreateMap<Scholar, ScholarSaveDto>().ReverseMap();
         CreateMap<MonthlyMagzine, MonthlyMagzinesSaveDto>().ReverseMap(); 
         CreateMap<BookDetail, BookDetailDto>().ReverseMap();
+        CreateMap<AudioScholars, CommonDto>().ReverseMap();
         CreateMap<MadrassaClass, CommonDto>().ReverseMap();
         //CreateMap<BookDetail, BookDetailSaveDto>().ReverseMap(); 
         CreateMap<BookImage, BookImageDto>().ReverseMap();
