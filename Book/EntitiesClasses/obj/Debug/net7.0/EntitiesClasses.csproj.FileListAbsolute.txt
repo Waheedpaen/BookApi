@@ -1,0 +1,14 @@
+E:\BookProject\BookApi\Book\EntitiesClasses\bin\Debug\net7.0\EntitiesClasses.deps.json
+E:\BookProject\BookApi\Book\EntitiesClasses\bin\Debug\net7.0\EntitiesClasses.runtimeconfig.json
+E:\BookProject\BookApi\Book\EntitiesClasses\bin\Debug\net7.0\EntitiesClasses.dll
+E:\BookProject\BookApi\Book\EntitiesClasses\bin\Debug\net7.0\EntitiesClasses.pdb
+E:\BookProject\BookApi\Book\EntitiesClasses\obj\Debug\net7.0\EntitiesClasses.csproj.AssemblyReference.cache
+E:\BookProject\BookApi\Book\EntitiesClasses\obj\Debug\net7.0\EntitiesClasses.GeneratedMSBuildEditorConfig.editorconfig
+E:\BookProject\BookApi\Book\EntitiesClasses\obj\Debug\net7.0\EntitiesClasses.AssemblyInfoInputs.cache
+E:\BookProject\BookApi\Book\EntitiesClasses\obj\Debug\net7.0\EntitiesClasses.AssemblyInfo.cs
+E:\BookProject\BookApi\Book\EntitiesClasses\obj\Debug\net7.0\EntitiesClasses.csproj.CoreCompileInputs.cache
+E:\BookProject\BookApi\Book\EntitiesClasses\obj\Debug\net7.0\EntitiesClasses.dll
+E:\BookProject\BookApi\Book\EntitiesClasses\obj\Debug\net7.0\refint\EntitiesClasses.dll
+E:\BookProject\BookApi\Book\EntitiesClasses\obj\Debug\net7.0\EntitiesClasses.pdb
+E:\BookProject\BookApi\Book\EntitiesClasses\obj\Debug\net7.0\EntitiesClasses.genruntimeconfig.cache
+E:\BookProject\BookApi\Book\EntitiesClasses\obj\Debug\net7.0\ref\EntitiesClasses.dll
