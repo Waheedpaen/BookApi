@@ -11,7 +11,7 @@ namespace DataAccessLayer.Services
     {
         Task<List<BookCategory>> BookCategories();
         Task<List<AudioScholars>> AudioScholars();
-       
+        Task<List<AudioDetail>> AudioDetails();
         Task<List<FarqaCategory>> FarqaCategories();
         Task<List<Scholar>> GetScholars();
          Task<List<BookDetail>> GetBookDetails();  

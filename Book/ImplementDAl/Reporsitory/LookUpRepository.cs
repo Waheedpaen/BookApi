@@ -18,6 +18,11 @@ public class LookUpRepository : ILookUpRepository
 
     }
 
+    public async Task<List<AudioDetail>> AudioDetails()
+    {
+        return await Context.Set<AudioDetail>().ToListAsync();
+    }
+
     public async Task<List<AudioScholars>> AudioScholars()
     {
         return await Context.Set<AudioScholars>().ToListAsync();

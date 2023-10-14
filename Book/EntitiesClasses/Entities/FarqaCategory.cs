@@ -7,9 +7,9 @@ namespace EntitiesClasses.Entities;
   
 
     [ForeignKey("BookCategory")]
-    public int BookCategoryId { get; set; }
+    public int    BookCategoryId { get; set; }
     public string? ImageUrl { get; set; }
 
-    public virtual BookCategory BookCategory { get; set; }
+    public virtual BookCategory  BookCategory { get; set; }
     }
  

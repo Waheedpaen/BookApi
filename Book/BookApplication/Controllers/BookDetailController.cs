@@ -1,7 +1,6 @@
 ﻿using Azure;
 using Azure.Core;
-using EntitiesClasses.Entities;
-using EntitiesClasses.Migrations;
+using EntitiesClasses.Entities; 
 using HelperDatas.PaginationsClasses;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;

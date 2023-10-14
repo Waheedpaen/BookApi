@@ -99,13 +99,6 @@ E:\BookProject\BookApi\Book\BookApplication\bin\Debug\net7.0\DataAccessLayer.pdb
 E:\BookProject\BookApi\Book\BookApplication\bin\Debug\net7.0\HelperDatas.pdb
 E:\BookProject\BookApi\Book\BookApplication\bin\Debug\net7.0\ImplementDAl.pdb
 E:\BookProject\BookApi\Book\BookApplication\obj\Debug\net7.0\BookApplication.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\obj\Debug\net7.0\BookApplication.csproj.AssemblyReference.cache
-C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\obj\Debug\net7.0\BookApplication.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\obj\Debug\net7.0\BookApplication.AssemblyInfoInputs.cache
-C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\obj\Debug\net7.0\BookApplication.AssemblyInfo.cs
-C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\obj\Debug\net7.0\BookApplication.csproj.CoreCompileInputs.cache
-C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\obj\Debug\net7.0\BookApplication.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\obj\Debug\net7.0\BookApplication.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\bin\Debug\net7.0\appsettings.Development.json
 C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\bin\Debug\net7.0\appsettings.json
 C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\bin\Debug\net7.0\BookApplication.staticwebassets.runtime.json
@@ -187,6 +180,13 @@ C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\bin\Debug\net7.0\Entit
 C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\bin\Debug\net7.0\HelperDatas.pdb
 C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\bin\Debug\net7.0\ImplementDAl.pdb
 C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\bin\Debug\net7.0\ViewModels.pdb
+C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\obj\Debug\net7.0\BookApplication.csproj.AssemblyReference.cache
+C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\obj\Debug\net7.0\BookApplication.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\obj\Debug\net7.0\BookApplication.AssemblyInfoInputs.cache
+C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\obj\Debug\net7.0\BookApplication.AssemblyInfo.cs
+C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\obj\Debug\net7.0\BookApplication.csproj.CoreCompileInputs.cache
+C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\obj\Debug\net7.0\BookApplication.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\obj\Debug\net7.0\BookApplication.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\obj\Debug\net7.0\staticwebassets\msbuild.BookApplication.Microsoft.AspNetCore.StaticWebAssets.props
 C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\obj\Debug\net7.0\staticwebassets\msbuild.build.BookApplication.props
 C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.BookApplication.props

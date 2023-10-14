@@ -22,6 +22,46 @@ namespace EntitiesClasses.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("EntitiesClasses.Entities.AudioDetail", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("AudioScholarsId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("Created_At")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("DateRelase")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("FileNameAudio")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FilePathAudio")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(MAX)");
+
+                    b.Property<DateTime?>("Updated_At")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AudioScholarsId");
+
+                    b.ToTable("AudioDetail");
+                });
+
             modelBuilder.Entity("EntitiesClasses.Entities.AudioScholars", b =>
                 {
                     b.Property<int>("Id")
@@ -45,7 +85,7 @@ namespace EntitiesClasses.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("AudioScholars");
+                    b.ToTable("AudioScholares");
                 });
 
             modelBuilder.Entity("EntitiesClasses.Entities.BookCategory", b =>
@@ -463,6 +503,17 @@ namespace EntitiesClasses.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("UserTypes");
+                });
+
+            modelBuilder.Entity("EntitiesClasses.Entities.AudioDetail", b =>
+                {
+                    b.HasOne("EntitiesClasses.Entities.AudioScholars", "AudioScholars")
+                        .WithMany()
+                        .HasForeignKey("AudioScholarsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("AudioScholars");
                 });
 
             modelBuilder.Entity("EntitiesClasses.Entities.BookDetail", b =>

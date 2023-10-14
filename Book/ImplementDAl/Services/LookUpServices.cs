@@ -54,5 +54,10 @@ public class LookUpServices : ILookUpServices
     {
         return await _unitOfWork.ILookUpRepository.AudioScholars();
     }
+
+    public async Task<List<AudioDetail>> AudioDetails()
+    {
+        return await _unitOfWork.ILookUpRepository.AudioDetails();
+    }
 }
 

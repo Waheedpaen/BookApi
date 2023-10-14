@@ -12,7 +12,7 @@ public class AudioDetail : CommonClass
     public string? FilePathAudio { get; set; }
     public DateTime? DateRelase { get; set; }
     [ForeignKey("AudioScholars")]
-    public int?  AudioScholarsId { get; set; }
-    public virtual AudioScholars ? AudioScholars { get; set; }
+    public int   AudioScholarsId { get; set; }
+    public virtual AudioScholars ?AudioScholars { get; set; }
 
 }
