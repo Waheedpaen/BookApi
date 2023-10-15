@@ -5,17 +5,14 @@ using Microsoft.AspNetCore.Http.Features;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.WebHost.ConfigureKestrel(options =>
-{
-    options.Limits.MaxRequestBodySize = 512 * 2012 * 1598;
-});
+ 
 
 builder.Services.Configure<FormOptions>(x =>
 {
-    //x.ValueLengthLimit = int.MaxValue;
-    x.MultipartBodyLengthLimit = long.MaxValue; // In case of multipart
+    x.ValueLengthLimit = int.MaxValue;
+    x.MultipartBodyLengthLimit = int.MaxValue; // In case of multipart
 });
-
+ 
 builder.Services.Configure<IISServerOptions>(options =>
 {
     options.MaxRequestBodySize = 500 * 1024 * 1024; // 500 MB

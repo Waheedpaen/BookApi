@@ -5762,11 +5762,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\BookProject\\BookApi\\Book\\DataAccessLayer\\DataAccessLayer.csproj",
+      "projectUniqueName": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\DataAccessLayer\\DataAccessLayer.csproj",
       "projectName": "DataAccessLayer",
-      "projectPath": "E:\\BookProject\\BookApi\\Book\\DataAccessLayer\\DataAccessLayer.csproj",
+      "projectPath": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\DataAccessLayer\\DataAccessLayer.csproj",
       "packagesPath": "C:\\Users\\Wa\\.nuget\\packages\\",
-      "outputPath": "E:\\BookProject\\BookApi\\Book\\DataAccessLayer\\obj\\",
+      "outputPath": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\DataAccessLayer\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Wa\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5783,14 +5783,14 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "E:\\BookProject\\BookApi\\Book\\EntitiesClasses\\EntitiesClasses.csproj": {
-              "projectPath": "E:\\BookProject\\BookApi\\Book\\EntitiesClasses\\EntitiesClasses.csproj"
+            "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\EntitiesClasses\\EntitiesClasses.csproj": {
+              "projectPath": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\EntitiesClasses\\EntitiesClasses.csproj"
             },
-            "E:\\BookProject\\BookApi\\Book\\HelperDatas\\HelperDatas.csproj": {
-              "projectPath": "E:\\BookProject\\BookApi\\Book\\HelperDatas\\HelperDatas.csproj"
+            "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\HelperDatas\\HelperDatas.csproj": {
+              "projectPath": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\HelperDatas\\HelperDatas.csproj"
             },
-            "E:\\BookProject\\BookApi\\Book\\ViewModels\\ViewModels.csproj": {
-              "projectPath": "E:\\BookProject\\BookApi\\Book\\ViewModels\\ViewModels.csproj"
+            "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\ViewModels\\ViewModels.csproj": {
+              "projectPath": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\ViewModels\\ViewModels.csproj"
             }
           }
         }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\BookProject\\BookApi\\Book\\ImplementDAl\\ImplementDAl.csproj": {}
+    "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\ImplementDAl\\ImplementDAl.csproj": {}
   },
   "projects": {
-    "E:\\BookProject\\BookApi\\Book\\DataAccessLayer\\DataAccessLayer.csproj": {
+    "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\DataAccessLayer\\DataAccessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\BookProject\\BookApi\\Book\\DataAccessLayer\\DataAccessLayer.csproj",
+        "projectUniqueName": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\DataAccessLayer\\DataAccessLayer.csproj",
         "projectName": "DataAccessLayer",
-        "projectPath": "E:\\BookProject\\BookApi\\Book\\DataAccessLayer\\DataAccessLayer.csproj",
+        "projectPath": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\DataAccessLayer\\DataAccessLayer.csproj",
         "packagesPath": "C:\\Users\\Wa\\.nuget\\packages\\",
-        "outputPath": "E:\\BookProject\\BookApi\\Book\\DataAccessLayer\\obj\\",
+        "outputPath": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\DataAccessLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Wa\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,14 +28,14 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "E:\\BookProject\\BookApi\\Book\\EntitiesClasses\\EntitiesClasses.csproj": {
-                "projectPath": "E:\\BookProject\\BookApi\\Book\\EntitiesClasses\\EntitiesClasses.csproj"
+              "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\EntitiesClasses\\EntitiesClasses.csproj": {
+                "projectPath": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\EntitiesClasses\\EntitiesClasses.csproj"
               },
-              "E:\\BookProject\\BookApi\\Book\\HelperDatas\\HelperDatas.csproj": {
-                "projectPath": "E:\\BookProject\\BookApi\\Book\\HelperDatas\\HelperDatas.csproj"
+              "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\HelperDatas\\HelperDatas.csproj": {
+                "projectPath": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\HelperDatas\\HelperDatas.csproj"
               },
-              "E:\\BookProject\\BookApi\\Book\\ViewModels\\ViewModels.csproj": {
-                "projectPath": "E:\\BookProject\\BookApi\\Book\\ViewModels\\ViewModels.csproj"
+              "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\ViewModels\\ViewModels.csproj": {
+                "projectPath": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\ViewModels\\ViewModels.csproj"
               }
             }
           }
@@ -69,14 +69,14 @@
         }
       }
     },
-    "E:\\BookProject\\BookApi\\Book\\EntitiesClasses\\EntitiesClasses.csproj": {
+    "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\EntitiesClasses\\EntitiesClasses.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\BookProject\\BookApi\\Book\\EntitiesClasses\\EntitiesClasses.csproj",
+        "projectUniqueName": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\EntitiesClasses\\EntitiesClasses.csproj",
         "projectName": "EntitiesClasses",
-        "projectPath": "E:\\BookProject\\BookApi\\Book\\EntitiesClasses\\EntitiesClasses.csproj",
+        "projectPath": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\EntitiesClasses\\EntitiesClasses.csproj",
         "packagesPath": "C:\\Users\\Wa\\.nuget\\packages\\",
-        "outputPath": "E:\\BookProject\\BookApi\\Book\\EntitiesClasses\\obj\\",
+        "outputPath": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\EntitiesClasses\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Wa\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -166,14 +166,14 @@
         }
       }
     },
-    "E:\\BookProject\\BookApi\\Book\\HelperDatas\\HelperDatas.csproj": {
+    "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\HelperDatas\\HelperDatas.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\BookProject\\BookApi\\Book\\HelperDatas\\HelperDatas.csproj",
+        "projectUniqueName": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\HelperDatas\\HelperDatas.csproj",
         "projectName": "HelperDatas",
-        "projectPath": "E:\\BookProject\\BookApi\\Book\\HelperDatas\\HelperDatas.csproj",
+        "projectPath": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\HelperDatas\\HelperDatas.csproj",
         "packagesPath": "C:\\Users\\Wa\\.nuget\\packages\\",
-        "outputPath": "E:\\BookProject\\BookApi\\Book\\HelperDatas\\obj\\",
+        "outputPath": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\HelperDatas\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Wa\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -231,14 +231,14 @@
         }
       }
     },
-    "E:\\BookProject\\BookApi\\Book\\ImplementDAl\\ImplementDAl.csproj": {
+    "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\ImplementDAl\\ImplementDAl.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\BookProject\\BookApi\\Book\\ImplementDAl\\ImplementDAl.csproj",
+        "projectUniqueName": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\ImplementDAl\\ImplementDAl.csproj",
         "projectName": "ImplementDAl",
-        "projectPath": "E:\\BookProject\\BookApi\\Book\\ImplementDAl\\ImplementDAl.csproj",
+        "projectPath": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\ImplementDAl\\ImplementDAl.csproj",
         "packagesPath": "C:\\Users\\Wa\\.nuget\\packages\\",
-        "outputPath": "E:\\BookProject\\BookApi\\Book\\ImplementDAl\\obj\\",
+        "outputPath": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\ImplementDAl\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Wa\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -255,11 +255,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "E:\\BookProject\\BookApi\\Book\\DataAccessLayer\\DataAccessLayer.csproj": {
-                "projectPath": "E:\\BookProject\\BookApi\\Book\\DataAccessLayer\\DataAccessLayer.csproj"
+              "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\DataAccessLayer\\DataAccessLayer.csproj": {
+                "projectPath": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\DataAccessLayer\\DataAccessLayer.csproj"
               },
-              "E:\\BookProject\\BookApi\\Book\\EntitiesClasses\\EntitiesClasses.csproj": {
-                "projectPath": "E:\\BookProject\\BookApi\\Book\\EntitiesClasses\\EntitiesClasses.csproj"
+              "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\EntitiesClasses\\EntitiesClasses.csproj": {
+                "projectPath": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\EntitiesClasses\\EntitiesClasses.csproj"
               }
             }
           }
@@ -299,14 +299,14 @@
         }
       }
     },
-    "E:\\BookProject\\BookApi\\Book\\ViewModels\\ViewModels.csproj": {
+    "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\ViewModels\\ViewModels.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\BookProject\\BookApi\\Book\\ViewModels\\ViewModels.csproj",
+        "projectUniqueName": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\ViewModels\\ViewModels.csproj",
         "projectName": "ViewModels",
-        "projectPath": "E:\\BookProject\\BookApi\\Book\\ViewModels\\ViewModels.csproj",
+        "projectPath": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\ViewModels\\ViewModels.csproj",
         "packagesPath": "C:\\Users\\Wa\\.nuget\\packages\\",
-        "outputPath": "E:\\BookProject\\BookApi\\Book\\ViewModels\\obj\\",
+        "outputPath": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\ViewModels\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Wa\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -323,8 +323,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "E:\\BookProject\\BookApi\\Book\\EntitiesClasses\\EntitiesClasses.csproj": {
-                "projectPath": "E:\\BookProject\\BookApi\\Book\\EntitiesClasses\\EntitiesClasses.csproj"
+              "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\EntitiesClasses\\EntitiesClasses.csproj": {
+                "projectPath": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\EntitiesClasses\\EntitiesClasses.csproj"
               }
             }
           }

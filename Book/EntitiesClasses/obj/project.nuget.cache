@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ftUjCLI9BJJQkZxxeUiqLPiDkbHGKOxmOmVrDoF0+RdGMkbVQFpQQ9zcef+NLt5I+FyN8BMFOODVG+gECHODjg==",
+  "dgSpecHash": "kYAF5qTBMQBZ+6VMvj3qfvwXKnm7O5pJTACdJjAGU1gq14cISmmZvKKK1uJ3R1eMSBmrCXawjiiPpxRvn7qIrQ==",
   "success": true,
-  "projectFilePath": "E:\\BookProject\\BookApi\\Book\\EntitiesClasses\\EntitiesClasses.csproj",
+  "projectFilePath": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\EntitiesClasses\\EntitiesClasses.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Wa\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Wa\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

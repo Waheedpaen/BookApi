@@ -4618,11 +4618,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\BookProject\\BookApi\\Book\\BookApplication\\BookApplication.csproj",
+      "projectUniqueName": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\BookApplication.csproj",
       "projectName": "BookApplication",
-      "projectPath": "E:\\BookProject\\BookApi\\Book\\BookApplication\\BookApplication.csproj",
+      "projectPath": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\BookApplication.csproj",
       "packagesPath": "C:\\Users\\Wa\\.nuget\\packages\\",
-      "outputPath": "E:\\BookProject\\BookApi\\Book\\BookApplication\\obj\\",
+      "outputPath": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Wa\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -4640,20 +4640,20 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "E:\\BookProject\\BookApi\\Book\\DataAccessLayer\\DataAccessLayer.csproj": {
-              "projectPath": "E:\\BookProject\\BookApi\\Book\\DataAccessLayer\\DataAccessLayer.csproj"
+            "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\DataAccessLayer\\DataAccessLayer.csproj": {
+              "projectPath": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\DataAccessLayer\\DataAccessLayer.csproj"
             },
-            "E:\\BookProject\\BookApi\\Book\\EntitiesClasses\\EntitiesClasses.csproj": {
-              "projectPath": "E:\\BookProject\\BookApi\\Book\\EntitiesClasses\\EntitiesClasses.csproj"
+            "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\EntitiesClasses\\EntitiesClasses.csproj": {
+              "projectPath": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\EntitiesClasses\\EntitiesClasses.csproj"
             },
-            "E:\\BookProject\\BookApi\\Book\\HelperDatas\\HelperDatas.csproj": {
-              "projectPath": "E:\\BookProject\\BookApi\\Book\\HelperDatas\\HelperDatas.csproj"
+            "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\HelperDatas\\HelperDatas.csproj": {
+              "projectPath": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\HelperDatas\\HelperDatas.csproj"
             },
-            "E:\\BookProject\\BookApi\\Book\\ImplementDAl\\ImplementDAl.csproj": {
-              "projectPath": "E:\\BookProject\\BookApi\\Book\\ImplementDAl\\ImplementDAl.csproj"
+            "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\ImplementDAl\\ImplementDAl.csproj": {
+              "projectPath": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\ImplementDAl\\ImplementDAl.csproj"
             },
-            "E:\\BookProject\\BookApi\\Book\\ViewModels\\ViewModels.csproj": {
-              "projectPath": "E:\\BookProject\\BookApi\\Book\\ViewModels\\ViewModels.csproj"
+            "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\ViewModels\\ViewModels.csproj": {
+              "projectPath": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\ViewModels\\ViewModels.csproj"
             }
           }
         }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "eNrkk2oKxbUwUDgnmbhNLfBV+TyM5QwHMWDsmMeRuL2hNBbWDLuswke1dnFNxyPHqRZGYvd8unJQgEEQCLi4yQ==",
+  "dgSpecHash": "jg3dWCpkARCKmGBwBHShnau46CF0iElfM0o4X0QRjF2VA+R8cqnkdg9mMUBNPKJROnC+hDXFCb/mzSNEALXNdA==",
   "success": true,
-  "projectFilePath": "E:\\BookProject\\BookApi\\Book\\HelperDatas\\HelperDatas.csproj",
+  "projectFilePath": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\HelperDatas\\HelperDatas.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Wa\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Wa\\.nuget\\packages\\microsoft.aspnetcore.authentication.core\\2.2.0\\microsoft.aspnetcore.authentication.core.2.2.0.nupkg.sha512",

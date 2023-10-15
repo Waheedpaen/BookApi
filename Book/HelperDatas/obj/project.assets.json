@@ -4064,11 +4064,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\BookProject\\BookApi\\Book\\HelperDatas\\HelperDatas.csproj",
+      "projectUniqueName": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\HelperDatas\\HelperDatas.csproj",
       "projectName": "HelperDatas",
-      "projectPath": "E:\\BookProject\\BookApi\\Book\\HelperDatas\\HelperDatas.csproj",
+      "projectPath": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\HelperDatas\\HelperDatas.csproj",
       "packagesPath": "C:\\Users\\Wa\\.nuget\\packages\\",
-      "outputPath": "E:\\BookProject\\BookApi\\Book\\HelperDatas\\obj\\",
+      "outputPath": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\HelperDatas\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Wa\\AppData\\Roaming\\NuGet\\NuGet.Config",

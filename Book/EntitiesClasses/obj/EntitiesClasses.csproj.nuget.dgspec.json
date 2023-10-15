@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\BookProject\\BookApi\\Book\\EntitiesClasses\\EntitiesClasses.csproj": {}
+    "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\EntitiesClasses\\EntitiesClasses.csproj": {}
   },
   "projects": {
-    "E:\\BookProject\\BookApi\\Book\\EntitiesClasses\\EntitiesClasses.csproj": {
+    "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\EntitiesClasses\\EntitiesClasses.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\BookProject\\BookApi\\Book\\EntitiesClasses\\EntitiesClasses.csproj",
+        "projectUniqueName": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\EntitiesClasses\\EntitiesClasses.csproj",
         "projectName": "EntitiesClasses",
-        "projectPath": "E:\\BookProject\\BookApi\\Book\\EntitiesClasses\\EntitiesClasses.csproj",
+        "projectPath": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\EntitiesClasses\\EntitiesClasses.csproj",
         "packagesPath": "C:\\Users\\Wa\\.nuget\\packages\\",
-        "outputPath": "E:\\BookProject\\BookApi\\Book\\EntitiesClasses\\obj\\",
+        "outputPath": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\EntitiesClasses\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Wa\\AppData\\Roaming\\NuGet\\NuGet.Config",
