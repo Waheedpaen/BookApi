@@ -5,6 +5,8 @@ using ViewModels.AudioDetailViewModel;
 
 using System;
 using System.IO;
+using ViewModels.CommonViewModel;
+
 namespace BookApplication.Controllers;
 
 [Route("api/[controller]")]
@@ -127,14 +129,14 @@ public class AudioDetailController : ControllerBase
 
 
 
-    [HttpPut("UpdateDeleteAudio")]
+    [HttpPut("UpdateAudioDetail")]
     [DisableRequestSizeLimit]
     [RequestFormLimits(ValueLengthLimit = int.MaxValue, MultipartBodyLengthLimit = int.MaxValue)]
-    public async Task<IActionResult> UpdateDeleteAudio([FromForm] AudioDetailSaveViewModel model)
+    public async Task<IActionResult> UpdateAudioDetail([FromForm] AudioDetailSaveViewModel model)
     {
         if (!ModelState.IsValid) return BadRequest(ModelState);
-        var entity = _mapper.Map<AudioDetail>(model);
-        var dataAlreadyExits = await _audioDetailServices.AudioDetailAlreadyExit(entity.Name);
+        //var entity = _mapper.Map<AudioDetail>(model);
+        var dataAlreadyExits = await _audioDetailServices.AudioDetailAlreadyExit(model.Name);
         if (dataAlreadyExits != null)
         {
             return Ok(new { Success = false, Message = dataAlreadyExits.Name + ' ' + "Already Exist" });
@@ -170,7 +172,7 @@ public class AudioDetailController : ControllerBase
                     return BadRequest("No file or empty file provided.");
                 }
                 var uploadsFolder = Path.Combine(_hostEnvironment.WebRootPath, "AudioDetail");
-                var audioFileName = Guid.NewGuid().ToString() + ".mp3";
+                var audioFileName = Guid.NewGuid().ToString() + Path.GetExtension(model.ImageUrlData.FileName);
                 var audioFileNameFilePath = Path.Combine(uploadsFolder, audioFileName);
                 if (!Directory.Exists(uploadsFolder))
                 {
@@ -211,4 +213,21 @@ public class AudioDetailController : ControllerBase
         return Ok(pagedResult);
     }
 
+
+
+    [HttpGet("GetAudioDetailByAudioScholar/{Id}")]
+    public async Task<IActionResult> GetAudioDetailByAudioScholar(int Id)
+    {
+        if (!ModelState.IsValid) return BadRequest(ModelState);
+        var entity = await _audioDetailServices. GetAudioDetailByAudioScholar(Id);
+      /*  var model = _mapper.Map<List<CommonDto>>(entity)*/;
+        if (entity != null)
+        {
+            return Ok(new { Data = entity, Success = true, });
+        }
+        else
+        {
+            return Ok(new { Data = string.Empty, Success = false, });
+        }
+    }
 }

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "TVmx0m+wZQe8QoDr8J+ilGuBMhHgGYADxcb6h+jyae0=",
+  "Hash": "OzsuqY3jWVxQ2Dh3gpiL/9sQ7T+OKGOTeT0SW0118vE=",
   "Source": "BookApplication",
   "BasePath": "_content/BookApplication",
   "Mode": "Default",
@@ -32,6 +32,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\AudioDetail\\212292f2-b197-44bf-8ec7-55ea5551019c.mp4"
+    },
+    {
+      "Identity": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\wwwroot\\AudioDetail\\232c33bd-0485-4ff2-824c-35be3d4be92d.mp3",
+      "SourceId": "BookApplication",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\wwwroot\\",
+      "BasePath": "_content/BookApplication",
+      "RelativePath": "AudioDetail/232c33bd-0485-4ff2-824c-35be3d4be92d.mp3",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\AudioDetail\\232c33bd-0485-4ff2-824c-35be3d4be92d.mp3"
     },
     {
       "Identity": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\wwwroot\\AudioDetail\\304a8881-ae1f-40ab-8442-8d420c6517a8.mp3",
@@ -119,6 +136,23 @@
       "OriginalItemSpec": "wwwroot\\AudioDetail\\682c5899-dfc4-4e5d-9a7b-220640c5fbac.mp3"
     },
     {
+      "Identity": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\wwwroot\\AudioDetail\\b5a2e9f1-f07b-4a9b-b509-7024823122bc.mp3",
+      "SourceId": "BookApplication",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\wwwroot\\",
+      "BasePath": "_content/BookApplication",
+      "RelativePath": "AudioDetail/b5a2e9f1-f07b-4a9b-b509-7024823122bc.mp3",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\AudioDetail\\b5a2e9f1-f07b-4a9b-b509-7024823122bc.mp3"
+    },
+    {
       "Identity": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\wwwroot\\AudioDetail\\c67f42f5-0fb4-4733-bb03-0056917f25bb.mp3",
       "SourceId": "BookApplication",
       "SourceType": "Discovered",
@@ -151,6 +185,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\AudioDetail\\dd78cb10-1b4b-4ff0-81b4-ee8bb63aacff.mp3"
+    },
+    {
+      "Identity": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\wwwroot\\AudioDetail\\df7f4fc5-adb1-4ce4-9adc-035c2115e9c7.mp3",
+      "SourceId": "BookApplication",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\wwwroot\\",
+      "BasePath": "_content/BookApplication",
+      "RelativePath": "AudioDetail/df7f4fc5-adb1-4ce4-9adc-035c2115e9c7.mp3",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\AudioDetail\\df7f4fc5-adb1-4ce4-9adc-035c2115e9c7.mp3"
     },
     {
       "Identity": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\wwwroot\\MonthlyMagzine\\19b9d9c4-6a98-4865-b254-c3d3f83dadcb.mp3",
