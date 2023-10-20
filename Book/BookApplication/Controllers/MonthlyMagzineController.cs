@@ -2,6 +2,7 @@
 using ImplementDAl.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Hosting;
 using ViewModels.CommonViewModel;
 using ViewModels.MonthlyMagizne;
@@ -226,6 +227,27 @@ public class MonthlyMagzineController : ControllerBase
         var pagedResult = await _monthlyMagzinesServices.SearchAndPaginateAsync(options);
         return Ok(pagedResult);
     }
+
+
+    [HttpGet("GetMonthlyMagzinesPdf/{id}")]
+    public async Task<IActionResult> GetMonthlyMagzinesPdf(int id)
+    {
+        var entity = await _monthlyMagzinesServices.Get(id);
+
+        if (entity == null)
+        {
+            return NotFound();
+        }
+
+        var fileStream = new FileStream(entity.FilePathPDF, FileMode.Open, FileAccess.Read);
+
+        return File(fileStream, "application/pdf", entity.FileNamePDF);
+    }
+
+
+
+
+
 
     [HttpPost("dara")] 
     [DisableRequestSizeLimit]

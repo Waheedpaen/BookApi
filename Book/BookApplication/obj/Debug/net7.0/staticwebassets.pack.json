@@ -21,12 +21,20 @@
       "PackagePath": "staticwebassets\\AudioDetail\\3a7d9136-4407-4f4b-9bd6-71f3497b036c.mp3"
     },
     {
+      "Id": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\wwwroot\\AudioDetail\\53f92c2d-0ee0-4f67-b5bc-1c49bf911bfb.mp4",
+      "PackagePath": "staticwebassets\\AudioDetail\\53f92c2d-0ee0-4f67-b5bc-1c49bf911bfb.mp4"
+    },
+    {
       "Id": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\wwwroot\\AudioDetail\\62331f23-d00a-485a-b9f1-1cf8d21efd8a.mp3",
       "PackagePath": "staticwebassets\\AudioDetail\\62331f23-d00a-485a-b9f1-1cf8d21efd8a.mp3"
     },
     {
       "Id": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\wwwroot\\AudioDetail\\682c5899-dfc4-4e5d-9a7b-220640c5fbac.mp3",
       "PackagePath": "staticwebassets\\AudioDetail\\682c5899-dfc4-4e5d-9a7b-220640c5fbac.mp3"
+    },
+    {
+      "Id": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\wwwroot\\AudioDetail\\913f21ef-f007-483a-9b1c-14dbc616a484.mp4",
+      "PackagePath": "staticwebassets\\AudioDetail\\913f21ef-f007-483a-9b1c-14dbc616a484.mp4"
     },
     {
       "Id": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\wwwroot\\AudioDetail\\b5a2e9f1-f07b-4a9b-b509-7024823122bc.mp3",
@@ -37,6 +45,10 @@
       "PackagePath": "staticwebassets\\AudioDetail\\c67f42f5-0fb4-4733-bb03-0056917f25bb.mp3"
     },
     {
+      "Id": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\wwwroot\\AudioDetail\\cf4cdde6-1b96-44b5-832b-2468750d75ca.mp3",
+      "PackagePath": "staticwebassets\\AudioDetail\\cf4cdde6-1b96-44b5-832b-2468750d75ca.mp3"
+    },
+    {
       "Id": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\wwwroot\\AudioDetail\\dd78cb10-1b4b-4ff0-81b4-ee8bb63aacff.mp3",
       "PackagePath": "staticwebassets\\AudioDetail\\dd78cb10-1b4b-4ff0-81b4-ee8bb63aacff.mp3"
     },
@@ -45,12 +57,28 @@
       "PackagePath": "staticwebassets\\AudioDetail\\df7f4fc5-adb1-4ce4-9adc-035c2115e9c7.mp3"
     },
     {
+      "Id": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\wwwroot\\AudioDetail\\e4a732bd-d2b5-475b-8f29-aa149a02ad03.mp4",
+      "PackagePath": "staticwebassets\\AudioDetail\\e4a732bd-d2b5-475b-8f29-aa149a02ad03.mp4"
+    },
+    {
+      "Id": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\wwwroot\\AudioDetail\\fc97f31e-26ca-4af9-a7f4-e3d63100ccc6",
+      "PackagePath": "staticwebassets\\AudioDetail"
+    },
+    {
+      "Id": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\wwwroot\\MonthlyMagzine\\16bb83ab-18ed-44af-a829-fb02e1af9485.pdf",
+      "PackagePath": "staticwebassets\\MonthlyMagzine\\16bb83ab-18ed-44af-a829-fb02e1af9485.pdf"
+    },
+    {
       "Id": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\wwwroot\\MonthlyMagzine\\19b9d9c4-6a98-4865-b254-c3d3f83dadcb.mp3",
       "PackagePath": "staticwebassets\\MonthlyMagzine\\19b9d9c4-6a98-4865-b254-c3d3f83dadcb.mp3"
     },
     {
       "Id": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\wwwroot\\MonthlyMagzine\\6c84e343-c342-4e95-8118-128c11010d4a.mp3",
       "PackagePath": "staticwebassets\\MonthlyMagzine\\6c84e343-c342-4e95-8118-128c11010d4a.mp3"
+    },
+    {
+      "Id": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\wwwroot\\MonthlyMagzine\\821d6e0d-966f-49ff-8488-532925bfb5e6.pdf",
+      "PackagePath": "staticwebassets\\MonthlyMagzine\\821d6e0d-966f-49ff-8488-532925bfb5e6.pdf"
     },
     {
       "Id": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\wwwroot\\MonthlyMagzine\\9ea2f28a-255f-4c9f-9379-1bff240d307b.ttml",
@@ -63,6 +91,10 @@
     {
       "Id": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\wwwroot\\MonthlyMagzine\\b6c48805-a0e0-47cb-ad9d-815650025e9d.mp4",
       "PackagePath": "staticwebassets\\MonthlyMagzine\\b6c48805-a0e0-47cb-ad9d-815650025e9d.mp4"
+    },
+    {
+      "Id": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\wwwroot\\MonthlyMagzine\\c318bb18-9fcf-4c40-9981-e0fb4a76cbc5.pdf",
+      "PackagePath": "staticwebassets\\MonthlyMagzine\\c318bb18-9fcf-4c40-9981-e0fb4a76cbc5.pdf"
     },
     {
       "Id": "C:\\Users\\Wa\\Documents\\GitHub\\BookApi\\Book\\BookApplication\\wwwroot\\MonthlyMagzine\\fa5a6163-1855-471c-8e0b-00dedeb7dc36.mp3",

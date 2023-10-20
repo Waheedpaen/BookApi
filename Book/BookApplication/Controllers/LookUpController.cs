@@ -161,8 +161,7 @@ public class LookUpController : ControllerBase
     {
         if (!ModelState.IsValid) return BadRequest(ModelState);
         var enityData = await _lookUpServices.AudioScholars();
-        var model = _mapper.Map<List<CommonDto>>(enityData);
-        model = model.Select(a => a).TakeLast(5).ToList();
+        var model = _mapper.Map<List<CommonDto>>(enityData); 
         if (model != null)
         {
             return Ok(new { Success = true, data = model });

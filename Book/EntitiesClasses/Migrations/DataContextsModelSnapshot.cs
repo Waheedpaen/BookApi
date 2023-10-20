@@ -22,6 +22,35 @@ namespace EntitiesClasses.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("EntitiesClasses.Entitie.ChatGroup", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("CreatedById")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedDateTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("GroupName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserIds")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CreatedById");
+
+                    b.ToTable("ChatGroups");
+                });
+
             modelBuilder.Entity("EntitiesClasses.Entities.AudioDetail", b =>
                 {
                     b.Property<int>("Id")
@@ -235,6 +264,48 @@ namespace EntitiesClasses.Migrations
                     b.ToTable("FarqaCategories");
                 });
 
+            modelBuilder.Entity("EntitiesClasses.Entities.GroupMessage", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Attachment")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Comment")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedDateTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("GroupId")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("IsRead")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("MessageFromUserId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("MessageReplyId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("MessageToUserIds")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MessageFromUserId");
+
+                    b.ToTable("GroupMessages");
+                });
+
             modelBuilder.Entity("EntitiesClasses.Entities.MadrassaBook", b =>
                 {
                     b.Property<int>("Id")
@@ -334,6 +405,91 @@ namespace EntitiesClasses.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("MadrassaClasses");
+                });
+
+            modelBuilder.Entity("EntitiesClasses.Entities.Message", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Attachment")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Comment")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedDateTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsRead")
+                        .HasColumnType("bit");
+
+                    b.Property<int?>("MessageFromUserId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("MessageReplyId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("MessageToUserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MessageFromUserId");
+
+                    b.HasIndex("MessageToUserId");
+
+                    b.ToTable("Messages");
+                });
+
+            modelBuilder.Entity("EntitiesClasses.Entities.MessageReply", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Attachment")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedDateTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsRead")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("MessageId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("MessageId1")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Reply")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("ReplyFromUserId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("ReplyToUserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MessageId1");
+
+                    b.HasIndex("ReplyFromUserId");
+
+                    b.HasIndex("ReplyToUserId");
+
+                    b.ToTable("MessageReplies");
                 });
 
             modelBuilder.Entity("EntitiesClasses.Entities.MonthlyMagzine", b =>
@@ -505,6 +661,17 @@ namespace EntitiesClasses.Migrations
                     b.ToTable("UserTypes");
                 });
 
+            modelBuilder.Entity("EntitiesClasses.Entitie.ChatGroup", b =>
+                {
+                    b.HasOne("EntitiesClasses.Entities.User", "User")
+                        .WithMany()
+                        .HasForeignKey("CreatedById")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("EntitiesClasses.Entities.AudioDetail", b =>
                 {
                     b.HasOne("EntitiesClasses.Entities.AudioScholars", "AudioScholars")
@@ -545,6 +712,17 @@ namespace EntitiesClasses.Migrations
                     b.Navigation("BookCategory");
                 });
 
+            modelBuilder.Entity("EntitiesClasses.Entities.GroupMessage", b =>
+                {
+                    b.HasOne("EntitiesClasses.Entities.User", "MessageFromUser")
+                        .WithMany()
+                        .HasForeignKey("MessageFromUserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("MessageFromUser");
+                });
+
             modelBuilder.Entity("EntitiesClasses.Entities.MadrassaBook", b =>
                 {
                     b.HasOne("EntitiesClasses.Entities.MadrassaClass", "MadrassaClass")
@@ -563,6 +741,44 @@ namespace EntitiesClasses.Migrations
                         .HasForeignKey("MadrassaBookId");
 
                     b.Navigation("MadrassaBook");
+                });
+
+            modelBuilder.Entity("EntitiesClasses.Entities.Message", b =>
+                {
+                    b.HasOne("EntitiesClasses.Entities.User", "MessageFromUser")
+                        .WithMany()
+                        .HasForeignKey("MessageFromUserId");
+
+                    b.HasOne("EntitiesClasses.Entities.User", "MessageToUser")
+                        .WithMany()
+                        .HasForeignKey("MessageToUserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("MessageFromUser");
+
+                    b.Navigation("MessageToUser");
+                });
+
+            modelBuilder.Entity("EntitiesClasses.Entities.MessageReply", b =>
+                {
+                    b.HasOne("EntitiesClasses.Entities.Message", "Message")
+                        .WithMany()
+                        .HasForeignKey("MessageId1");
+
+                    b.HasOne("EntitiesClasses.Entities.User", "ReplyFromUser")
+                        .WithMany()
+                        .HasForeignKey("ReplyFromUserId");
+
+                    b.HasOne("EntitiesClasses.Entities.User", "ReplyToUser")
+                        .WithMany()
+                        .HasForeignKey("ReplyToUserId");
+
+                    b.Navigation("Message");
+
+                    b.Navigation("ReplyFromUser");
+
+                    b.Navigation("ReplyToUser");
                 });
 
             modelBuilder.Entity("EntitiesClasses.Entities.Scholar", b =>

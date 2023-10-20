@@ -1,6 +1,7 @@
 ﻿
 
 
+using EntitiesClasses.Entitie;
 using Microsoft.EntityFrameworkCore;
 
 namespace EntitiesClasses.DataContext;
@@ -18,7 +19,10 @@ namespace EntitiesClasses.DataContext;
     public DbSet<MadrassaClass> MadrassaClasses { get; set; }
     public DbSet<MadrassaBook> MadrassaBooks { get; set; }
     public DbSet<MonthlyMagzine> MonthlyMagzines { get; set; }
-
+    public DbSet<Message> Messages { get; set; }
+    public DbSet<MessageReply> MessageReplies { get; set; }
+    public DbSet<ChatGroup> ChatGroups { get; set; }
+    public DbSet<GroupMessage> GroupMessages { get; set; }
 
     public DbSet<MadrassaBookCatgory> MadrassaBookCatgories { get; set; }
     public DbSet<Scholar> Scholars { get; set; }
@@ -31,9 +35,9 @@ namespace EntitiesClasses.DataContext;
     {
 
         modelBuilder.Entity<User>().HasQueryFilter((d => EF.Property<bool>(d, "IsDeleted") == false));
-   
-        //modelBuilder.Entity<AudioDetail>().HasQueryFilter((d => EF.Property<bool>(d, "IsDeleted") == false));
-        //modelBuilder.Entity<AudioScholars>().HasQueryFilter((d => EF.Property<bool>(d, "IsDeleted") == false));
+
+        modelBuilder.Entity<AudioDetail>().HasQueryFilter((d => EF.Property<bool>(d, "IsDeleted") == false));
+        modelBuilder.Entity<AudioScholars>().HasQueryFilter((d => EF.Property<bool>(d, "IsDeleted") == false));
         modelBuilder.Entity<MadrassaClass>().HasQueryFilter((d => EF.Property<bool>(d, "IsDeleted") == false));
         modelBuilder.Entity<BookCategory>().HasQueryFilter((d => EF.Property<bool>(d, "IsDeleted") == false));
         modelBuilder.Entity<MadrassaBook>().HasQueryFilter((d => EF.Property<bool>(d, "IsDeleted") == false));
