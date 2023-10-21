@@ -6,6 +6,7 @@ using DataAccessLayer.Services;
 using ImplementDAl.Services;
 using ImplementDAL.Services;
 using ImplementDAL.UnitWorks;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 using ViewModel.AutoMapper;
 
 namespace MobileManagementSystem.Extension
@@ -25,12 +26,14 @@ namespace MobileManagementSystem.Extension
             Services.AddTransient<IAudioScholarsServices,  AudioScholarServices>(); 
             Services.AddTransient<ILookUpServices, LookUpServices>(); 
             Services.AddTransient<IBookCategoryServices, BookCategoryServices>();
+            Services.TryAddSingleton<IHttpContextAccessor, HttpContextAccessor>();   
             Services.AddTransient<IFarqaCategoryServices, FarqaCategoryServices>();
             Services.AddTransient<IBookDetailServices, BookDetailServices>();
+            Services.AddTransient<IChatServices, ChatServices>();
             //Services.AddTransient<IOperatingSystemService, OperatingSystemService>();
             //Services.AddTransient<ILoggerManager, LoggerManager>();
             Services.AddAutoMapper(typeof(AutoMappers));
-
+            Services.AddSignalR();
             return Services; 
         }
     }

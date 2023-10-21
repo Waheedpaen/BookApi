@@ -122,12 +122,16 @@ C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\bin\Debug\net7.0\Human
 C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\bin\Debug\net7.0\System.Web.Cors.dll
 C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.OpenIdConnect.dll
+C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\bin\Debug\net7.0\Microsoft.AspNetCore.Connections.Abstractions.dll
 C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.Internal.dll
 C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\bin\Debug\net7.0\Microsoft.AspNetCore.Http.Connections.Common.dll
 C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\bin\Debug\net7.0\Microsoft.AspNetCore.JsonPatch.dll
 C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\bin\Debug\net7.0\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\bin\Debug\net7.0\Microsoft.AspNetCore.SignalR.Common.dll
+C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\bin\Debug\net7.0\Microsoft.AspNetCore.SignalR.Protocols.Json.dll
 C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\bin\Debug\net7.0\Microsoft.Data.SqlClient.dll
 C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
@@ -136,8 +140,10 @@ C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\bin\Debug\net7.0\Micro
 C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.SqlServer.dll
 C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\bin\Debug\net7.0\Microsoft.Extensions.Features.dll
 C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\bin\Debug\net7.0\Microsoft.Extensions.Identity.Core.dll
 C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\bin\Debug\net7.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
 C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\bin\Debug\net7.0\Microsoft.Identity.Client.dll
 C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\bin\Debug\net7.0\Microsoft.Identity.Client.Extensions.Msal.dll
 C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
@@ -161,6 +167,7 @@ C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\bin\Debug\net7.0\Syste
 C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\bin\Debug\net7.0\System.Drawing.Common.dll
 C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\bin\Debug\net7.0\System.Memory.Data.dll
+C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\bin\Debug\net7.0\System.Net.WebSockets.WebSocketProtocol.dll
 C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\bin\Debug\net7.0\System.Runtime.Caching.dll
 C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\bin\Debug\net7.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\bin\Debug\net7.0\System.Security.Permissions.dll
@@ -202,10 +209,3 @@ C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\obj\Debug\net7.0\refin
 C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\obj\Debug\net7.0\BookApplication.pdb
 C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\obj\Debug\net7.0\BookApplication.genruntimeconfig.cache
 C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\obj\Debug\net7.0\ref\BookApplication.dll
-C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\bin\Debug\net7.0\Microsoft.AspNetCore.Connections.Abstractions.dll
-C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\bin\Debug\net7.0\Microsoft.AspNetCore.Http.Connections.Common.dll
-C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\bin\Debug\net7.0\Microsoft.AspNetCore.SignalR.Common.dll
-C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\bin\Debug\net7.0\Microsoft.AspNetCore.SignalR.Protocols.Json.dll
-C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\bin\Debug\net7.0\Microsoft.Extensions.Features.dll
-C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
-C:\Users\Wa\Documents\GitHub\BookApi\Book\BookApplication\bin\Debug\net7.0\System.Net.WebSockets.WebSocketProtocol.dll

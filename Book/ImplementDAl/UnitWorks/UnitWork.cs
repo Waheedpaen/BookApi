@@ -10,6 +10,7 @@ namespace ImplementDAL.UnitWorks;
      public  class UnitWork : IUnitofWork
     {
     private UserRepository _userRepository;
+    private ChatRepository _chatRepository;
     private LookUpRepository _lookUpRepository;
     private MadrassaClassRepository _madrassaClassRepository;
     private FarqaCategoryRepository _faarqaCategoryRepository;
@@ -40,6 +41,8 @@ namespace ImplementDAL.UnitWorks;
     public IAudioScholarsRepository IAudioScholarsRepository => _audioScholarsRepository ?? new(_context);
 
     public IAudioDetailRepository IAudioDetailRepository => _audioDetailRepository ?? new(_context);
+
+    public IChatRepository IChatRepository => _chatRepository ?? new(_context);
 
     public async Task<int> CommitAsync()
     {

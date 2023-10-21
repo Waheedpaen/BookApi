@@ -1,5 +1,6 @@
 
 
+using CoreWebApi.Hubs;
 using Microsoft.AspNetCore.Http.Features;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -31,7 +32,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-
+app.MapHub<ChatHub>("/notificationHub");
 app.UseHttpsRedirection();
 app.UseCors();
 app.UseAuthorization();

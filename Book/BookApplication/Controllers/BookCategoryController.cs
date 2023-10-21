@@ -5,6 +5,9 @@ using HelperDatas.PaginationsClasses;
 using ImplementDAl.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System;
+using System.Runtime.ConstrainedExecution;
+using System.Security.Claims;
 using ViewModels.CommonViewModel;
 
 namespace BookApplication.Controllers;
@@ -16,19 +19,24 @@ public class BookCategoryController : ControllerBase
     private readonly IMapper _mapper;
     private readonly ILookUpServices _lookUpServices;
     private readonly IConfiguration _config;
+    private readonly IHttpContextAccessor _httpContextAccessor;
     private readonly IBookCategoryServices _bookCategoryServices;
-    public BookCategoryController(IBookCategoryServices bookCategoryServices, ILookUpServices lookUpServices, IMapper mapper, IConfiguration config)
+    private int _LoggedIn_UserID = 0;
+    public BookCategoryController(IHttpContextAccessor
+        httpContextAccessor, IBookCategoryServices
+        bookCategoryServices, ILookUpServices lookUpServices, IMapper mapper, IConfiguration config)
     {
         _lookUpServices = lookUpServices;
         _mapper = mapper;
         _config = config;
         _bookCategoryServices = bookCategoryServices;
-    }
+       _httpContextAccessor = httpContextAccessor;
 
+    }
 
     [HttpPost("SaveBookCategory")]
     public async Task<IActionResult> SaveBookCategory(CommonDto model)
-    {
+    { 
         var enity = _mapper.Map<BookCategory>(model);
         var dataExit = await _bookCategoryServices.BookCategoryAlreadyExit(enity.Name);
         if (dataExit != null)

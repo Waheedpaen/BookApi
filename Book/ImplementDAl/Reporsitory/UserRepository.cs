@@ -29,11 +29,10 @@ public  class UserRepository :  Reporsitory<User, int>, IUserRepository
     public UserRepository(DataContexts context, IHttpContextAccessor httpContextAccessor) : base(context)
     {
         _serviceResponse = new ServiceResponse<object>();
-        _LoggedIn_UserID = Convert.ToInt32(httpContextAccessor.HttpContext.User.FindFirstValue(Enums.ClaimType.UserId.ToString()));
-        _LoggedIn_UserTypeId = Convert.ToInt32(httpContextAccessor.HttpContext.User.FindFirstValue(Enums.ClaimType.UserTypeId.ToString()));
-        _LoggedIn_UserName = httpContextAccessor.HttpContext.User.FindFirstValue(Enums.ClaimType.Name.ToString())?.ToString();
-        ;
-
+        //_LoggedIn_UserID = Convert.ToInt32(httpContextAccessor.HttpContext.User.FindFirstValue(Enum.Cl.UserId.ToString()));
+        //_LoggedIn_UserTypeId = Convert.ToInt32(httpContextAccessor.HttpContext.User.FindFirstValue(Enum.ClaimType.UserTypeId.ToString()));
+        //_LoggedIn_UserName = httpContextAccessor.HttpContext.User.FindFirstValue(Enum.ClaimType.Name.ToString())?.ToString();
+      
 
         //if (_LoggedIn_UserID == 0)
         //    throw new Exception(CustomMessage.UserNotLoggedIn);
