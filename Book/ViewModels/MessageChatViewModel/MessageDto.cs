@@ -10,6 +10,7 @@ public class MessageDto
 {
     public class MessageForAddDto {  
         public int MessageToUserId { get; set; }
+        public int ? _LoggedIn_UserID { get; set; }
     public string Comment { get; set; }
     // public int MessageFromUserId { get; set; }
     public int? MessageReplyId { get; set; }
@@ -55,6 +56,7 @@ public class GroupMessageForListDto
     public string Type { get; set; }
     public string MessageToUserIdsStr { get; set; }
     public List<string> MessageToUserIds { get; set; }
+
     public string MessageToUser { get; set; }
     public string Comment { get; set; }
     public int MessageFromUserId { get; set; }

@@ -15,6 +15,14 @@ public class ChatServices : IChatServices
 
         _unitOfWork = unitOfWork;
     }
+
+    public async Task<Message> SendMessage(Message model)
+    {
+        await _unitOfWork.IChatRepository.SendMessage(model);
+        await _unitOfWork.CommitAsync();
+        return model;  
+    }
+
     public async Task<MessageReply> SendReply(MessageReply model)
     {
         await _unitOfWork.IChatRepository.SendReply(model);
