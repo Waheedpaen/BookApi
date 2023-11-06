@@ -8,8 +8,13 @@ namespace ViewModel.ViewModels.UserViewModel;
     [Required]
     
     public string UserName { get; set; }
- 
-    public string Email { get; set; } 
+    public Boolean ?IsOnlined { get; set; }
+
+    public Boolean ? Offline { get; set; }
+    public string Email { get; set; }
+    public DateTime? LoginTime { get; set; }
+
+    public DateTime? LastLogout { get; set; }
     public virtual UserTypesDto UserTypes { get; set; }
 
     //[ForeignKey("Shop")]

@@ -62,9 +62,13 @@ namespace ImplementDAL.Services;
     {
        return await _unitOfWork.IUserRepository.GetUserCount();
     }
-    public async Task<List<User>> GetUsers()
+    public async Task<List<User>> ActiveUsers()
     {
-        return await _unitOfWork.IUserRepository.GetUsers();
+        return await _unitOfWork.IUserRepository.GetActiveUsers();
+    }
+    public async Task<List<User>> GetDeActiveUsers()
+    {
+        return await _unitOfWork.IUserRepository.GetDeActiveUsers();
     }
 
     public async Task<List<UserTypes>> GetUserTypes()
@@ -79,11 +83,11 @@ namespace ImplementDAL.Services;
        return objUser;
 
     }
-    public async Task<User> Logout()
+    public async Task<User> Logout(int loginUserId)
     {
-        var userData = await _unitOfWork.IUserRepository.Logout();
-          await _unitOfWork.CommitAsync();
-         return userData;
+        var userData = await _unitOfWork.IUserRepository.Logout(loginUserId);
+        await _unitOfWork.CommitAsync();
+        return userData;
     }
 
     public Task<List<User>> SearchingData(string name)

@@ -19,6 +19,9 @@ using Microsoft.AspNetCore.Authorization;
 using System.Net.Mail;
 using HelperData;
 using DataAccessLayer.Services;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+using Microsoft.AspNetCore.SignalR;
+using ImplementDAL.Services;
 
 namespace BookApplication.Controllers
  ;
@@ -30,22 +33,57 @@ public class AuthsController : BaseController
     private readonly IMapper _mapper;
     private readonly IUserService _userService;
     private readonly IConfiguration _config;
-    public AuthsController(IUserService userService, IMapper mapper, IConfiguration config)
+    private readonly IHubContext<BroadcastHub> _hubContext;
+    public AuthsController(IHubContext<BroadcastHub> hubContext, IUserService userService, IMapper mapper, IConfiguration config)
     {
         _userService = userService;
         _mapper = mapper;
         _config = config;
+        _hubContext = hubContext;
     }
 
-    [HttpGet("GetUsers")]
-    public async Task<IActionResult> GetUser()
+ 
+    [HttpGet("GetActiveUsers")]
+    public async Task<IActionResult> ActiveUsers()
     {
         if (!ModelState.IsValid) return BadRequest(ModelState);
-        var enityData = await _userService.GetUsers();
-        var userDto = _mapper.Map<List<UserListDto>>(enityData);
-        if (userDto != null)
+        var enityData = await _userService.ActiveUsers();
+        List<UserListDto> listUser = new();
+        foreach (var item in enityData.Where(data => data.IsOnlined == true).ToList())
         {
-            _response.Data = userDto;
+            listUser.Add(new UserListDto { Name = item.Name, LoginTime = item.LoginTime, });
+        }
+        //var userDto = _mapper.Map<List<UserListDto>>(enityData);
+
+        if (listUser != null)
+        {
+            _response.Data = listUser;
+            _response.Success = true;
+            return Ok(_response);
+        }
+        else
+        {
+            _response.Success = false;
+            _response.Message = CustomMessage.DataNotExit;
+            return Ok(_response);
+        }
+
+    }
+    [HttpGet("GetDeActiveUsers")]
+        public async Task<IActionResult> GetDeActiveUsers()
+        {
+            if (!ModelState.IsValid) return BadRequest(ModelState);
+            var enityData = await _userService.GetDeActiveUsers();
+            List<UserListDto> listUser = new();
+            foreach (var item in enityData.Where(data => data.Offline == false).ToList())
+            {
+                listUser.Add(new UserListDto { Name = item.Name, LastLogout = item.LastLogout, });
+            }
+            //var userDto = _mapper.Map<List<UserListDto>>(enityData);
+
+            if (listUser != null)
+        {
+            _response.Data = listUser;
             _response.Success = true;
             return Ok(_response);
         }
@@ -59,9 +97,13 @@ public class AuthsController : BaseController
     }
     [HttpGet("GetUserCount")]
     public async Task<IActionResult> GetUserCount()
+
     {
         var userCounts = await _userService.GetUserCount();
-        return Ok(userCounts);
+
+        await _hubContext.Clients.All.SendAsync("ReceiveUserCount", userCounts);
+
+        return Ok(new { Data = userCounts, Success = true });
     }
 
     [HttpPost("Login")]
@@ -203,7 +245,18 @@ public class AuthsController : BaseController
             return Ok(_response);
         }
     }
-    
+
+    [HttpGet("LogOut/{Id}")]
+    public async Task<IActionResult> LogOut(int Id)
+    {
+        var data = await _userService.Logout(Id);
+        //var dataDto = _mapper.Map<UserListDto>(data);
+          
+        return Ok(new { Success = true   });
+
+      
+     
+    }
 
     [HttpPut("UpdateUser")]
     public async Task<IActionResult> UpdateUser(UserUpdateDto model)
@@ -322,6 +375,8 @@ public class AuthsController : BaseController
         return Ok(_response);
 
     }
+
+    
 
 }
 

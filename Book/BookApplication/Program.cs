@@ -1,6 +1,7 @@
 
 
 using CoreWebApi.Hubs;
+using ImplementDAL.Services;
 using Microsoft.AspNetCore.Http.Features;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -22,6 +23,8 @@ builder.Services.Configure<IISServerOptions>(options =>
 builder.Services.AddDependencies();
 builder.Services.AddIdentityServices(builder.Configuration);
 
+builder.Services.AddSignalR();
+
 var app = builder.Build();
 
 
@@ -32,7 +35,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.MapHub<ChatHub>("/notificationHub");
+ 
+app.MapHub<BroadcastHub>("/sara");
 app.UseHttpsRedirection();
 app.UseCors();
 app.UseAuthorization();

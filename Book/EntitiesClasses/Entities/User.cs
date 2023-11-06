@@ -11,8 +11,11 @@
     public string  Email   { get; set; }
     [StringLength(50, ErrorMessage = "FullName cannot be longer then 50 characters")]
 
- 
     public DateTime? LastActive { get; set; }
+    public Boolean ?  IsOnlined { get; set; }
+    public Boolean  ? Offline { get; set; }
+    public DateTime? LoginTime { get; set; }
+
     public DateTime? LastLogout { get; set; }
     public byte[] PasswordHash { get; set; }
     public byte[] PasswordSalt { get; set; }

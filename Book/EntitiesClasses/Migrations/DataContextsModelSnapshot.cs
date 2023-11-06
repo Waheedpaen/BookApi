@@ -594,6 +594,9 @@ namespace EntitiesClasses.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
+                    b.Property<bool?>("IsOnlined")
+                        .HasColumnType("bit");
+
                     b.Property<DateTime?>("LastActive")
                         .HasMaxLength(50)
                         .HasColumnType("datetime2");
@@ -601,9 +604,15 @@ namespace EntitiesClasses.Migrations
                     b.Property<DateTime?>("LastLogout")
                         .HasColumnType("datetime2");
 
+                    b.Property<DateTime?>("LoginTime")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("varchar(50)");
+
+                    b.Property<bool?>("Offline")
+                        .HasColumnType("bit");
 
                     b.Property<byte[]>("PasswordHash")
                         .IsRequired()

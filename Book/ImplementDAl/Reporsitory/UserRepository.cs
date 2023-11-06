@@ -45,11 +45,17 @@ public  class UserRepository :  Reporsitory<User, int>, IUserRepository
     }
 
 
-    public async Task<User> Logout()
+    public async Task<User> Logout(int loginUserId)
     {
-     var data =     await Context.Set<User>().FirstOrDefaultAsync(data=>data.Id == _LoggedIn_UserID);
+     var data =     await Context.Set<User>().FirstOrDefaultAsync(data=>data.Id == loginUserId);
+        data.IsOnlined = null; 
+        data.Offline = false;
+        data.LoginTime = null;
+        data.LastLogout = DateTime.Now;
+        Context.Set<User>().Update(data);
+        Context.SaveChanges();
         data.LastActive = null;
-        data.LastLogout = DateTime.UtcNow;
+        data.LastLogout = DateTime.Now;
         return data;
     }
 
@@ -60,6 +66,16 @@ public  class UserRepository :  Reporsitory<User, int>, IUserRepository
         var objUser = await Context.Set<User>().Include(data=>data.UserTypes).Where(data => data.Email.ToLower() == model.Email.ToLower().Trim()&& (data.UserTypesId == model.UserTypeId)).FirstOrDefaultAsync();
         if (objUser == null)
             return null;
+
+        //var userForOnLine = new  User();
+        //userForOnLine.IsOnlined = true;
+        //userForOnLine.Offline = false;
+        objUser.IsOnlined = true;
+        objUser.LoginTime= DateTime.Now;
+        objUser.LastLogout =null;
+        objUser.Offline = null; 
+        DataContexts.Users.Update(objUser);
+        DataContexts.SaveChanges();
         LoginUserDto obj = new();
         obj.Id = objUser.Id;
        obj.Email = objUser.Email;
@@ -69,7 +85,8 @@ public  class UserRepository :  Reporsitory<User, int>, IUserRepository
         obj.PasswordHash = objUser.PasswordHash;
         obj.ImageUrl = objUser.ImageUrl;
         obj.PasswordSalt = objUser.PasswordSalt;
-        obj.LastActive = DateTime.UtcNow;
+
+        //obj.LastActive = DateTime.UtcNow;
 
         if (objUser != null)
         {
@@ -113,6 +130,8 @@ public  class UserRepository :  Reporsitory<User, int>, IUserRepository
                 user.Email = model.Email; 
                 user.UserTypesId = model.UserTypeId.ToNotNull_Int();
                 user.IsDeleted = false;
+            user.IsOnlined = false;
+            user.Offline = false;
                 user.Updated_At = null;
                 user.LastActive = DateTime.UtcNow;
                 user.ImageUrl = model.ImageUrl;
@@ -176,14 +195,20 @@ public  class UserRepository :  Reporsitory<User, int>, IUserRepository
         return PhoneExit;
     }
 
-    public async Task<List<User>> GetUsers()
+    public async Task<List<User>> GetActiveUsers()
     {
        return await Context.Set<User>().Include(data=>data.UserTypes).ToListAsync();
     }
 
+    public async Task<List<User>> GetDeActiveUsers()
+    {
+        return await Context.Set<User>().Include(data => data.UserTypes).ToListAsync();
+    }
+
     public async Task<int> GetUserCount()
     {
-        return await Context.Set<User>().CountAsync();    
+     var  totalUserCount  = await Context.Set<User>().Where(data => data.IsOnlined == true).ToListAsync();
+        return totalUserCount.Count();
     }
 
     public async Task<User> GetUser(int userId)

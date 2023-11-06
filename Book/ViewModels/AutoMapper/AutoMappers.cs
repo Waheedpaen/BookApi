@@ -1,5 +1,6 @@
 ﻿
 using EntitiesClasses.Entities;
+using ViewModel.ViewModels.UserViewModel;
 using ViewModels.AudioDetailViewModel;
 using ViewModels.BookDetails;
 using ViewModels.CommonViewModel;
@@ -24,8 +25,10 @@ public class AutoMappers : Profile
         CreateMap<BookDetail, BookDetailDto>().ReverseMap();
         CreateMap<AudioScholars, CommonDto>().ReverseMap();
         CreateMap< AudioDetail, CommonDto> ().ReverseMap();
+        CreateMap<UserTypes, UserTypesDto>().ReverseMap();
+        CreateMap<User, UserListDto>().ReverseMap();
 
-        
+
         CreateMap<MadrassaClass, CommonDto>().ReverseMap();
         //CreateMap<BookDetail, BookDetailSaveDto>().ReverseMap(); 
         CreateMap<BookImage, BookImageDto>().ReverseMap();

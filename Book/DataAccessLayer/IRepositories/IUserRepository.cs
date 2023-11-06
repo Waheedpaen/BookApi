@@ -9,7 +9,7 @@ namespace DataAccessLayer.IRepositories;
 
 public interface IUserRepository : IRepository<User, int>
 {
-    Task<User> Logout();
+    Task<User> Logout(int loginUserId);
     Task<LoginUserDto> Login(UserDtoLogin model);
 
     Task<ServiceResponse<object>> AddUser(UserAddDto model);
@@ -21,7 +21,8 @@ public interface IUserRepository : IRepository<User, int>
 
     Task<bool> UserEmailAlreadyExit(string Name);
 
-    Task<List<User>> GetUsers();
+    Task<List<User>> GetActiveUsers();
+    Task<List<User>> GetDeActiveUsers(); 
     Task<List<UserTypes>> GetUserTypes();
 
     Task<int> GetUserCount();

@@ -7,16 +7,18 @@ using ViewModel.ViewModels.UserViewModel;
 namespace DataAccessLayer.Services;
  
      public  interface IUserService
-     {
-      Task<User> Logout();
+     { 
+    Task<User> Logout(int loginUserId);
     Task<LoginUserDto> Login(UserDtoLogin model);
 
     Task<ServiceResponse<object>> AddUser(UserAddDto model);
     Task<bool> UserAlreadyExit(string Name);
     Task<bool> UserNameAlreadyExit(string Name);
     Task<User> ChangePassword(User update, ChangePasswordDto model);
-    Task<List<User>> GetUsers();
-     Task<int> GetUserCount();
+    Task<List<User>> ActiveUsers();
+  Task<List<User>> GetDeActiveUsers();
+
+    Task<int> GetUserCount();
     Task<bool> CheckUserNameExistence(string Name);
     Task<bool> UserEmailAlreadyExit(string Name);
     Task<EmailVerificationCode> VerifyEmailCodeAndEmail(EmailVerificationCode model);
