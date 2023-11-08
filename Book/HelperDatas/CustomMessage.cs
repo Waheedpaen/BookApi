@@ -4,6 +4,7 @@
     public class CustomMessage
     {
     public const string Added = "Record(s) added successfully";
+    public const string RecordExits = "Record(s) Have Deleted, Create New Account";
     public const string DataNotExit = "Record(s) Not Exit ";
     public const string Updated = "Record(s) updated successfully";
     public const string Deleted = "Record(s) deleted successfully";

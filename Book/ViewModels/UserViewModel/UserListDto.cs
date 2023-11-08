@@ -15,7 +15,7 @@ namespace ViewModel.ViewModels.UserViewModel;
     public DateTime? LoginTime { get; set; }
 
     public DateTime? LastLogout { get; set; }
-    public virtual UserTypesDto UserTypes { get; set; }
+    //public virtual UserTypesDto UserTypes { get; set; }
 
     //[ForeignKey("Shop")]
     //public int ShopId { get;set; }

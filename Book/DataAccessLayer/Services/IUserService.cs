@@ -2,12 +2,16 @@
 
 using EntitiesClasses.Entities;
 using HelperData;
+using HelperDatas.GlobalReferences;
+using HelperDatas.PaginationsClasses;
 using ViewModel.ViewModels.UserViewModel;
+using ViewModels.UserViewModel;
 
 namespace DataAccessLayer.Services;
  
      public  interface IUserService
-     { 
+     {
+    Task<bool> ActiveOrDeactiveUser(UserActiveModel model);
     Task<User> Logout(int loginUserId);
     Task<LoginUserDto> Login(UserDtoLogin model);
 
@@ -31,8 +35,8 @@ namespace DataAccessLayer.Services;
     Task<List<UserTypes>> GetUserTypes();
     Task<User> UserEmailAlreadyExitForVerify(string emailAddress);
     Task<EmailVerificationCode> verifyEmailCodeAndEmailCheck(string emailAddress);
-    
 
-
+    Task<PagedResult<User>> SearchAndPaginateAsync(SearchAndPaginateOptions options);
+    Task<bool> UserHaveDeleted(string Email);
 }
  

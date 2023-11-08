@@ -11,10 +11,12 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Mail;
 using System.Reflection.Metadata;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using ViewModel.ViewModels.UserViewModel;
+using ViewModels.UserViewModel;
 
 public  class UserRepository :  Reporsitory<User, int>, IUserRepository
     {
@@ -63,7 +65,7 @@ public  class UserRepository :  Reporsitory<User, int>, IUserRepository
     {
        
         ServiceResponse<object> serviceResponse = new();
-        var objUser = await Context.Set<User>().Include(data=>data.UserTypes).Where(data => data.Email.ToLower() == model.Email.ToLower().Trim()&& (data.UserTypesId == model.UserTypeId)).FirstOrDefaultAsync();
+        var objUser = await Context.Set<User>().Include(data=>data.UserTypes).Where(data => data.Email.ToLower() == model.Email.ToLower().Trim()&& (data.UserTypesId == model.UserTypeId) && (data.IsDeleted == false)).FirstOrDefaultAsync();
         if (objUser == null)
             return null;
 
@@ -166,7 +168,15 @@ public  class UserRepository :  Reporsitory<User, int>, IUserRepository
         else
             return false;
     }
+    public async Task<bool> UserHaveDeleted(string Email)
+    {
 
+        var data = await Context.Set<User>().AnyAsync(x => x.Email.ToLower() == Email.ToLower() && x.IsDeleted == true);
+        if (data == true)
+            return true;
+        else
+            return false;
+    }
     public async Task<bool> UserNameAlreadyExit(string Name)
     {
 
@@ -246,6 +256,13 @@ public  class UserRepository :  Reporsitory<User, int>, IUserRepository
         return data;
     }
 
-    
+    public async Task<bool> ActiveOrDeactiveUser(UserActiveModel model)
+    {
+        var data = await Context.Set<User>().Where(x => x.Id == model.Id && x.UserTypesId == model.UserTypesId).FirstOrDefaultAsync();
+        data.IsDeleted = model.IsDeleted;
+        Context.Set<User>().Update(data);
+        Context.SaveChanges();
+        return model.IsDeleted;
+    }
 }
  

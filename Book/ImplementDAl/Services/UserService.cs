@@ -5,6 +5,7 @@
 using DataAccessLayer.Seeds;
 using HelperData;
 using ViewModel.ViewModels.UserViewModel;
+using ViewModels.UserViewModel;
 
 namespace ImplementDAL.Services;
     public class UserService : IUserService
@@ -16,6 +17,17 @@ namespace ImplementDAL.Services;
       
         _unitOfWork = unitOfWork;
     }
+
+    public async Task<PagedResult<User>> SearchAndPaginateAsync(SearchAndPaginateOptions options)
+    {
+        Expression<Func<User, bool>> predicate = category =>
+        string.IsNullOrEmpty(options.SearchTerm) ||
+        category.Name.Contains(options.SearchTerm);
+
+        var pagedResult = await _unitOfWork.IUserRepository.SearchAndPaginateAsync(predicate, new PaginationOptions() { PageSize = options.PageSize, Page = options.Page });
+        return pagedResult;
+    }
+
 
     public async Task<ServiceResponse<object>> AddUser(UserAddDto model)
     { 
@@ -147,6 +159,14 @@ catch (Exception ex)
        return await _unitOfWork.IUserRepository.verifyEmailCodeAndEmailCheck(emailAddress);
     }
 
-    
+    public async Task<bool> ActiveOrDeactiveUser(UserActiveModel model)
+    {
+        return await _unitOfWork.IUserRepository.ActiveOrDeactiveUser(model);
+    }
+
+    public async Task<bool> UserHaveDeleted(string Email)
+    {
+        return await _unitOfWork.IUserRepository.UserHaveDeleted(Email);
+    }
 }
  

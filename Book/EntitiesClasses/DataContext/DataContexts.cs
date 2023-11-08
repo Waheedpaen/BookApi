@@ -34,7 +34,7 @@ namespace EntitiesClasses.DataContext;
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
 
-        modelBuilder.Entity<User>().HasQueryFilter((d => EF.Property<bool>(d, "IsDeleted") == false));
+        //modelBuilder.Entity<User>().HasQueryFilter((d => EF.Property<bool>(d, "IsDeleted") == false));
 
         modelBuilder.Entity<AudioDetail>().HasQueryFilter((d => EF.Property<bool>(d, "IsDeleted") == false));
         modelBuilder.Entity<AudioScholars>().HasQueryFilter((d => EF.Property<bool>(d, "IsDeleted") == false));

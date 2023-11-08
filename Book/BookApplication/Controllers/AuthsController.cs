@@ -22,6 +22,10 @@ using DataAccessLayer.Services;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 using Microsoft.AspNetCore.SignalR;
 using ImplementDAL.Services;
+using HelperDatas.PaginationsClasses;
+using ImplementDAl.Services;
+using ViewModels.CommonViewModel;
+using ViewModels.UserViewModel;
 
 namespace BookApplication.Controllers
  ;
@@ -42,7 +46,14 @@ public class AuthsController : BaseController
         _hubContext = hubContext;
     }
 
- 
+    [HttpGet("SearchAndPaginateCategories")]
+    public async Task<IActionResult> SearchAndPaginateCategories([FromQuery] SearchAndPaginateOptions options)
+    {
+       
+        var pagedResult = await _userService.SearchAndPaginateAsync(options); 
+
+        return Ok(pagedResult);
+    }
     [HttpGet("GetActiveUsers")]
     public async Task<IActionResult> ActiveUsers()
     {
@@ -109,13 +120,17 @@ public class AuthsController : BaseController
     [HttpPost("Login")]
     public async Task<IActionResult> Login(UserDtoLogin userDtoLogin)
     {
+     
+
         if (!ModelState.IsValid)
         {
             return BadRequest(ModelState);
         }
+        userDtoLogin.Email = userDtoLogin.Email.ToLower();
+        if (await _userService.UserHaveDeleted(userDtoLogin.Email))
+            return BadRequest(new { message = CustomMessage.RecordExits });
 
-        var objUserLogin = await _userService.Login(userDtoLogin);
-
+        var objUserLogin = await _userService.Login(userDtoLogin); 
         if (objUserLogin == null)
         {
             _response.Success = false;
@@ -376,7 +391,16 @@ public class AuthsController : BaseController
 
     }
 
+    [HttpPost("UserActivitation")]
+    public async Task<IActionResult> UserActivitation(UserActiveModel model)
+    {
+         
+        var dataExit = await _userService.ActiveOrDeactiveUser(model);
+      
+         return Ok(new { Success = dataExit,   });
     
+       
+    }
 
 }
 
