@@ -38,5 +38,6 @@ namespace DataAccessLayer.Services;
 
     Task<PagedResult<User>> SearchAndPaginateAsync(SearchAndPaginateOptions options);
     Task<bool> UserHaveDeleted(string Email);
+    Task<bool> AssignRoleToUser(AssignRoleToUserModel model);
 }
  

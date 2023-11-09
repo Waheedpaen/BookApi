@@ -402,5 +402,16 @@ public class AuthsController : BaseController
        
     }
 
+    [HttpPost("AssignRoleToUser")]
+    public async Task<IActionResult> AssignRoleToUser(AssignRoleToUserModel model)
+    {
+
+        var boolObject = await _userService.AssignRoleToUser(model);
+
+        return Ok(new { Success = boolObject, });
+
+
+    }
+ 
 }
 

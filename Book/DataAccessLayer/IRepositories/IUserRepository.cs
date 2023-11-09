@@ -33,7 +33,7 @@ public interface IUserRepository : IRepository<User, int>
     Task<bool> UserPhoneAlreadyExit(string Name);
     Task<EmailVerificationCode> verifyEmailCodeAndEmailCheck(string emailAddress);
      Task<bool> UserHaveDeleted(string Email); 
-
+     Task<bool> AssignRoleToUser(AssignRoleToUserModel model);
 
 
 }

@@ -8,6 +8,7 @@ using EntitiesClasses.Entities;
 using HelperData;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
+using NLog.Filters;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -49,6 +50,8 @@ public  class UserRepository :  Reporsitory<User, int>, IUserRepository
 
     public async Task<User> Logout(int loginUserId)
     {
+        //When user log out . isonlined will null and offilne is fase
+        // offline is false mean . user is offline and 
      var data =     await Context.Set<User>().FirstOrDefaultAsync(data=>data.Id == loginUserId);
         data.IsOnlined = null; 
         data.Offline = false;
@@ -72,12 +75,18 @@ public  class UserRepository :  Reporsitory<User, int>, IUserRepository
         //var userForOnLine = new  User();
         //userForOnLine.IsOnlined = true;
         //userForOnLine.Offline = false;
+        // start 
+        // when user login in  isonlined is true. it mean user is isonlined . 
+        // longin time. it mean when user is login . show it login time of user too 
+        // and apply update method here for inonline true and assign the ligin time 
         objUser.IsOnlined = true;
-        objUser.LoginTime= DateTime.Now;
-        objUser.LastLogout =null;
+        objUser.LoginTime= DateTime.Now; 
         objUser.Offline = null; 
         DataContexts.Users.Update(objUser);
         DataContexts.SaveChanges();
+
+
+        //end 
         LoginUserDto obj = new();
         obj.Id = objUser.Id;
        obj.Email = objUser.Email;
@@ -132,8 +141,10 @@ public  class UserRepository :  Reporsitory<User, int>, IUserRepository
                 user.Email = model.Email; 
                 user.UserTypesId = model.UserTypeId.ToNotNull_Int();
                 user.IsDeleted = false;
+            // when user crete new account by default isonline and offline will false, reason because user just create account . not login yet 
             user.IsOnlined = false;
             user.Offline = false;
+            // end
                 user.Updated_At = null;
                 user.LastActive = DateTime.UtcNow;
                 user.ImageUrl = model.ImageUrl;
@@ -163,19 +174,21 @@ public  class UserRepository :  Reporsitory<User, int>, IUserRepository
     {
      
         var data = await Context.Set<User>().AnyAsync(x => x.UserName.ToLower() == Name.ToLower());
-        if (data == true)
-            return true;
-        else
-            return false;
+        return data == true ? true : false;
+        //if (data == true)
+        //    return true;
+        //else
+        //    return false;
     }
     public async Task<bool> UserHaveDeleted(string Email)
     {
 
         var data = await Context.Set<User>().AnyAsync(x => x.Email.ToLower() == Email.ToLower() && x.IsDeleted == true);
-        if (data == true)
-            return true;
-        else
-            return false;
+        return data == true ? true : false;
+        //if (data == true)
+        //    return true;
+        //else
+        //    return false;
     }
     public async Task<bool> UserNameAlreadyExit(string Name)
     {
@@ -217,7 +230,7 @@ public  class UserRepository :  Reporsitory<User, int>, IUserRepository
 
     public async Task<int> GetUserCount()
     {
-     var  totalUserCount  = await Context.Set<User>().Where(data => data.IsOnlined == true).ToListAsync();
+        var  totalUserCount  = await Context.Set<User>().Where(data => data.IsOnlined == true).ToListAsync();
         return totalUserCount.Count();
     }
 
@@ -252,17 +265,36 @@ public  class UserRepository :  Reporsitory<User, int>, IUserRepository
 
     public async Task<EmailVerificationCode> verifyEmailCodeAndEmailCheck(string emailAddress)
     {
-      var data = await Context.Set<EmailVerificationCode>().Where(x => x.Email == emailAddress).FirstOrDefaultAsync();
+         var data = await Context.Set<EmailVerificationCode>().Where(x => x.Email == emailAddress).FirstOrDefaultAsync();
         return data;
     }
 
     public async Task<bool> ActiveOrDeactiveUser(UserActiveModel model)
     {
-        var data = await Context.Set<User>().Where(x => x.Id == model.Id && x.UserTypesId == model.UserTypesId).FirstOrDefaultAsync();
+        // this methos user: active the user or deactive the user. than 
+        // if user is active than user than sigin to page . or user is deactive mean user is not login to login page
+        var data = await Context.Set<User>().Where(x => x.Id == model.Id ).FirstOrDefaultAsync(); 
         data.IsDeleted = model.IsDeleted;
         Context.Set<User>().Update(data);
         Context.SaveChanges();
         return model.IsDeleted;
+    }
+
+    public async Task<bool> AssignRoleToUser(AssignRoleToUserModel model)
+    {
+        // assgin role to the user. user can be adim . or user..
+        var data = await Context.Set<User>().Where(x => x.Id == model.Id ).FirstOrDefaultAsync();
+        if (data != null)
+        {
+            data.UserTypesId = model.UserTypesId;
+            Context.Set<User>().Update(data);
+            Context.SaveChanges();
+            return true;
+        }
+        else
+        {
+            return false;
+        } 
     }
 }
  

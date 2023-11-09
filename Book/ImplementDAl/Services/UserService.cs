@@ -168,5 +168,10 @@ catch (Exception ex)
     {
         return await _unitOfWork.IUserRepository.UserHaveDeleted(Email);
     }
+
+    public async Task<bool> AssignRoleToUser(AssignRoleToUserModel model)
+    {
+       return await _unitOfWork.IUserRepository.AssignRoleToUser(model);    
+    }
 }
  
