@@ -22,6 +22,7 @@ namespace ViewModel.ViewModels.UserViewModel;
     //public virtual Shop Shop { get; set; }
 
     public int updatebyId { get; set; }
+    public int ?  UserTypeId { get; set; }
 
     public string ImageUrl { get; set; }
 }

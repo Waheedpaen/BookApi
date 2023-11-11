@@ -62,7 +62,7 @@ public class AuthsController : BaseController
         List<UserListDto> listUser = new();
         foreach (var item in enityData.Where(data => data.IsOnlined == true).ToList())
         {
-            listUser.Add(new UserListDto { Name = item.Name, LoginTime = item.LoginTime, });
+            listUser.Add(new UserListDto { Name = item.Name, LoginTime = item.LoginTime, UserTypeId = item.UserTypesId  });
         }
         //var userDto = _mapper.Map<List<UserListDto>>(enityData);
 
@@ -88,7 +88,7 @@ public class AuthsController : BaseController
             List<UserListDto> listUser = new();
             foreach (var item in enityData.Where(data => data.Offline == false).ToList())
             {
-                listUser.Add(new UserListDto { Name = item.Name, LastLogout = item.LastLogout, });
+                listUser.Add(new UserListDto { Name = item.Name, LastLogout = item.LastLogout, UserTypeId=item.UserTypesId });
             }
             //var userDto = _mapper.Map<List<UserListDto>>(enityData);
 
