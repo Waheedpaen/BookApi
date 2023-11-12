@@ -34,21 +34,21 @@ public class BookCategoryController : ControllerBase
 
     }
 
-    [HttpPost("SaveBookCategory")]
-    public async Task<IActionResult> SaveBookCategory(CommonDto model)
-    { 
-        var enity = _mapper.Map<BookCategory>(model);
-        var dataExit = await _bookCategoryServices.BookCategoryAlreadyExit(enity.Name);
-        if (dataExit != null)
-        {
-            return Ok(new { Success = false, Message = dataExit.Name + ' ' + "Already Exist", });
+        [HttpPost("SaveBookCategory")]
+        public async Task<IActionResult> SaveBookCategory(CommonDto model)
+        { 
+            var enity = _mapper.Map<BookCategory>(model);
+            var dataExit = await _bookCategoryServices.BookCategoryAlreadyExit(enity.Name);
+            if (dataExit != null)
+            {
+                return Ok(new { Success = false, Message = dataExit.Name + ' ' + "Already Exist", });
+            }
+            else
+            {
+                await _bookCategoryServices.Create(enity);
+                return Ok(new { Success = true, Message = CustomMessage.Added });
+            }
         }
-        else
-        {
-            await _bookCategoryServices.Create(enity);
-            return Ok(new { Success = true, Message = CustomMessage.Added });
-        }
-    }
 
     [HttpGet("BookCategoryDetail/{Id}")]
     public async Task<IActionResult> Get(int Id)

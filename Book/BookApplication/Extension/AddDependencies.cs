@@ -30,6 +30,7 @@ namespace MobileManagementSystem.Extension
             Services.AddTransient<IFarqaCategoryServices, FarqaCategoryServices>();
             Services.AddTransient<IBookDetailServices, BookDetailServices>();
             Services.AddTransient<IChatServices, ChatServices>();
+            Services.AddTransient<INewServices, NewServices>();  
             //Services.AddTransient<IOperatingSystemService, OperatingSystemService>();
             //Services.AddTransient<ILoggerManager, LoggerManager>();
             Services.AddAutoMapper(typeof(AutoMappers));

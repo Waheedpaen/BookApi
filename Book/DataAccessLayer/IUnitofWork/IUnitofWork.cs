@@ -9,6 +9,7 @@ namespace DataAccessLayer.IUnitofWork;
     IChatRepository IChatRepository { get; }
     IMonthlyMagzinesRepository IMonthlyMagzinesRepository { get; }
     ILookUpRepository  ILookUpRepository { get; }
+    INewsRepository INewsRepository { get; }
     IMadrassaBookRepository IMadrassaBookRepository { get; }
     IAudioScholarsRepository IAudioScholarsRepository { get; }
     IAudioDetailRepository IAudioDetailRepository { get; }

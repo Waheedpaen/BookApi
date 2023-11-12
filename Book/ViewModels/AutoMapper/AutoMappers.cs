@@ -6,6 +6,7 @@ using ViewModels.BookDetails;
 using ViewModels.CommonViewModel;
 using ViewModels.FarqaCategoryViewModel;
 using ViewModels.MonthlyMagizne;
+using ViewModels.NewsViewModel;
 using ViewModels.ScholarViewModel;
 
 namespace ViewModel.AutoMapper;
@@ -26,6 +27,7 @@ public class AutoMappers : Profile
         CreateMap<AudioScholars, CommonDto>().ReverseMap();
         CreateMap< AudioDetail, CommonDto> ().ReverseMap();
         CreateMap<UserTypes, UserTypesDto>().ReverseMap();
+        CreateMap<News, NewsDto>().ReverseMap(); 
         CreateMap<User, UserListDto>().ReverseMap();
 
 

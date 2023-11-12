@@ -530,6 +530,40 @@ namespace EntitiesClasses.Migrations
                     b.ToTable("MonthlyMagzines");
                 });
 
+            modelBuilder.Entity("EntitiesClasses.Entities.News", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime?>("Created_At")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("varchar(MAX)");
+
+                    b.Property<string>("Header")
+                        .HasColumnType("varchar(MAX)");
+
+                    b.Property<string>("ImageUrl")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Title")
+                        .HasColumnType("varchar(MAX)");
+
+                    b.Property<DateTime?>("Updated_At")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("News");
+                });
+
             modelBuilder.Entity("EntitiesClasses.Entities.Scholar", b =>
                 {
                     b.Property<int>("Id")

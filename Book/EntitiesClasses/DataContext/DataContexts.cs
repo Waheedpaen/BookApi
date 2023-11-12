@@ -23,6 +23,8 @@ namespace EntitiesClasses.DataContext;
     public DbSet<MessageReply> MessageReplies { get; set; }
     public DbSet<ChatGroup> ChatGroups { get; set; }
     public DbSet<GroupMessage> GroupMessages { get; set; }
+    public DbSet<News>    News { get; set; }
+
 
     public DbSet<MadrassaBookCatgory> MadrassaBookCatgories { get; set; }
     public DbSet<Scholar> Scholars { get; set; }
