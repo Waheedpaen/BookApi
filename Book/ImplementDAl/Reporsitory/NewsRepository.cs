@@ -16,6 +16,6 @@ public class NewsRepository : Reporsitory<News, int>, INewsRepository
 
     public async Task<News> NewsAlreadyExit(string header)
     {
-        return await DataContexts.Set<News>().FirstOrDefaultAsync(data => data.Header == header);
+        return await DataContexts.Set<News>().FirstOrDefaultAsync(data => data.Header == header && data.IsDeleted == false);
     }
 }

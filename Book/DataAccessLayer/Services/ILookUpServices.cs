@@ -14,9 +14,10 @@ namespace DataAccessLayer.Services
         Task<List<AudioDetail>> AudioDetails();
         Task<List<FarqaCategory>> FarqaCategories();
         Task<List<Scholar>> GetScholars();
-         Task<List<BookDetail>> GetBookDetails();  
-      Task<List<BookImage>> GetBookImages();
+        Task<List<BookDetail>> GetBookDetails();  
+        Task<List<BookImage>> GetBookImages();
         Task<List<MadrassaBook>> GetMadrassaBooks();
-        Task<List<MonthlyMagzine>> GetMonthlyMagzines();
+        Task<List<MonthlyMagzine>> GetMonthlyMagzines(); 
+        Task<List<News>> News();
     }
 }

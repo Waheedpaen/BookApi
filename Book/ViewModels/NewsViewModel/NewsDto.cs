@@ -9,9 +9,13 @@ namespace ViewModels.NewsViewModel;
 
 public class NewsDto : Entity
 {
- 
-    public string? Header { get; set; } 
-    public string? Title { get; set; } 
-    public string? Description { get; set; }
-    public string? ImageUrl { get; set; }
+
+    [Column(TypeName = "nvarchar(max)")]
+    public string Header { get; set; }
+    [Column(TypeName = "nvarchar(max)")]
+    public string Title { get; set; }
+    [Column(TypeName = "nvarchar(max)")]
+    public string Description { get; set; }
+    public string ImageUrl { get; set; }
+
 }

@@ -1,4 +1,5 @@
-﻿using HelperData;
+﻿using EntitiesClasses.Entities;
+using HelperData;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -62,5 +63,15 @@ public class LookUpRepository : ILookUpRepository
     public async Task<List<MonthlyMagzine>> MonthlyMagzines()
     {
         return await Context.Set<MonthlyMagzine>().OrderByDescending(data => data).ToListAsync();
+    }
+
+    public async Task<List<News>> News()
+    {
+        // 1 this line take current date 
+        var today = DateTime.Now.Date;
+        // 2. this line compare two  current date   .Where(news => news.Created_At.HasValue && news.Created_At.Value.Date == today)
+        return await Context.Set<News>().Where(news => news.Created_At.HasValue && news.Created_At.Value.Date == today && news.IsDeleted == false )
+            .OrderByDescending(data => data.Title).ToListAsync();
+         
     }
 }

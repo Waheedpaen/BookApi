@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ViewModel.ViewModels.UserViewModel;
 using ViewModels.CommonViewModel;
+using ViewModels.NewsViewModel;
 using ViewModels.ScholarViewModel;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 using static System.Runtime.InteropServices.JavaScript.JSType;
@@ -188,5 +189,19 @@ public class LookUpController : ControllerBase
         }
     }
 
-
+    [HttpGet("GetNews")]
+    public async Task<IActionResult> GetNews()
+    {
+        if (!ModelState.IsValid) return BadRequest(ModelState);
+        var enityData = await _lookUpServices.News();
+        var model = _mapper.Map<List<NewsDto>>(enityData);
+        if (model != null)
+        {
+            return Ok(new { Success = true, data = model });
+        }
+        else
+        {
+            return Ok(new { Success = false, data = string.Empty, });
+        }
+    }
 }

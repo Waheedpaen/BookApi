@@ -12,7 +12,7 @@ namespace DataAccessLayer.IRepositories;
  
     public interface ILookUpRepository
     {
-         Task<List<AudioScholars>> AudioScholars();
+     Task<List<AudioScholars>> AudioScholars();
     Task<List<AudioDetail>> AudioDetails();
     Task<List<BookCategory>> BookCategories();
     Task<List<FarqaCategory>> FarqaCategories();
@@ -22,6 +22,7 @@ namespace DataAccessLayer.IRepositories;
     Task<List<BookImage>> GetBookImages();
     Task<List<MadrassaBook>> GetMadrassaBooks();
     Task<List<MonthlyMagzine>> MonthlyMagzines();
+    Task<List<News>> News();
 
 }
 
