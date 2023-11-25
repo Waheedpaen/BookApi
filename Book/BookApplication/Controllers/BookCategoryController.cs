@@ -67,6 +67,29 @@ public class BookCategoryController : ControllerBase
 
     }
 
+
+
+    [HttpGet("GetSuggestions/{searchword}")]
+    public async Task<IActionResult> GetSuggestions(string searchword)
+    {
+        if (!ModelState.IsValid) return BadRequest(ModelState);
+        var entity = await _bookCategoryServices.GetSuggestions(searchword);
+       var model = _mapper.Map<List<CommonDto>>(entity);
+        if (model != null)
+        {
+            return Ok(new { Data = model, Success = true, });
+        }
+        else
+        {
+            return Ok(new { Data = string.Empty, Success = false, });
+        }
+
+    }
+
+
+
+
+
     [HttpDelete("DeleteBookCategory/{Id}")]
     public async Task<IActionResult> Delete(int Id)
     {
@@ -119,6 +142,9 @@ public class BookCategoryController : ControllerBase
         var pagedResult = await _bookCategoryServices.SearchAndPaginateAsync(options);
         return Ok(pagedResult);
     }
+
+
+
 }
 
 

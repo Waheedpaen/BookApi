@@ -38,7 +38,10 @@ public  class BookCategoryServices : IBookCategoryServices
         return await _unitOfWork.IBookCategory.GetByIdAsync(id);
     }
 
- 
+    public async Task<List<BookCategory>> GetSuggestions(string searchword)
+    {
+         return await _unitOfWork.IBookCategory.GetSuggestions(searchword);
+    }
 
     public async Task<PagedResult<BookCategory>> SearchAndPaginateAsync(SearchAndPaginateOptions options)
     {

@@ -590,7 +590,7 @@ namespace EntitiesClasses.Migrations
 
                     b.Property<string>("MadrassaName")
                         .IsRequired()
-                        .HasColumnType("varchar(100)");
+                        .HasColumnType("varchar(900)");
 
                     b.Property<string>("Name")
                         .IsRequired()

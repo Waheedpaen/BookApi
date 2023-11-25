@@ -3,7 +3,7 @@
 
     public  class Scholar : CommonClass
     {
-    [Column(TypeName = "varchar(100)")]
+    [Column(TypeName = "varchar(900)")]
     public string MadrassaName { get; set; }
         public string? ImageUrl { get; set; }
     [ForeignKey("FarqaCategory")]

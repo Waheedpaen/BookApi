@@ -150,7 +150,8 @@ public class AuthsController : BaseController
             };
 
         var authSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["JsonWebTokenKeys:IssuerSigningKey"]));
-        var token = new JwtSecurityToken(expires: DateTime.Now.AddHours(3), claims: claims, signingCredentials: new SigningCredentials(authSigningKey, SecurityAlgorithms.HmacSha256));
+          var token = new JwtSecurityToken(expires: DateTime.Now.AddHours(3), claims: claims, signingCredentials: new SigningCredentials(authSigningKey, SecurityAlgorithms.HmacSha256));
+      //  var token = new JwtSecurityToken(expires: DateTime.Now.AddMinutes(1), claims: claims, signingCredentials: new SigningCredentials(authSigningKey, SecurityAlgorithms.HmacSha256));
 
         _response.Data = new
         {

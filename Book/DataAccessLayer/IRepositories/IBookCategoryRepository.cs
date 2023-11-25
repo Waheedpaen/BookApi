@@ -10,6 +10,8 @@ namespace DataAccessLayer.IRepositories;
 public interface IBookCategoryRepository : IRepository<BookCategory, int>
 {
     public Task<BookCategory> BookCategoryAlreadyExit(string name);
+    Task<List<BookCategory>> GetSuggestions(string searchword);
 }
+
     
  
