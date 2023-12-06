@@ -35,11 +35,13 @@ public static class HelperFunctions
     }
     public static string ToDate(this DateTime dateString)
     {
+    
         var PKZone = TimeZoneInfo.FindSystemTimeZoneById("Pakistan Standard Time");
         var Now = TimeZoneInfo.ConvertTimeFromUtc(dateString, PKZone);
         var dt = Now.Date.ToString("ddd dd-MM-yyyy");
         return dt;
     }
+;
     public static string ToDate(this DateTime? dateString)
     {
         if (dateString != null)

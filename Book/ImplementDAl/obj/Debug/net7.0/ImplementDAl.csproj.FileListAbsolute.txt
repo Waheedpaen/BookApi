@@ -19,3 +19,9 @@ E:\BookProject\BookApi\Book\ImplementDAl\obj\Debug\net7.0\ImplementDAl.dll
 E:\BookProject\BookApi\Book\ImplementDAl\obj\Debug\net7.0\refint\ImplementDAl.dll
 E:\BookProject\BookApi\Book\ImplementDAl\obj\Debug\net7.0\ImplementDAl.pdb
 E:\BookProject\BookApi\Book\ImplementDAl\obj\Debug\net7.0\ref\ImplementDAl.dll
+C:\Users\Wa\Documents\GitHub\BookApi\Book\ImplementDAl\obj\Debug\net7.0\ImplementDAl.csproj.AssemblyReference.cache
+C:\Users\Wa\Documents\GitHub\BookApi\Book\ImplementDAl\obj\Debug\net7.0\ImplementDAl.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Wa\Documents\GitHub\BookApi\Book\ImplementDAl\obj\Debug\net7.0\ImplementDAl.AssemblyInfoInputs.cache
+C:\Users\Wa\Documents\GitHub\BookApi\Book\ImplementDAl\obj\Debug\net7.0\ImplementDAl.AssemblyInfo.cs
+C:\Users\Wa\Documents\GitHub\BookApi\Book\ImplementDAl\obj\Debug\net7.0\ImplementDAl.csproj.CoreCompileInputs.cache
+C:\Users\Wa\Documents\GitHub\BookApi\Book\ImplementDAl\obj\Debug\net7.0\ImplementDAl.sourcelink.json
