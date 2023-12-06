@@ -240,7 +240,7 @@ public static class HelperFunctions
             return new List<int>();
         }
     }
-    internal static bool IsNullOrEmpty(this string value)
+    public  static bool IsNullOrEmpty(this string value)
     {
         return string.IsNullOrEmpty(value);
     }
@@ -263,6 +263,12 @@ public static class HelperFunctions
 
 
 
+    public static string CapitalizeFirstLetter(this string str)
+    {
+        if (string.IsNullOrEmpty(str))
+            return str;
+        return char.ToUpper(str[0]) + str.Substring(1);
+    }
 
     public static void CheckUserLoggedIn()
     {
