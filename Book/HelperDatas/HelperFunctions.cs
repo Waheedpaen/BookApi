@@ -41,7 +41,7 @@ public static class HelperFunctions
         var dt = Now.Date.ToString("ddd dd-MM-yyyy");
         return dt;
     }
-;
+
     public static string ToDate(this DateTime? dateString)
     {
         if (dateString != null)
